@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #323232;
+}
+
+a:hover{
+	color: #6fc0ff;
+}
+
+#wrapper{
+	width: 100%;
+	background: url('images/guitar.jpg') center 0 no-repeat #323232;
+}
+
+/* ============================ HEADER ============================ */
+
+section.header_outer{
+	width: 100%;
+	background: url('images/topbar.png') repeat-x;
+	z-index: 2;
+	position: relative;
+	height: 100px;
+}
+
+header{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+header h1{
+	color: #fff;
+	float: left;
+	display: inline-block;
+	margin-top: 25px;
+	font-size: 32px;
+}	
+
+header nav{
+	display: inline-block;
+	float: right;
+	margin-top: 40px;
+}
+
+header nav ul{
+	text-align: right;
+	list-style: none;
+	display: inline-block;
+}
+
+header nav ul li{
+	display: inline-block;
+	padding-left: 45px;
+}
+
+header nav ul li a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #fff;
+}
+
+header nav ul li a:hover{
+	color: #6fc0ff;
+}
+
+/* ============================ GUITAR ============================ */
+
+section#guitar_outer{
+	width: 100%;
+	height: 500px;
+	z-index: 1;
+	position: relative;
+}
+
+section#guitar{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 65px;
+}
+
+section#guitar h2{
+	text-shadow: 0 1px 3px #222;
+	color: #fff;
+	font-size: 78px;
+}
+
+section#guitar h3{
+	text-shadow: 0 1px 3px #222;
+	color: #fff;
+	font-size: 30px;
+	font-weight: normal;
+	margin-top: 40px;
+}
+
+section#guitar input#search_box{
+	margin-top: 45px;
+	width: 645px;
+	padding: 10px 15px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+}
+
+/* ============================ ARTISTS ============================ */
+
+section#artists_outer{
+	width: 100%;
+	background: #323232;
+	height: 188px;
+	z-index: 2;
+	position: relative;
+	text-align: center;
+	overflow:hidden;
+}
+
+section#artists_outer nav{
+	width: 1692px;
+	height: 188px;
+	overflow:hidden;
+	display: inline-block;
+}
+
+section#artists_outer nav ul{
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	right: 130px;
+}
+
+section#artists_outer nav ul li{
+	margin: 0 -2px;
+	display: inline-block;
+}
+
+section#artists_outer nav ul li a img{
+	width: 188px;
+	height: 188px;
+	display: inline-block;
+	border: none;
+}
+
+section#artists_outer nav ul li a img:hover{
+	opacity: 0.4;
+}
+
+/* ============================ LISTS ============================ */
+
+section#lists_outer{
+	width: 100%;
+	background: #ededed;
+	z-index: 2;
+	position: relative;
+	height: 550px;
+}
+
+section#lists{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section#lists ul{
+	list-style: none;
+	display: inline-block;
+	width: 380px;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 50px;
+	text-align: left;
+}
+
+section#lists ul.first_ul{
+	margin-right: 100px;
+}
+
+section#lists ul li{
+	padding: 9px 0 9px 18px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+section#lists ul li h3{
+	font-size: 16px;
+	color: #181818;
+}
+
+section#lists ul li a{
+	font-size: 14px;
+	color: #181818;
+	text-decoration: none;
+}
+
+section#lists ul li a:hover{
+	color: #6fc0ff;
+}
+
+/* ============================ WOOD ============================ */
+
+section#wood_outer{
+	width: 100%;
+	background: url('images/wood.jpg') repeat-x;
+	height: 212px;
+}
+
+section#wood{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section#wood h2{
+	font-size: 44px;
+	color: #fff;
+	text-shadow: 0 1px 3px #666;
+	font-weight: normal;
+	padding-top: 35px;
+}
+
+section#wood a{
+	display: inline-block;
+	background: url('images/wood_button.png') no-repeat;
+	width: 169px;
+	height: 41px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 0 1px 3px #666;
+	margin-top: 21px;
+	padding: 10px 0 0 0;
+}
+
+section#wood a:hover{
+	opacity: 0.8;
+}
+
+section#wood a:active{
+	background-position: 0 1px;
+}
+
+/* ============================ FOOTER ============================ */
+
+section#footer_outer{
+	width: 100%;
+	background: #323232;
+}
+
+footer{
+	width: 960px;
+	height: 350px;
+	margin: 0 auto;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+}
+
+footer a.social{
+	width: 42px;
+	height: 42px;
+	display: inline-block;
+	text-indent: -9999px;
+	margin: 70px 0 40px;
+}
+
+footer a.social:hover{
+	opacity: 0.7;
+}
+
+footer a.fb{
+	background: url('images/fb.png') center center no-repeat transparent;
+}
+
+footer a.twitter{
+	background: url('images/twitter.png') center center no-repeat transparent;
+	margin: 0 50px 0 40px;
+}
+
+footer a.mail{
+	background: url('images/mail.png') center center no-repeat transparent;
+}
+
+footer p{
+	color: #767676;
+	font-size: 14px;
+}
