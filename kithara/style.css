@@ -35,7 +35,7 @@ header{
 	margin: 0 auto;
 }
 
-header h1{
+header h1 a{
 	color: #fff;
 	float: left;
 	display: inline-block;
@@ -68,6 +68,120 @@ header nav ul li a{
 
 header nav ul li a:hover{
 	color: #6fc0ff;
+}
+
+/* ============================ TOPBAR ============================ */
+
+section#topbar_outer{
+	width: 100%;
+	height: 60px;
+	background: #6fc0ff;
+}
+
+section#topbar{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section#topbar section.left{
+	float: left;
+	font-size: 14px;
+	color: #3384c3;
+	margin-top: 20px;
+}
+
+section#topbar section.left a{
+	color: #245c88;
+}
+
+section#topbar section.left a:hover{
+	color: #fff;
+}
+
+section#topbar section.left span.current{
+	color: #fff;
+}
+
+section#topbar section.right{
+	float: right;
+	margin-top: 15px;
+}
+
+section#topbar section.right input#search_form_small{
+	font-size: 14px;
+	border: 1px solid #4f8fc1;
+	padding: 5px 10px;
+	border-radius: 3px;
+	width: 260px;
+}
+
+/* ============================ INFOBAR ============================ */
+
+section#infobar{
+	width: 960px;
+	height: 162px;
+	margin: 0 auto;
+	border-bottom: 1px solid #e0dfdf;
+}
+
+section#infobar section.left{
+	float: left;
+	font-size: 14px;
+	color: #3384c3;
+	height: 162px;
+	width: 600px;
+	margin-top: 20px;
+}
+
+section#infobar section.left img{
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+}
+
+section#infobar section.left div{
+	width: 450px;
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;
+	line-height: 38px;
+}
+
+section#infobar section.left h2{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 36px;
+	color: #282828;
+	margin-bottom: 6px;
+}
+
+section#infobar section.left a{
+	color: #7b7b7b;
+	font-size: 16px;
+}
+
+section#infobar section.left a:hover, section#infobar section.left a.comments_link:hover{
+	color: #6fc0ff;
+}
+
+section#infobar section.left a.comments_link{
+	display: inline-block;
+	color: #b2b2b2;
+	font-size: 12px;
+	margin-top: 20px;
+}
+
+section#infobar section.right{
+	float: right;
+	margin-top: 75px;
+}
+
+section#infobar section.right span{
+	margin-bottom: 18px;
+	display: inline-block;
+	color: #7b7b7b;
+	font-size: 16px;
 }
 
 /* ============================ GUITAR ============================ */
@@ -152,6 +266,28 @@ section#artists_outer nav ul li a img:hover{
 	opacity: 0.4;
 }
 
+/* ============================ CONTENT ============================ */
+
+section#content{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section#content div.entry_content{
+	font-size: 14px;
+	color: #000;
+	text-align: left;
+	margin-top: 30px;
+	line-height: 22px;
+	margin-bottom: 60px;
+}
+
+section#content div.entry_content div.chords{
+	font-weight: bold;
+	color: #3a97df;
+}
+
 /* ============================ LISTS ============================ */
 
 section#lists_outer{
@@ -202,6 +338,93 @@ section#lists ul li a{
 
 section#lists ul li a:hover{
 	color: #6fc0ff;
+}
+
+/* ============================ LISTS-SINGLE ============================ */
+
+section#lists_single_outer{
+	width: 100%;
+	background: #ededed;
+	z-index: 2;
+	position: relative;
+	height: 400px;
+}
+
+section#lists_single{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section#lists_single ul{
+	list-style: none;
+	display: inline-block;
+	width: 380px;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	border-radius: 5px;
+	margin-top: 55px;
+	text-align: left;
+}
+
+section#lists_single ul.first_ul{
+	margin-right: 190px;
+}
+
+section#lists_single ul li{
+	padding: 9px 0 9px 18px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+section#lists_single ul li:last-child a{
+	color: #9a9999;
+}
+
+section#lists_single ul li h3{
+	font-size: 16px;
+	color: #181818;
+}
+
+section#lists_single ul li a{
+	font-size: 14px;
+	color: #181818;
+	text-decoration: none;
+}
+
+section#lists_single ul li a:hover{
+	color: #6fc0ff;
+}
+
+/* ============================ COMMENTS ============================ */
+
+a#comments_outer{
+	width: 100%;
+	height: 120px;
+	display: inline-block;
+	background-color: #fff;
+}
+
+a#comments_outer:hover{
+	background-color: #dfdfdf;
+}
+
+section#comments{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section#comments h2{
+	font-size: 36px;
+	color: #5c5c5c;
+	margin-top: 20px;
+}
+
+section#comments span{
+	font-size: 14px;
+	color: #989898;
 }
 
 /* ============================ WOOD ============================ */
