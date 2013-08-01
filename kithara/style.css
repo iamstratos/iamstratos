@@ -16,7 +16,7 @@ a:hover{
 
 #wrapper{
 	width: 100%;
-	background: url('images/guitar.jpg') center 0 no-repeat #323232;
+	background: url('images/guitar.jpg') center 0 no-repeat #000;
 }
 
 /* ============================ HEADER ============================ */
