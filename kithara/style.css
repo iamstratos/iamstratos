@@ -169,7 +169,6 @@ section#infobar section.left a.comments_link{
 	display: inline-block;
 	color: #b2b2b2;
 	font-size: 12px;
-	margin-top: 20px;
 }
 
 section#infobar section.right{
@@ -419,11 +418,15 @@ section#comments h2{
 	font-size: 36px;
 	color: #5c5c5c;
 	margin-top: 20px;
+	display: inline-block;
 }
 
 section#comments span{
 	font-size: 14px;
 	color: #989898;
+	display: inline-block;
+	margin-left: 13px;
+	margin-top: 5px;
 }
 
 /* ============================ WOOD ============================ */
