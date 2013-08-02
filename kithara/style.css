@@ -30,7 +30,8 @@ section.header_outer{
 }
 
 header{
-	width: 960px;
+	width: 940px;
+	padding: 0 10px;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -79,7 +80,8 @@ section#topbar_outer{
 }
 
 section#topbar{
-	width: 960px;
+	width: 940px;
+	padding: 0 10px;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -203,7 +205,8 @@ section#artists_outer{
 /* ============================ INFOBAR ============================ */
 
 section#infobar{
-	width: 960px;
+	width: 940px;
+	padding: 0 10px;
 	height: 162px;
 	margin: 0 auto;
 	border-bottom: 1px solid #e0dfdf;
@@ -267,6 +270,37 @@ section#infobar section.right span{
 	font-size: 16px;
 }
 
+/* ============================ SONGS_LIST ============================ */
+
+section#songs_list{
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+section#songs_list ul{
+	list-style: none;
+	text-align: left;
+	display: inline-block;
+	width: 960px;
+	margin-top: -19px;
+}
+
+section#songs_list ul li{
+	font-size: 14px;
+	color: #1c1c1c;
+	padding: 7px 10px 7px;
+}
+
+section#songs_list ul li.gray{
+	background-color: #ededed;
+}
+
+section#songs_list ul li:last-child{
+	border-bottom: 1px solid #e0dfdf;
+}
+
 /* ============================ GUITAR ============================ */
 
 section#guitar_outer{
@@ -310,7 +344,8 @@ section#guitar input#search_box{
 /* ============================ CONTENT ============================ */
 
 section#content{
-	width: 960px;
+	width: 940px;
+	padding: 0 10px;
 	height: 100%;
 	margin: 0 auto;
 }
@@ -392,7 +427,8 @@ section#lists_single_outer{
 }
 
 section#lists_single{
-	width: 960px;
+	width: 940px;
+	padding: 0 10px;
 	height: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -410,7 +446,7 @@ section#lists_single ul{
 }
 
 section#lists_single ul.first_ul{
-	margin-right: 190px;
+	margin-right: 170px;
 }
 
 section#lists_single ul li{
