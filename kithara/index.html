@@ -1,10 +1,20 @@
 <!doctype html>  
 <head>  
-  <meta charset="utf-8">  
-  <title>Kithara.gr</title>  
-  <meta name="description" content="Guitar tabs/chords for everyone!">  
-  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="style.css">  
+	<meta charset="utf-8">  
+	<title>Kithara.gr</title>  
+	<meta name="description" content="Guitar tabs/chords for everyone!">  
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">  
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.tinycarousel.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+                
+		$('#slider-code').tinycarousel({ display: 1 });
+        
+    });
+</script> 
 </head>  
   
 <body>  
@@ -29,11 +39,13 @@
 			<h3>ΠΕΡΙΣΣΟΤΕΡΕΣ ΑΠΟ 1,000 ΣΥΓΧΟΡΔΙΕΣ!</h3>
 			<input type="text" id="search_box" placeholder="Αναζήτηση..." />
 			</section>		
-        </section>
+        </section>	
 		
 		<section id="artists_outer">
-			<nav>
-				<ul>
+		<div id="slider-code">
+			<a class="buttons prev" href="#">left</a>
+			<div class="viewport">
+				<ul class="overview">
 					<li><a href="#" title="Αντώνης Βαρδής"><img src="images/artists/vardis.jpg" alt="Βαρδής" /></a></li>
 					<li><a href="#" title="Στέλιος Ρόκκος"><img src="images/artists/rokkos.jpg" alt="Ρόκκος" /></a></li>
 					<li><a href="#" title="Μιχάλης Χατζηγιάννης"><img src="images/artists/xatzhgiannhs.jpg" alt="Χατζηγιάννης" /></a></li>
@@ -44,8 +56,10 @@
 					<li><a href="#" title="Νίκος Οικονομόπουλος"><img src="images/artists/oikonomopoulos.jpg" alt="Οικονομόπουλος" /></a></li>
 					<li><a href="#" title="Λαυρέντης Μαχαιρίτσας"><img src="images/artists/maxairitsas.jpg" alt="Μαχαιρίτσας" /></a></li>
 				</ul>
-			</nav>
-		</section>
+			</div>
+			<a class="buttons next" href="#">right</a>
+			</div>
+		</section>	
 		
 		<section id="lists_outer">
 			<section id="lists">
@@ -97,7 +111,7 @@
 			</footer>  
 		</section>
 			
-    </div>  
+    </div>
   
 </body>  
 </html>  

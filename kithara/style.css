@@ -116,6 +116,90 @@ section#topbar section.right input#search_form_small{
 	width: 260px;
 }
 
+/* ============================ SLIDER ============================ */
+
+section#artists_outer{
+	width: 100%;
+	background: #323232;
+	height: 188px;
+	z-index: 2;
+	position: relative;
+}
+
+#slider-code { 
+	height: 188px; 
+	overflow:hidden; 
+	position: relative;
+}
+
+#slider-code .viewport { 
+	float: left;
+	width: 100%;
+	height: 188px;
+	overflow: hidden;
+	position: relative;
+}
+
+#slider-code .buttons { 
+	position: absolute;
+	background: url(images/nav.png) no-repeat 6px 6px #323232;
+	width: 27px;
+	height: 27px;
+	border-radius: 50%;
+	text-indent: -9000px;
+	cursor: pointer;
+	display: block;
+	top: 50%;
+	opacity: 0.8;
+}
+
+#slider-code .buttons:hover{
+	opacity: 0.6;
+} 
+
+#slider-code .prev { 
+	left: 10px;
+	margin-top: -11px;
+	z-index: 2;
+}
+
+#slider-code .next { 
+	right: 10px;
+	left: auto;
+	background-position: 6px -15px;
+}
+
+#slider-code .disable { 
+	visibility: hidden; 
+}
+
+#slider-code .overview { 
+	list-style: none; 
+	position: absolute; 
+	padding: 0; 
+	margin: 0; 
+	left: 0; 
+	top: 0; 
+}
+
+#slider-code .overview li{ 
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 188px;
+}
+
+#slider-code li a img{
+	width: 188px;
+	height: 188px;
+	display: inline-block;
+	border: none;
+}
+
+#slider-code li a img:hover{
+	opacity: 0.4;
+}
+
 /* ============================ INFOBAR ============================ */
 
 section#infobar{
@@ -221,47 +305,6 @@ section#guitar input#search_box{
 	font-size: 18px;
 	border: none;
 	border-radius: 5px;
-}
-
-/* ============================ ARTISTS ============================ */
-
-section#artists_outer{
-	width: 100%;
-	background: #323232;
-	height: 188px;
-	z-index: 2;
-	position: relative;
-	text-align: center;
-	overflow:hidden;
-}
-
-section#artists_outer nav{
-	width: 1692px;
-	height: 188px;
-	overflow:hidden;
-	display: inline-block;
-}
-
-section#artists_outer nav ul{
-	list-style: none;
-	display: inline-block;
-	position: relative;
-}
-
-section#artists_outer nav ul li{
-	margin: 0 -2px;
-	display: inline-block;
-}
-
-section#artists_outer nav ul li a img{
-	width: 188px;
-	height: 188px;
-	display: inline-block;
-	border: none;
-}
-
-section#artists_outer nav ul li a img:hover{
-	opacity: 0.4;
 }
 
 /* ============================ CONTENT ============================ */
