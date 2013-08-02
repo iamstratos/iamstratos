@@ -202,6 +202,78 @@ section#artists_outer{
 	opacity: 0.4;
 }
 
+/* ============================ ARTISTLIST ============================ */
+
+section#artistlist_outer{
+	width: 100%;
+	height: 100%;
+}
+
+section#artistlist_outer ul{
+	width: 940px;
+	margin: 0 auto;
+	list-style: none;
+	margin-bottom: 30px;
+}
+
+
+section#artistlist_outer li{
+	width: 940px;
+	height: 120px;
+	margin: 0 auto;
+	border-bottom: 1px solid #e0dfdf;
+}
+
+section#artistlist_outer li:last-child{
+	border: none;
+}
+
+section#artistlist_outer ul li section.left{
+	float: left;
+	font-size: 14px;
+	color: #3384c3;
+	height: auto;
+	width: 600px;
+	padding-top: 20px;
+}
+
+section#artistlist_outer ul li section.left img{
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+}
+
+section#artistlist_outer ul li section.left div{
+	width: 450px;
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;
+	line-height: 38px;
+}
+
+section#artistlist_outer ul li section.left h2 a{
+	display: inline-block;
+	font-weight: normal;
+	font-size: 28px;
+	color: #282828;
+	margin-bottom: 4px;
+}
+
+section#artistlist_outer ul li section.left span{
+	color: #7b7b7b;
+	font-size: 14px;
+}
+
+section#artistlist_outer ul li section.left a:hover, section#artistlist_outer ul li section.left a.comments_link:hover{
+	color: #6fc0ff;
+}
+
+section#artistlist_outer ul li section.left a.comments_link{
+	display: inline-block;
+	color: #b2b2b2;
+	font-size: 12px;
+}
+
 /* ============================ INFOBAR ============================ */
 
 section#infobar{
