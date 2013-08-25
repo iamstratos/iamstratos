@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-<link type="text/css" rel="Stylesheet" href="bjqs.css" />
+
 
 <script>
   document.createElement('header');
@@ -26,6 +26,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script src="js/jquery.fitvids.min.js" type="text/javascript"></script>
 <script src="js/jquery.fitvids.js" type="text/javascript"></script>
+
+<script src="waypoints-sticky.js"></script>
+<script src="waypoints.js"></script>
+
 <script type="text/javascript">
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
@@ -49,7 +53,6 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	
 	
 <script src="jquery.backstretch.min.js"></script>
-
 	
 	<div id="header_outer">		
 	<script>
@@ -67,6 +70,10 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	</div><!-- header_outer ENDS -->
 	
 	<section class="nav_outer">
+				
+		<div class="nav">
+		<a class="avatar_small" href="#" title="Stratos Iordanidis"><img src="images/avatar.jpg" alt="Stratos Iordanidis" width="48px" height="48px" /></a>
+		
 		<nav>
 		<ul>
 		<li><a href="index.html">Home</a></li>
@@ -74,6 +81,9 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 		<li><a href="/blog/">Blog</a></li>
 		</ul>			
 		</nav><!-- section ENDS -->
+		
+		</div>
+		
 	</section><!-- section_outer ENDS -->
 	
 	<section class="section_outer_num1">
@@ -176,5 +186,16 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	</section><!-- section_outer ENDS -->
 	
 </div><!-- wrapper ENDS -->
+
+
+<script src="waypoints.js"></script>
+<script src="waypoints-sticky.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.nav_outer').waypoint('sticky');
+});
+</script>
+
 </body>
 </html>

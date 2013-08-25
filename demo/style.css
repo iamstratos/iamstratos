@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 960px) {
 
-header, footer, .section{
+header, footer, .section, .nav{
 	width: 720px !important;
 	text-align: center !important;
 }
@@ -48,7 +48,7 @@ footer nav li{
 
 @media screen and (max-width: 720px) {
 
-header, footer, .section{
+header, footer, .section, .nav{
 	width: 512px !important;
 	text-align: center !important;
 }
@@ -94,7 +94,7 @@ footer nav li{
 
 @media screen and (max-width: 512px) {
 
-header, footer, .section{
+header, footer, .section, .nav{
 	width: 250px !important;
 	text-align: center !important;
 }
@@ -140,6 +140,20 @@ footer nav li{
 	margin: 0.5em 0.6em !important;
 }
 
+
+div.nav a.avatar_small{
+	float: none !important;
+}
+
+div.nav nav{
+	float: none !important;
+}
+
+div.nav nav ul li{
+	display: block !important;
+	padding: 5px 20px !important;
+}
+
 }
 
 /* -----------------  *  ----------------- */
@@ -164,29 +178,69 @@ a:hover{
 
 /* -----------------  Navigation ----------------- */
 
+section.nav_outer.stuck {
+	position:fixed;
+	top:0;
+	box-shadow:0 1px 2px rgba(0, 0, 0, .3);
+	z-index: 1;
+}
+
 section.nav_outer{
 	width: 100%;
 	background-color: #16C994;
+	display: inline-block;
 }
 
-nav{
+div.nav{
 	width: 940px;
 	height: 100%;
 	margin: 0 auto;
-	text-align: center;
 }
 
-nav ul{
+div.nav.stuck {
+	position:fixed;
+	top:0;
+}
+
+div.nav a.avatar_small{
+	border: 3px solid #fff;
+	border-radius: 55px;
+	-webkit-border-radius: 55px;
+	-moz-border-radius: 55px;
+	box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.3);
+	-moz-box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.3);
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#3a3a3a', Direction=145, Strength=1);
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	float: left;
+	margin: 10px 0;
+}
+
+div.nav a.avatar_small img{
+	border-radius: 55px;
+	-webkit-border-radius: 55px;
+	-moz-border-radius: 55px;
+	behavior: url(border-radius.htc);
+	border: none;
+}
+
+div.nav nav{
+	float: right;
+}
+
+div.nav nav ul{
 	list-style: none;
-	padding: 20px 0;
+	padding: 27px 0;
 }
 
-nav ul li{
+div.nav nav ul li{
 	display: inline-block;
 	padding: 0 20px;
 }
 
-nav ul li a{
+div.nav nav ul li a{
 	font-size: 16px;
 	color: #fff;
 	text-transform: uppercase;
@@ -194,7 +248,7 @@ nav ul li a{
 	text-shadow: 0 1px 1px #6a6a6a;
 }
 
-nav ul li a:hover{
+div.nav nav ul li a:hover{
 	color: #ddd;
 }
 
