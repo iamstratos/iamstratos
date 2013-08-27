@@ -230,8 +230,9 @@ div.nav nav ul li a{
 	font-size: 16px;
 	color: #fff;
 	text-transform: uppercase;
-	font-weight: bold;
+	font-weight: normal;
 	text-shadow: 0 1px 1px #6a6a6a;
+	font-family: 'Raleway', sans-serif;
 }
 
 div.nav nav ul li a:hover{
@@ -281,6 +282,7 @@ header h1{
 	margin-top: 0.8em;
 	margin-bottom: 1em;
 	font-family: 'Raleway', sans-serif;
+	text-shadow: 0 1px 3px rgba( 0, 0, 0, 0.3);
 }
 
 header h2{
