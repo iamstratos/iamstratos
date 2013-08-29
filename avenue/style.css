@@ -415,15 +415,12 @@ section.portfolio{
 	letter-spacing: -3px;
 }
 
-.collage section.top{
-	margin-right: -1px;
-}
-
 .collage section.top, .collage section.bottom{
 	display: inline-block;
 	letter-spacing: -3px;
 	width: 401px;
 	vertical-align: top;
+	margin-right: -1px;
 }
 
 .collage section.top a, .collage section.bottom a{
