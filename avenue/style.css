@@ -352,7 +352,7 @@ section.content{
 	text-align: left;
 }
 
-/* -----------------  Sections - NUM 1 ----------------- */
+/* -----------------  Sections - PORTFOLIO ----------------- */
 
 section.section_outer_num1{
 	background-color: #fff;
@@ -364,7 +364,7 @@ section.section_outer_num1{
 section.portfolio{
 	height: auto;
 	display: inline-block;
-	padding: 5em 0;
+	padding: 5em 0 5.5em;
 }
 
 .portfolio h2{
@@ -407,6 +407,46 @@ section.portfolio{
 
 .num1 section.content a.button:hover{
 	background-color: #0c95ff;
+}
+
+/* -----------------  COLLAGE ----------------- */
+
+.collage{
+	letter-spacing: -3px;
+}
+
+.collage section.top, .collage section.bottom{
+	display: inline-block;
+	letter-spacing: -3px;
+	width: 400px;
+	vertical-align: top;
+	background: #2a2a2a;
+}
+
+.collage section.top a, .collage section.bottom a{
+	display: inline-block;
+	width: 200px;
+	height: 150px;
+}
+
+.collage section.top a:hover, .collage section.bottom a:hover{
+	opacity: 0.15;
+}
+
+.collage section.top img, .collage section.bottom img{
+	width: 200px;
+	height: 150px;
+	border: none;
+	vertical-align: top;
+}
+
+.collage section.top a.big, .collage section.bottom a.big{
+	width: 400px;
+	height: 300px;
+}
+.collage section.top a.big img, .collage section.bottom a.big img{
+	width: 400px;
+	height: 300px;
 }
 
 /* -----------------  Sections - ABOUT ----------------- */
@@ -572,19 +612,6 @@ section.section_outer_map #container{
 	width: 100%;
 	z-index: 2;
 	margin-top: 4.5em;
-}
-
-/* -----------------  Collage ----------------- */
-
-.Collage{
-    padding: 5px;
-	position: relative;
-	z-index: 1;
-}
-
-.Collage img{
-    vertical-align: bottom;
-	border: none;
 }
 
 .symbol, a.symbol:before {

@@ -31,10 +31,11 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
             });
 </script>
 
+<script src="js/scroll.js"></script>
 <script src="js/jquery.collagePlus.js"></script>
 <script src="js/jquery.removeWhitespace.min.js"></script>
 <script src="js/jquery.collageCaption.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
     // All images need to be loaded for this plugin to work so
     // we end up waiting for the whole window to load in this example
@@ -51,7 +52,7 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
         $('.Collage').removeWhitespace().collagePlus(
             {
                 'fadeSpeed'     : 2000,
-                'targetHeight'  : 150,
+                'targetHeight'  : 200,
 				'effect'          : 'effect-6'
             }
         );
@@ -66,7 +67,8 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
         if (resizeTimer) clearTimeout(resizeTimer);
         resizeTimer = setTimeout(collage, 200);
     });
-</script>
+</script> -->
+
 
 <title>Avenuue - Portfolio Theme</title>
 
@@ -77,7 +79,6 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	<section class="nav_outer">
 		<div class="nav">
 		<a class="avatar_small" href="#" title="Stratos Iordanidis"><img src="images/avatar.jpg" alt="Stratos Iordanidis" width="48px" height="48px" /></a>
-		
 		<nav>
 		<ul>
 		<li><a href="#nav_home">Home</a></li>
@@ -90,7 +91,6 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	</section>
 	
 	<div class="header_outer" id="nav_home">
-	
 		<header>
 			<h1>LET'S WORK TOGETHER</h1>
 		</header>
@@ -98,35 +98,36 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	
 	<section class="section_outer_num1" id="nav_portfolio">
 		<section class="section portfolio">
-		
 			<h2>MY PORTFOLIO</h2>
 			
-			<div class="Collage">
-			<a href="http://drbl.in/iEgp"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1206311/route_1x.jpg"></a><a href="http://drbl.in/ifOq"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1140480/dont_cry_smile_dribbble.jpg"></a><a href="http://drbl.in/ePgK"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/673644/smaller_music_player.jpg"></a><a href="http://drbl.in/gVPC"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/972896/full_preview.jpg"></a><a href="http://drbl.in/iyQf"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1191949/tangled_1x.png"></a><a href="http://drbl.in/hgIC"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1002276/dribbble.jpg"></a>
+			<div class="collage">
+			<section class="top">
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" target="_blank"><img src="images/works/s1.jpg" /></a>
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" target="_blank"><img src="images/works/s2.jpg" /></a>
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" class="big" target="_blank"><img src="images/works/b2.jpg" /></a>
+			</section>
+			
+			<section class="bottom">
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" class="big" target="_blank"><img src="images/works/b1.jpg" /></a>
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" target="_blank"><img src="images/works/s3.jpg" /></a>
+			<a href="http://www.behance.net/gallery/Vintage-Posters/9635329" target="_blank"><img src="images/works/s4.jpg" /></a>
+			</section>
 			</div>
-			
-			
 		</section><!-- section ENDS -->
 	</section><!-- section_outer ENDS -->	
 	
 	<section class="section_outer_num2" id="nav_about">
 		<section class="section about">
-		
 			<h2>A LITTLE ABOUT ME</h2>
-			
 			<p>
 			Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. 
 			</p>
-			
-			
 		</section><!-- section ENDS -->
 	</section><!-- section_outer ENDS -->	
 	
 	<section class="section_outer_social" id="nav_social">
 		<section class="section social">
-		
 		<h2>KEEP IN TOUCH</h2>
-			
 		<nav>
 			<ul>
 			<li><a class="fb" href="https://www.facebook.com/ssstratos" title="Facebook"><span class='symbol'>&#xe227;</span></a></li>
@@ -135,10 +136,7 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 			<li><a class="mail" href="http://www.ssstratos.com" title="Mail"><span class='symbol'>&#xe224;</span></a></li>
 			</ul>
 		</nav>
-		
 		</section>
-		
-		
 	</section><!-- section_outer ENDS -->
 	
 	<section class="section_outer_map">
@@ -152,20 +150,17 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	
 	<section class="section_outer_footer">
 		<footer>
-		
-		<p>&copy; 2013 Stratos Iordanidis - All Rights Reserved.</p>
-		
-		
+		<p>&copy; 2013 Stratos Iordanidis - All Rights Reserved.</p>		
 		</footer>
 		
 		<a href="#" id="toTop"><img src="images/top.png" alt="Go to Top" /></a>
-	</section><!-- section_outer ENDS -->
+	</section><!-- section_outer ENDS -->	
 	
 </div><!-- wrapper ENDS -->
 
 <script src="js/jquery.backstretch.min.js"></script>
 <script>
-	  $('.header_outer').backstretch("images/cycle.jpg");
+	   $('.header_outer').backstretch("images/cycle.jpg");
 </script>
 <script src="js/waypoints.js"></script>
 <script src="js/waypoints-sticky.js"></script>
