@@ -250,6 +250,8 @@ div.nav a.avatar_small img{
 	-moz-border-radius: 55px;
 	behavior: url(border-radius.htc);
 	border: none;
+	width: 48px;
+	height: 48px;
 }
 
 div.nav nav{
@@ -358,12 +360,12 @@ section.portfolio{
 /* -----------------  COLLAGE ----------------- */
 
 .collage{
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 }
 
 .collage section.top, .collage section.bottom{
 	display: inline-block;
-	width: 451px;
+	width: 452px;
 	vertical-align: top;
 }
 
@@ -396,7 +398,9 @@ section.portfolio{
 .collage section.top a.big{
 	width: 450px;
 	height: 338px;
-	margin: 6px 6px 0 0;
+	margin: 7px 6px 0 0;
+	position: relative;
+	left: 1px;
 }
 
 .collage section.bottom a.big{
