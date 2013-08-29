@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 960px) {
 
-header, footer, .section{
+header, footer, .section, div.nav{
 	width: 720px !important;
 	text-align: center !important;
 }
@@ -23,44 +23,15 @@ header{
 	height: 100% !important;
 }
 
-.left{
-	float: none !important;
-	text-align: center !important;
-}
-
-.right{
-	float: none !important;
-	text-align: center !important;
-}
-
-.num4 section.video_content{
-	text-align: center !important;
-}
-
-section.media{
-	display: inline-block;
-	width: auto !important;
-}
-
-section.content{
-	display: inline-block;
-	width: 100% !important;
-}
-
-section.num1, section.num2, section.num3, section.num4{
-	height: 100% !important;
-}
-
-footer nav li{
-	display: inline-block;
-	margin: 0.5em 0.6em !important;
+header h1{
+	font-size: 8em !important;
 }
 
 }
 
 @media screen and (max-width: 720px) {
 
-header, footer, .section{
+header, footer, .section, div.nav{
 	width: 512px !important;
 	text-align: center !important;
 }
@@ -69,44 +40,32 @@ header{
 	height: 100% !important;
 }
 
-.left{
-	float: none !important;
-	text-align: center !important;
+header h1{
+	font-size: 6em !important;
+	padding-top: 2em !important;
 }
 
-.right{
-	float: none !important;
-	text-align: center !important;
+div.nav{
+	width: 940px;
+	height: 75px;
+	margin: 0 auto;
 }
 
-.num4 section.video_content{
-	text-align: center !important;
+span.nav_icon{
+	display: inline-block !important;
 }
 
-section.media{
-	display: inline-block;
-	width: auto !important;
-}
 
-section.content{
-	display: inline-block;
-	width: 100% !important;
-}
-
-section.num1, section.num2, section.num3, section.num4{
-	height: 100% !important;
-}
-
-footer nav li{
-	display: inline-block;
-	margin: 0.5em 0.6em !important;
+div.nav nav ul{
+	display: none;
+	padding: 10px 0 !important;
 }
 
 }
 
 @media screen and (max-width: 512px) {
 
-header, footer, .section{
+header, footer, .section, div.nav{
 	width: 250px !important;
 	text-align: center !important;
 }
@@ -115,41 +74,56 @@ header{
 	height: 100% !important;
 }
 
-.left{
-	float: none !important;
-	text-align: center !important;
+header h1{
+	padding-top: 3em !important;
+	font-size: 3em !important;
 }
 
-.right{
-	float: none !important;
-	text-align: center !important;
+div.nav{
+	width: 940px;
+	height: 75px;
+	margin: 0 auto;
 }
 
-.num4 section.video_content{
-	text-align: center !important;
+span.nav_icon{
+	display: inline-block !important;
 }
 
-section.media{
-	display: inline-block;
-	width: auto !important;
+div.nav nav ul{
+	display: none;
+	padding: 10px 0 !important;
 }
 
-section.media img{
-	max-width: 250px;
-}
-
-section.content{
-	display: inline-block;
-	width: 100% !important;
-}
-
-section.num1, section.num2, section.num3, section.num4{
-	height: 100% !important;
-}
-
-footer nav li{
-	display: inline-block;
+section.social nav li{
 	margin: 0.5em 0.6em !important;
+}
+
+.collage section.top, .collage section.bottom{
+	width: 201px !important;
+}
+
+section.section_outer_map #container{
+	font-size: 2em !important;
+}
+
+.collage section.top a, .collage section.bottom a{
+	width: 200px !important;
+	height: 150px !important;
+}
+
+.collage section.top a img, .collage section.bottom a img{
+	width: 200px !important;
+	height: 150px !important;
+} 
+
+.collage section.top a.big img, .collage section.bottom a.big img {
+	width: 250px !important;
+	height: 188px !important;
+}
+
+.collage section.top a.big, .collage section.bottom a.big {
+	width: 250px !important;
+	height: 188px !important;
 }
 
 }
@@ -191,9 +165,27 @@ section.nav_outer.stuck {
 	opacity: 0.8;
 }
 
+section.nav_outer.stuck span.nav_icon{
+	background: url('images/navb.png') no-repeat transparent !important;
+}
+
+span.nav_icon{
+	display: none;
+	width: 23px;
+	height: 19px;
+	background: url('images/nav.png') no-repeat transparent;
+	cursor: pointer;
+	margin: 27px 0;
+	float: right;
+}
+
 section.nav_outer.stuck div.nav nav ul li a{
 	color: #3a3a3a;
 	text-shadow: none;
+}
+
+section.nav_outer.stuck div.nav nav ul li a:hover{
+	color: #8a8a8a;
 }
 
 section.nav_outer{
@@ -262,7 +254,8 @@ div.nav nav ul li a{
 }
 
 div.nav nav ul li a:hover{
-	color: #ddd;
+	color: #2a2a2a;
+	text-shadow: none;
 }
 
 /* -----------------  Header  ----------------- */
@@ -374,39 +367,6 @@ section.portfolio{
 	line-height: 40px;
 	margin-bottom: 1em;
 	font-family: 'Raleway', sans-serif;
-}
-
-.num1 section.content h3{
-	font-weight: normal;
-	font-size: 1em;
-	color: #989898;
-}
-
-.num1 section.content p{
-	font-size: 0.9em;
-	color: #1c1c1c;
-	margin: 3em 0;
-	line-height: 24px;
-}
-
-.num1 section.content a{
-	color: #0c95ff;
-}
-
-.num1 section.content a:hover{
-	color: #2a2a2a;
-}
-
-.num1 section.content a.button{
-	background-color: #313131;
-	color: #fefefe;
-	padding: 10px 25px;
-	display: inline-block;
-	border-radius: 5px;
-}
-
-.num1 section.content a.button:hover{
-	background-color: #0c95ff;
 }
 
 /* -----------------  COLLAGE ----------------- */

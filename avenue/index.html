@@ -42,6 +42,7 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
 	<section class="nav_outer">
 		<div class="nav">
 		<a class="avatar_small" href="#" title="Stratos Iordanidis"><img src="images/avatar.jpg" alt="Stratos Iordanidis" width="48px" height="48px" /></a>
+		<span class="nav_icon"></span>
 		<nav>
 		<ul>
 		<li><a href="#nav_home">Home</a></li>
@@ -133,6 +134,13 @@ $(document).ready(function() {
 	$('.nav_outer').waypoint('sticky', {
   offset: -10
 });
+});
+</script>
+<script>
+$(document).ready(function() {
+	$('.nav_icon').click(function(){
+		$('div.nav nav ul').slideToggle();
+	});
 });
 </script>
 			
