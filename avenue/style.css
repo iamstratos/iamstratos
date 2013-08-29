@@ -429,7 +429,7 @@ section.portfolio{
 	height: 150px;
 }
 
-.collage section.top a:hover, .collage section.bottom a:hover{
+.collage section.top a img:hover, .collage section.bottom a img:hover{
 	opacity: 0.15;
 }
 
@@ -438,6 +438,7 @@ section.portfolio{
 	height: 150px;
 	border: none;
 	vertical-align: top;
+	background: #2a2a2a;
 }
 
 .collage section.top a.big, .collage section.bottom a.big{
