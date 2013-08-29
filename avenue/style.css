@@ -427,6 +427,7 @@ section.portfolio{
 	display: inline-block;
 	width: 200px;
 	height: 150px;
+	background: #2a2a2a;
 }
 
 .collage section.top a img:hover, .collage section.bottom a img:hover{
@@ -438,7 +439,6 @@ section.portfolio{
 	height: 150px;
 	border: none;
 	vertical-align: top;
-	background: #2a2a2a;
 }
 
 .collage section.top a.big, .collage section.bottom a.big{
