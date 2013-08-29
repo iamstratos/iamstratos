@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('font/MonoSocialIconsFont-1.10.eot');
+    src: url('font/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('font/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('font/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('font/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 960px) {
@@ -164,17 +176,31 @@ a:hover{
 
 /* -----------------  Navigation ----------------- */
 
+.sticky-wrapper{
+	position: absolute;
+	width: 100%;
+	z-index: 600;
+}
+
 section.nav_outer.stuck {
 	position:fixed;
 	top:0;
 	box-shadow:0 1px 2px rgba(0, 0, 0, .3);
-	z-index: 1;
+	z-index: 500;
+	background-color: #fff;
+	opacity: 0.8;
+}
+
+section.nav_outer.stuck div.nav nav ul li a{
+	color: #3a3a3a;
+	text-shadow: none;
 }
 
 section.nav_outer{
 	width: 100%;
-	background-color: #16C994;
 	display: inline-block;
+	background: none;
+	z-index: 100;
 }
 
 div.nav{
@@ -279,8 +305,7 @@ header a.avatar img{
 header h1{
 	color: #fff;
 	font-size: 9em;
-	margin-top: 0.8em;
-	margin-bottom: 1em;
+	padding: 1.7em 0 1.5em;
 	font-family: 'Raleway', sans-serif;
 	text-shadow: 0 1px 3px rgba( 0, 0, 0, 0.3);
 }
@@ -336,18 +361,19 @@ section.section_outer_num1{
 	text-align: center;
 }
 
-section.num1{
+section.portfolio{
 	height: auto;
 	display: inline-block;
-	padding: 4em 0;
+	padding: 5em 0;
 }
 
-.num1 section.content h2{
+.portfolio h2{
 	font-weight: normal;
-	font-size: 2.4em;
+	font-size: 1.7em;
 	color: #1d1d1d;
 	line-height: 40px;
-	margin-bottom: 10px;
+	margin-bottom: 1em;
+	font-family: 'Raleway', sans-serif;
 }
 
 .num1 section.content h3{
@@ -383,177 +409,103 @@ section.num1{
 	background-color: #0c95ff;
 }
 
-/* -----------------  Sections - NUM 2 ----------------- */
+/* -----------------  Sections - ABOUT ----------------- */
 
 section.section_outer_num2{
-	background-color: #ffbe5b;
+	background-color: #48B9F8;
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
 }
 
-section.num2{
-	height: auto;
-	display: inline-block;
-	padding: 5em 0;
-}
-
-.num2 section.content h2{
-	font-weight: normal;
-	font-size: 2.4em;
-	color: #886532;	
-	line-height: 40px;
-	margin-bottom: 10px;
-}
-
-.num2 section.content h3{
-	font-weight: normal;
-	font-size: 1em;
-	color: #fff;
-}
-
-.num2 section.content p{
-	font-size: 0.9em;
-	color: #886532;
-	margin: 3em 0;
-	line-height: 24px;
-}
-
-.num2 section.content a{
-	color: #507fb4;
-}
-
-.num2 section.content a:hover{
-	color: #674e28;
-}
-
-.num2 section.content a.button{
-	background-color: #674e28;
-	color: #fefefe;
-	padding: 10px 25px;
-	display: inline-block;
-	border-radius: 5px;
-}
-
-.num2 section.content a.button:hover{
-	background-color: #507fb4;
-}
-
-.num2 section.media{
-	text-align: right;
-}
-
-/* -----------------  Sections - NUM 3 ----------------- */
-
-section.section_outer_num3{
-	background: url('images/bg_b.jpg') center 0 repeat #7b5b78;
-	background-attachment: fixed;
-	width: 100%;
-	overflow: hidden;
-	text-align: center;
-}
-
-section.num3{
+section.about{
 	height: auto;
 	display: inline-block;
 	padding: 4em 0;
 }
 
-.num3 section.content h2{
+.about h2{
 	font-weight: normal;
-	font-size: 2.4em;
-	color: #f0f0f0;	
-	line-height: 40px;
-	margin-bottom: 10px;
-}
-
-.num3 section.content h3{
-	font-weight: normal;
-	font-size: 1em;
-	color: #1a1a1a;
-}
-
-.num3 section.content p{
-	font-size: 0.9em;
-	color: #f0f0f0;
-	margin: 3em 0;
-	line-height: 24px;
-}
-
-.num3 section.content a{
-	color: #5e4761;
-}
-
-.num3 section.content a:hover{
-	color: #383838;
-}
-
-.num3 section.content a.button{
-	background-color: #383838;
+	font-size: 1.7em;
 	color: #fff;
-	padding: 10px 25px;
-	display: inline-block;
-	border-radius: 5px;
+	line-height: 40px;
+	margin-bottom: 0.5em;
+	font-family: 'Raleway', sans-serif;
 }
 
-.num3 section.content a.button:hover{
-	background-color: #5e4761;
+.about p{
+	width: 50%;
+	margin: 0 auto;
+	color: #fff;
+	line-height: 30px;
 }
 
-/* -----------------  Sections - NUM 4 ----------------- */
+/* -----------------  Social ----------------- */
 
-section.section_outer_num4{
+section.section_outer_social{
 	background-color: #fff;
 	width: 100%;
 	overflow: hidden;
+}
+
+section.social{
+	padding: 5em 0;
+	width: 940px;
+	margin: 0 auto;
 	text-align: center;
 }
 
-section.num4{
-	padding: 4em 0;
-	height: auto;
-	display: inline-block;
-}
-
-.num4 section.video_content{
-	text-align: left;
-}
-
-.num4 section.video_content h2{
+section.social h2{
 	font-weight: normal;
-	font-size: 2.4em;
-	color: #1a1a1a;
-	margin-top: 0.5em;
+	font-size: 1.7em;
+	color: #1d1d1d;
 	line-height: 40px;
-	margin-bottom: 10px;
+	margin-bottom: 1em;
+	font-family: 'Raleway', sans-serif;
 }
 
-.num4 section.video_content h3{
-	font-weight: normal;
-	font-size: 1em;
-	color: #7a7a7a;
+section.social nav{
+	margin: 1.7em 0;
 }
 
-.num4 section.video_content p{
-	font-size: 0.9em;
-	color: #1a1a1a;
-	margin-top: 2em;
-	line-height: 24px;
+section.social nav ul{
+	list-style: none;
 }
 
-.num4 section.video_content a{
-	color: #2a2a2a;
-	text-decoration: underline;
+section.social nav li{
+	display: inline-block;
+	margin: 0 0.6em;
 }
 
-.num4 section.video_content a:hover{
-	text-decoration: none;
+section.social nav li span{
+	display: inline-block;
+	font-size: 5em;
+}
+
+section.social nav li a:hover{
+	opacity: 0.5;
+}
+
+section.social nav li a.fb span{
+	color: #3B5998;
+}
+
+section.social nav li a.twitter span{
+	color: #4099FF;
+}
+
+section.social nav li a.dribbble span{
+	color: #ea4c89;
+}
+
+section.social nav li a.mail span{
+	color: #444444;
 }
 
 /* -----------------  Footer ----------------- */
 
 section.section_outer_footer{
-	background-color: #eaeaea;
+	background-color: #fff;
 	width: 100%;
 	overflow: hidden;
 }
@@ -563,51 +515,6 @@ footer{
 	width: 940px;
 	margin: 0 auto;
 	text-align: center;
-}
-
-footer h2{
-	color: #2a2a2a;
-	font-size: 2.3em;
-}
-
-footer nav{
-	margin: 1.7em 0;
-}
-
-footer nav ul{
-	list-style: none;
-}
-
-footer nav li{
-	display: inline-block;
-	margin: 0 0.6em;
-}
-
-footer nav li a{
-	display: inline-block;
-	width: 62px;
-	height: 62px;
-	text-indent: -9999px;
-}
-
-footer nav li a:hover{
-	opacity: 0.5;
-}
-
-footer nav li a.fb{
-	background: url('images/social.png') no-repeat;
-}
-
-footer nav li a.twitter{
-	background: url('images/social.png') -124px 0 no-repeat;
-}
-
-footer nav li a.dribbble{
-	background: url('images/social.png') -63px 0 no-repeat
-}
-
-footer nav li a.mail{
-	background: url('images/social.png') -187px 0 no-repeat
 }
 
 footer p{
@@ -620,8 +527,76 @@ footer p{
 	bottom: 30px;
 	cursor: pointer;
 	right: 20px;
+	z-index: 700;
 }
 
 #toTop:hover{
 	opacity: 0.8;
+}
+
+
+/* -----------------  Map ----------------- */
+
+section.section_outer_map{
+	width: 100%;
+	background: #000;
+	height: 390px;
+}
+
+
+section.section_outer_map #gmap{
+	height: 390px;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 1; 
+	opacity: 0.2;
+}
+
+section.section_outer_map #gmap:hover{
+	opacity: 1;
+	z-index: 100;
+}
+
+section.section_outer_map #container{
+	font-weight: bold;
+	font-size: 2.5em;
+	color: #fff;
+	line-height: 40px;
+	margin-bottom: 0.5em;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	margin-top: 4.5em;
+}
+
+/* -----------------  Collage ----------------- */
+
+.Collage{
+    padding: 5px;
+	position: relative;
+	z-index: 1;
+}
+
+.Collage img{
+    vertical-align: bottom;
+	border: none;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }

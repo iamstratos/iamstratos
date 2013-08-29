@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="images/favicon.ico" />
 
 <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-<link href="http://fonts.googleapis.com/css?family=Raleway:400,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="transitions.css" media="all" />
 
 <script>
   document.createElement('header');
@@ -31,90 +31,168 @@ $(function(){$.fn.scrollToTop=function(){$(this).hide().removeAttr("href");if($(
             });
 </script>
 
+<script src="js/jquery.collagePlus.js"></script>
+<script src="js/jquery.removeWhitespace.min.js"></script>
+<script src="js/jquery.collageCaption.min.js"></script>
+<script type="text/javascript">
+
+    // All images need to be loaded for this plugin to work so
+    // we end up waiting for the whole window to load in this example
+    $(window).load(function () {
+        $(document).ready(function(){
+            collage();
+            $('.Collage').collageCaption();
+        });
+    });
+
+
+    // Here we apply the actual CollagePlus plugin
+    function collage() {
+        $('.Collage').removeWhitespace().collagePlus(
+            {
+                'fadeSpeed'     : 2000,
+                'targetHeight'  : 150,
+				'effect'          : 'effect-6'
+            }
+        );
+    };
+
+    // This is just for the case that the browser window is resized
+    var resizeTimer = null;
+    $(window).bind('resize', function() {
+        // hide all the images until we resize them
+        $('.Collage .Image_Wrapper').css("opacity", 0);
+        // set a timer to re-apply the plugin
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(collage, 200);
+    });
+</script>
+
 <title>Avenuue - Portfolio Theme</title>
 
 </head>
 <body>
 <div id="wrapper">
 	
-	<div class="header_outer">
-	
+	<section class="nav_outer">
 		<div class="nav">
 		<a class="avatar_small" href="#" title="Stratos Iordanidis"><img src="images/avatar.jpg" alt="Stratos Iordanidis" width="48px" height="48px" /></a>
 		
 		<nav>
 		<ul>
-		<li><a href="index.html">Home</a></li>
-		<li><a href="/about/">About</a></li>
-		<li><a href="/blog/">Blog</a></li>
+		<li><a href="#nav_home">Home</a></li>
+		<li><a href="#nav_portfolio">Portfolio</a></li>
+		<li><a href="#nav_about">About</a></li>
+		<li><a href="#nav_social">Contact</a></li>
 		</ul>			
 		</nav><!-- section ENDS -->
-		
 		</div>
-		
+	</section>
+	
+	<div class="header_outer" id="nav_home">
+	
 		<header>
-			<h1>WAIT FOR IT</h1>
+			<h1>LET'S WORK TOGETHER</h1>
 		</header>
 	</div><!-- header_outer ENDS -->
 	
-	<section class="section_outer_num1">
-		<section class="section num1">
+	<section class="section_outer_num1" id="nav_portfolio">
+		<section class="section portfolio">
 		
-			<section class="media left">
-			<img src="images/musicplayer.png" alt="Music Player" />
-			</section><!-- media ENDS -->
+			<h2>MY PORTFOLIO</h2>
 			
-			<section class="content right">
-			<h2>Brand New Music Player</h2>
-			<h3>Simple. Clean. Perfect.</h3>
-			<p>Nam facilisis mattis eros in viverra. Donec cursus augue eleifend dui mollis posuere. <a href="#">Vivamus</a> non nunc purus. Vestibulum gravida neque tellus. Curabitur congue, lorem ac aliquam tristique, sem neque hendrerit arcu, in fermentum arcu nibh mollis tellus. Mauris erat risus, vehicula eget consequat non, porttitor id lacus.</p>
-			<a class="button" href="http://dribbble.com/shots/968011-Music-Player" title="Music Player">Get it now!</a>
-			</section><!-- content ENDS -->
+			<div class="Collage">
+			<a href="http://drbl.in/iEgp"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1206311/route_1x.jpg"></a><a href="http://drbl.in/ifOq"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1140480/dont_cry_smile_dribbble.jpg"></a><a href="http://drbl.in/ePgK"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/673644/smaller_music_player.jpg"></a><a href="http://drbl.in/gVPC"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/972896/full_preview.jpg"></a><a href="http://drbl.in/iyQf"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1191949/tangled_1x.png"></a><a href="http://drbl.in/hgIC"><img src="http://dribbble.s3.amazonaws.com/users/12558/screenshots/1002276/dribbble.jpg"></a>
+			</div>
+			
 			
 		</section><!-- section ENDS -->
 	</section><!-- section_outer ENDS -->	
 	
-	<section class="section_outer_num4">
-		<section class="section num4">
+	<section class="section_outer_num2" id="nav_about">
+		<section class="section about">
 		
-		<iframe class="video_player" src="http://player.vimeo.com/video/28789617?portrait=0&amp;color=ffffff" width="940" height="528" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-		
-		<section class="video_content">
-		<h2>EF - Live The Language - Vancouver</h2>
-		<h3>by Gustav Johansson</h3>
-		<p>Duis congue volutpat metus, eu varius ante fringilla a. Sed convallis auctor mi, quis semper orci vestibulum quis. <a href="#">Vivamus</a> consectetur posuere eros at egestas. Duis posuere luctus consectetur.</p>
-		</section><!-- content ENDS -->		
-		
+			<h2>A LITTLE ABOUT ME</h2>
+			
+			<p>
+			Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. 
+			</p>
+			
+			
 		</section><!-- section ENDS -->
+	</section><!-- section_outer ENDS -->	
+	
+	<section class="section_outer_social" id="nav_social">
+		<section class="section social">
+		
+		<h2>KEEP IN TOUCH</h2>
+			
+		<nav>
+			<ul>
+			<li><a class="fb" href="https://www.facebook.com/ssstratos" title="Facebook"><span class='symbol'>&#xe227;</span></a></li>
+			<li><a class="twitter" href="https://twitter.com/ssstratos" title="Twitter"><span class='symbol'>&#xe286;</span></a></li>
+			<li><a class="dribbble" href="http://dribbble.com/ssstratos" title="Dribbble"><span class='symbol'>&#xe221;</span></a></li>
+			<li><a class="mail" href="http://www.ssstratos.com" title="Mail"><span class='symbol'>&#xe224;</span></a></li>
+			</ul>
+		</nav>
+		
+		</section>
+		
+		
 	</section><!-- section_outer ENDS -->
+	
+	<section class="section_outer_map">
+	
+	<h2 id="container">YOU CAN FIND ME IN THESSALONIKI,GREECE</h2>
+	<!-- The regular embed code that Google Maps spews out, sans the line break and small tag; also, added "gmap" id as hook -->
+<iframe id="gmap" src="https://www.google.com/maps?sll=40.629368099970065,22.950664585945695&amp;sspn=0.06442578999821941,0.1648152351085065&amp;t=m&amp;q=Thessaloniki&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=Thessaloniki,+Greece&amp;z=12&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="425" height="350"></iframe>
+	
+	</section><!-- section_outer ENDS -->
+	
 	
 	<section class="section_outer_footer">
 		<footer>
 		
-		<h2>Let's keep in touch</h2>
-		
-		<nav>
-			<ul>
-			<li><a class="fb" href="https://www.facebook.com/ssstratos" title="Facebook">Facebook</a></li>
-			<li><a class="twitter" href="https://twitter.com/ssstratos" title="Twitter">Twitter</a></li>
-			<li><a class="dribbble" href="http://dribbble.com/ssstratos" title="Dribbble">Dribbble</a></li>
-			<li><a class="mail" href="http://www.ssstratos.com" title="Mail">Mail</a></li>
-			</ul>
-		</nav>
-		
 		<p>&copy; 2013 Stratos Iordanidis - All Rights Reserved.</p>
+		
 		
 		</footer>
 		
 		<a href="#" id="toTop"><img src="images/top.png" alt="Go to Top" /></a>
 	</section><!-- section_outer ENDS -->
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </div><!-- wrapper ENDS -->
 
 <script src="js/jquery.backstretch.min.js"></script>
 <script>
-	  $.backstretch("https://dl.dropboxusercontent.com/s/xsnjxrlsglj7oul/header.jpg?token_hash=AAET0lhKP07umxMXgwO7bGEviM-RvZ8QXzL6-teqIcsOXg&dl=1");
-	</script>
+	  // $('.header_outer').backstretch("http://farm1.staticflickr.com/167/384013950_46a3f48f6b_o.jpg");
+	  $('.header_outer').backstretch("https://dl.dropboxusercontent.com/s/xsnjxrlsglj7oul/header.jpg", {
+            'zIndex': -1 });
+</script>
+<script src="js/waypoints.js"></script>
+<script src="js/waypoints-sticky.js"></script>
 
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.nav_outer').waypoint('sticky', {
+  offset: -10
+});
+});
+</script>
+			
 </body>
 </html>
