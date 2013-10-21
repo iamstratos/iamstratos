@@ -160,7 +160,7 @@ a{
 }
 
 a:hover{
-	color: #ff6e2e;
+    text-decoration: underline;
 }
 
 /* -----------------  Navigation ----------------- */
@@ -682,6 +682,11 @@ section.social nav li a:hover{
 	-moz-transition: all .2s linear 0s;
 	-webkit-transition: all .2s linear 0s;
 	-o-transition: all .2s linear 0s;
+}
+
+section.social nav li a.fb span{
+    position: relative;
+    top: -7px;
 }
 
 section.social nav li a.fb span:hover{ color: #3B5998; }
