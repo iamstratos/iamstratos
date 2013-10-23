@@ -208,7 +208,6 @@ section.social nav li{
 }
 
 body{
-	font-family: Helvetica, Arial, sans-serif;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -256,21 +255,21 @@ section.nav_outer.stuck {
 	-o-transition: all .2s linear 0s;
 }
 
-section.nav_outer.stuck div.nav nav ul li a{
+section.nav_outer div.nav nav ul li a{
 	color: #3a3a3a;
 	text-shadow: none;
 }
 
-section.nav_outer.stuck div.nav nav ul li a:hover{
+section.nav_outer div.nav nav ul li a:hover{
 	color: #b6b6b6;
     text-decoration: none;
 }
 
-section.nav_outer.stuck div.nav nav ul li.fb a{ background-image: url('images/fb_small_hover.png'); width: 6px; }
-section.nav_outer.stuck div.nav nav ul li.fb a:hover{ background-image: url('images/fb_small.png'); }
+section.nav_outer div.nav nav ul li.fb a{ background-image: url('images/fb_small_hover.png'); width: 6px; }
+section.nav_outer div.nav nav ul li.fb a:hover{ background-image: url('images/fb_small.png'); }
 
-section.nav_outer.stuck div.nav nav ul li.twitter a{ background-image: url('images/twitter_small_hover.png'); width: 12px; }
-section.nav_outer.stuck div.nav nav ul li.twitter a:hover{ background-image: url('images/twitter_small.png'); }
+section.nav_outer div.nav nav ul li.twitter a{ background-image: url('images/twitter_small_hover.png'); width: 12px; }
+section.nav_outer div.nav nav ul li.twitter a:hover{ background-image: url('images/twitter_small.png'); }
 
 section.nav_outer{
 	width: 100%;
@@ -282,6 +281,7 @@ section.nav_outer{
 	-webkit-transition: all .2s linear 0s;
 	-o-transition: all .2s linear 0s;
 	box-shadow:0 1px 3px rgba(0, 0, 0, .5);
+	opacity: 0.9;
 }
 
 div.nav{
@@ -303,11 +303,11 @@ div.nav a.logo{
     display:inline-block;
     text-indent:-9999px;
 	float: left;
-    opacity: 0.6;  
+    opacity: 0.8;  
 }
 
 div.nav a.logo:hover{
-    opacity: 0.9;   
+    opacity: 0.6;   
 }
 
 div.nav nav{
@@ -387,11 +387,13 @@ header h2{
     text-align: center;
     font-weight: 300;
 	text-shadow:0 1px 3px rgba(26, 26, 26, .3);
+    font-family: 'Nunito', cursive;
 }
 
 header h2 strong{
-    font-weight: bold;
+    font-weight: normal;
     font-size: 70px;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 header .left{
@@ -419,9 +421,9 @@ header form{
 
 header p{
     color: #fff;
-    font-size: 18px;
-    font-weight: 300;
-    margin: 85px 0 20px;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 75px 0 25px;
     text-shadow: 0 1px 0 #2a2a2a;
 }
 
