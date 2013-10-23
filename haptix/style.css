@@ -67,7 +67,8 @@ section.logos{
 }
     
 .info2 p {
-   width: 65% !important;      
+   width: 65% !important;
+    margin-right: 125px !important;    
 }    
     
     
@@ -87,6 +88,11 @@ header{
 .checkout h5{
     left: 240px !important;  
 }
+    
+.info2 p {
+   width: 71% !important;
+    margin-right: 125px !important;    
+}  
     
 div.nav{
 	width: 940px;
@@ -155,6 +161,7 @@ header input[type=text] {
 
 .info2 p {
         width: 80% !important;
+        margin-right: 35px !important;
 }
 
 .dontforget input[type=text]{
@@ -387,7 +394,7 @@ header h2{
     text-align: center;
     font-weight: normal;
 	text-shadow:0 1px 3px rgba(26, 26, 26, .3);
-    font-family: 'Yellowtail', cursive;
+    font-family: 'Handlee', cursive;
     letter-spacing: 0.5px;
 }
 
@@ -655,8 +662,9 @@ section.info2{
     font-size: 18px;
     color: #fff;
     line-height: 24px;
-    width: 49.2%;
+    width: 58%;
     margin: 0 auto;
+    margin-right: 155px;
 }
 
 .info2 img{
@@ -817,54 +825,4 @@ footer p{
 
 #toTop:hover{
 	opacity: 0.8;
-}
-
-
-/* -----------------  Map ----------------- */
-
-section.section_outer_map{
-	width: 100%;
-	background: #000;
-	height: 390px;
-}
-
-
-section.section_outer_map #gmap{
-	height: 390px;
-	left: 0;
-	position: relative;
-	top: 0;
-	width: 100%;
-	z-index: 1; 
-	opacity: 0.2;
-	
-	transition-property: all .2s linear 0s;
-	-moz-transition: all .2s linear 0s;
-	-webkit-transition: all .2s linear 0s;
-	-o-transition: all .2s linear 0s;
-}
-
-section.section_outer_map #gmap:hover{
-	opacity: 1;
-	z-index: 100;
-	
-	transition-property: all .2s linear 0s;
-	-moz-transition: all .2s linear 0s;
-	-webkit-transition: all .2s linear 0s;
-	-o-transition: all .2s linear 0s;
-}
-
-section.section_outer_map #container{
-	font-weight: bold;
-	font-size: 2.5em;
-	color: #fff;
-	line-height: 40px;
-	margin-bottom: 0.5em;
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	z-index: 2;
-	margin-top: 4.5em;
 }
