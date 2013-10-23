@@ -382,17 +382,18 @@ header{
 
 header h2{
 	color: #fff;
-    font-size: 40px;
-	padding: 150px 0 90px;
+    font-size: 35px;
+	padding: 150px 0 70px;
     text-align: center;
-    font-weight: 300;
+    font-weight: normal;
 	text-shadow:0 1px 3px rgba(26, 26, 26, .3);
-    font-family: 'Nunito', cursive;
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 0.5px;
 }
 
 header h2 strong{
     font-weight: normal;
-    font-size: 70px;
+    font-size: 75px;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
@@ -423,7 +424,7 @@ header p{
     color: #fff;
     font-size: 20px;
     font-weight: normal;
-    margin: 75px 0 25px;
+    margin: 40px 0 25px;
     text-shadow: 0 1px 0 #2a2a2a;
 }
 
@@ -453,10 +454,13 @@ header input[type=submit]{
     margin-top: 10px;
     cursor:pointer;
     float: right;
+    box-shadow: 0 3px 0 #C55320;
 }
 
 header input[type=submit]:hover{
-    background-color:#fe9c71;   
+    position: relative;
+    top: 2px;
+    box-shadow: none;
 }
 
 /* -----------------  Sections  ----------------- */
