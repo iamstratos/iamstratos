@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Triangle Agency</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			// Set starting slide to 1
+			var startSlide = 1;
+			// Get slide number if it exists
+			if (window.location.hash) {
+				startSlide = window.location.hash.replace('#','');
+			}
+			// Initialize Slides
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: false,
+				play: 3000,
+				pause: 2500,
+				hoverPause: true,
+				// Get the starting slide
+				start: startSlide,
+				animationComplete: function(current){
+					// Set the slide number as a hash
+					window.location.hash = '#' + current;
+				}
+			});
+		});
+	</script>
+		
+	</head>
+	<body>
+		
+	<div id="content">
+				
+		<div id="menu">
+			<div class="menu1">
+			<ul>
+			<li><a href="#" title="">home</a></li>
+			<li><a href="#" title="">flights</a></li>
+			<li><a href="#" title="">fairies</a></li>
+			</ul>
+			</div><!-- menu1 ENDS -->
+			
+			<div class="logo"><a href="" title="Triangle Logo">Triangle Logo</a></div><!-- logo ENDS -->
+			
+			<div class="menu2">
+			<ul>
+			<li><a href="#" title="">cruises</a></li>
+			<li><a href="#" title="">contact</a></li>
+			<li><a href="#" title="">downloads</a></li>
+			</ul>
+			</div><!-- menu1 ENDS -->
+		</div><!-- menu ENDS -->
+	
+	<div id="slides">
+			<a href="#" class="next"><span class="next arrow"></span></a>
+				<div class="slides_container">
+					<div class="slide">
+						<h1>The Indonesia Expedition from 799 €</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<div class="slide">
+						<h1>A wonderful week in Singapore from 999 €</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+					<div class="slide">
+						<h1>We have the Best Rate Guarantee</h1>
+						<p>Found a lower rate? We'll beat it.</p>
+					</div>
+					<div class="slide">
+						<h1>-50% Promotions for our Members</h1>
+						<p>Don't lose the chance. Join now!</p>
+					</div>
+				</div>
+			<a href="#" class="prev"><span class="prev arrow"></span></a>
+	</div><!-- slides ENDS -->
+	
+	<div id="info">
+		<div class="box">
+			<label><strong>DESTINATION</strong><em>home name, city, country</em></label>
+			<input />
+			<span class="divider"></span>
+			<label><strong>TRAVEL DATES</strong></label>
+			<input value="02/30" class="dates dpad">
+			<input value="03/30" class="dates">
+			<span class="divider"></span>
+			<label><strong>ADULTS</strong><strong style="left: 76px; position: relative;">CHILDREN</strong></label>
+			<input value="02/30" class="dates dpad">
+			<input value="03/30" class="dates">
+			<span class="divider"></span>
+			<input class="button" type="submit" value="Search Hotels">
+		</div>
+		
+		<div class="packet space">
+			<div class="packet_text">
+				<h3>Explore every park of Berlin</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum nunc at mauris condimentum rhoncus. Proin fermentum ligula vitae elit laoreet a ullamcorper lorem cursus. Suspendisse malesuada nisl nec magna fringilla ornare. Clabel urabitur molestie ligula a urna ornare.</p>
+				<a class="book" href="#">Book Now</a>
+			</div>
+		</div>
+		
+		<div class="packet">
+			<div class="packet_text">
+				<h3>Travel in New York City</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum nunc at mauris condimentum rhoncus. Proin fermentum ligula vitae elit laoreet a ullamcorper lorem cursus. Suspendisse malesuada nisl nec magna fringilla ornare. Clabel urabitur molestie ligula a urna ornare.</p>
+				<a class="book" href="#">Book Now</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<ul>
+		<li><a href="https://www.facebook.com/ssstratos" title="facebook" target="_blank"><span class="fb">facebook</span></a></li>
+		<li><a href="https://www.twitter.com/ssstratos" title="twitter" target="_blank"><span class="twitter">twitter</span></a></li>
+		<li><a href="http://www.youtube.com/sssstratos" title="youtube" target="_blank"><span class="utube">youtube</span></a></li>
+		</ul>
+		
+		<p>&copy; 2013 - Designed &amp; Coded by <a href="http://www.ssstratos.com" title="Stratos Iordanidis Portfolio">Stratos Iordanidis</a> - All rights reserved</p>
+	</div><!-- footer ENDS -->
+	
+	</div><!-- content ENDS -->
+	
+	</body>
+</html>
