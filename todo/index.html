@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>todo! - Google Chrome to-do list plugin</title>
+    <meta name="description" content="Create to-do lists for your favourite websites, right in your browser!">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,600' rel='stylesheet' type='text/css'>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+        $(".plugin_listview").hide();
+        $(".plugin_listview").fadeIn(800);
+    });
+    
+    $(document).ready(function() {
+        setInterval(rotateImages, 4000);
+    });
+
+    function rotateImages(){
+      $(".plugin_listview").animate({marginLeft: "-355px"}, 500).delay(2600);
+
+      $(".plugin_listview").animate({marginLeft: "-710px"}, 500).delay(2600);
+
+      $(".plugin_listview").animate({marginLeft: "0px"}, 500).delay(2600);
+    }    
+        
+    </script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <header>
+        <div class="wrapper">
+            <div id="logo"><a href="#">todo!</a></div>
+            <h1>Number one To-Do plugin for Google Chrome</h1>
+            <p>Create to-do lists for your favourite websites, right in your browser!</p>
+            <div class="plugin_listview_wrapper">
+                <div class="plugin_listview">
+                    <img src="images/plugin_home2.png" alt="Plugin - Front View" />
+                    <img src="images/plugin_sc_listview.png" alt="Plugin - List View" />
+                    <img src="images/plugin_exportview.png" alt="Plugin - Export View" />
+                </div>
+            </div>    
+        </div>
+    </header>
+    <section id="install">
+        <div class="wrapper">
+            <a class="btn" target="_blank" href="https://chrome.google.com/webstore/category/extensions">Install it now</a>
+            <p class="chrome_web_store"><span class="chrome_web_store_icon"></span>available in the <strong>chrome web store</strong></p>
+        </div>
+    </section>
+    <section id="features">
+        <div class="wrapper">
+            <h2>Keep tasks. Get more done.</h2>
+            <span class="divider"></span>
+            <p>Todo! is the best to-do plugin for Google Chrome. You can add tasks to any website you want, right in your browser, with just one click. Keep tasks, optimize your productivity, get more done!</p>
+            <ul>
+                <li><i class="icon-globe"></i><h3>‘Bound to Website’ Tasks</h3></li>
+                <li><i class="icon-export"></i><h3>Export your lists</h3></li>
+                <li><i class="icon-cloud"></i><h3>Your tasks follow you</h3></li>
+            </ul>
+            <ul>
+                <li><i class="icon-pencil"></i><h3>Easy to edit or delete</h3></li>
+                <li><i class="icon-window"></i><h3>Right in your browser</h3></li>
+                <li><i class="icon-thumbs-up-1"></i><h3>Clean, fast, simple</h3></li>
+            </ul>
+        </div>
+    </section>
+    <section id="front-view">
+        <div class="wrapper">
+                <img src="images/plugin_home.png" alt="Plugin - Front View" />
+                <div class="text">
+                    <h3>Manage your lists</h3>
+                    <p>You can see all your lists and export them all at once. Also, you can add or remove one, anytime you want. Don’t forget the indicators on the right, they’ll always show you how many saved tasks you have.</p>
+                    <p class="note">You should mouse over a website to see ‘export’ &amp; ‘remove’ option.</p>
+                </div>
+        </div>
+    </section>
+    <section id="edit-view">
+        <div class="wrapper">
+            <img src="images/plugin_editview.png" alt="Plugin - Front View" />
+                <div class="text">
+                    <h3>Add, edit or remove tasks easily</h3>
+                    <p>Edit a task by clicking on it. Then, you can either change it or remove it. Would you like to add a new task? Just start typing (or hit the gray field on top).</p>
+                    <p class="note">We will automatically unckeck your task when you’re done.</p>
+                </div>
+        </div>
+    </section>
+    <section id="export-view">
+        <div class="wrapper">
+            <img src="images/plugin_exportview.png" alt="Plugin - Front View" />
+                <div class="text">
+                    <h3>Export your favourite lists</h3>
+                    <p>You can export your lists to several services. Manage your tasks and keep your website lists together with a few clicks. In addition, you can choose other formats and services that we don’t support.</p>
+                    <p class="note">‘Other format...’ option allows you to pick a variety of services.</p>
+                </div>
+        </div>
+    </section>
+    <section id="install-2">
+        <div class="wrapper">
+            <h2>Ready to install?</h2>
+            <span class="divider"></span>
+            <p>Get it now for free and start adding your tasks.</p>
+            <a class="btn" target="_blank" href="https://chrome.google.com/webstore/category/extensions">Install it now</a>
+            <p class="chrome_web_store"><span class="chrome_web_store_icon"></span>available in the <strong>chrome web store</strong></p>
+        </div>
+    </section>
+    <footer>
+        <p>Todo! &copy; 2014 All Rights Reserved</p>
+    </footer>
+    
+</body>
+</html>
