@@ -22,8 +22,17 @@
 .icon-pencil:before {
   content: '\e808'; }
 
+.icon-facebook-rect:before, .icon-twitter-rect:before {
+  content: '\e804'; }
+
+.icon-twitter-rect:before {
+  content: '\e805'; }
+
 .icon-export, .icon-globe, .icon-thumbs-up-1, .icon-cloud, .icon-window, .icon-pencil {
   color: #6a9fb1; }
+
+.icon-facebook-rect, .icon-twitter-rect {
+  color: #5c6469; }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "Entypo";
@@ -40,18 +49,20 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
-html, body, p, h1, h2, h3, a, img, span {
+html, body, p, h1, h2, h3, a, img, span, ul, ol {
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-  border: none; }
+  -webkit-margin-after: 0em; }
 
 ul, ol {
   list-style: none;
   display: inline-block; }
+
+img {
+  border: none; }
 
 h1 {
   font-size: 34px;
@@ -160,11 +171,11 @@ header {
     height: auto; }
 
 section#install {
-  padding-top: 165px;
+  padding-top: 160px;
   background-color: whitesmoke; }
 
 section#features {
-  padding-top: 225px;
+  padding-top: 205px;
   padding-bottom: 125px;
   background-color: whitesmoke; }
   section#features .wrapper {
@@ -269,7 +280,7 @@ section#install-2 {
     color: #979a9a;
     letter-spacing: -0.65px; }
   section#install-2 .btn {
-    margin-top: 80px; }
+    margin-top: 45px; }
   section#install-2 span.divider {
     display: inline-block;
     width: 620px;
@@ -281,9 +292,19 @@ footer {
   width: 100%;
   text-align: center;
   background: url("images/header_texture.jpg") repeat #252a2e;
-  height: 100px; }
+  height: 100px;
+  padding-top: 20px; }
   footer p {
     color: #5c6469;
     letter-spacing: -0.65px;
     font-size: 14px;
-    padding-top: 55px; }
+    margin-top: 5px; }
+  footer ul {
+    padding: 0; }
+    footer ul li {
+      float: left; }
+    footer ul li:first-child {
+      margin-right: 15px; }
+
+footer ul li i:hover {
+  color: #6a9fb1; }
