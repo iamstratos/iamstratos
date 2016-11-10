@@ -4542,7 +4542,7 @@ footer .elementary {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  width: 429px;
+  width: 419px;
   height: 735px;
   background-color: #fff;
   position: relative;
@@ -5032,10 +5032,6 @@ footer .elementary {
   display: inline-block;
   vertical-align: top;
   margin: 7px 7px 7px 0;
-}
-
-#vod_address {
-  pointer-events: none;
 }
 
 .map_popup .avatar {
