@@ -596,7 +596,7 @@ function enable_map_scroll()
 {
 	$('#vod_address').click(function()
 	{
-	    $(this).css("pointer-events", "auto");
+	    $(this).css("pointer-events", "all");
 	});
 }
 
@@ -649,12 +649,12 @@ function contautoWidth_innerpost()
 function contautoWidth_contact()
 {
 	var $browser_width = $(window).width();
-	var $container_inner_port = $(".contact_page .container").add(".aboutus_page .container");
-	var $sidebar_inner_port = $(".contact_page .sidebar").add(".aboutus_page .sidebar");
-	var sidebar_inner_port_width = $(".contact_page .sidebar").add(".aboutus_page .sidebar").outerWidth();
+	var $container_inner_port = $(".contact_page .container");
+	var $sidebar_inner_port = $(".contact_page .sidebar");
+	var sidebar_inner_port_width = $(".contact_page .sidebar").outerWidth();
 	var $width_result = $browser_width - sidebar_inner_port_width;
 
-	$container_inner_port.css("width", $width_result - 12 );
+	$container_inner_port.css("width", $width_result - 25 );
 }
 
 function contautoWidth_aboutus()
