@@ -596,7 +596,7 @@ function enable_map_scroll()
 {
 	$('#vod_address').click(function()
 	{
-	    $('#vod_address').css("pointer-events", "auto");
+	    $(this).css("pointer-events", "auto");
 	});
 }
 
