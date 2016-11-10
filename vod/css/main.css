@@ -2610,12 +2610,12 @@ footer .elementary {
   margin-left: 15px;
 }
 
-@media screen and (max-width: 1669px) {
+@media screen and (min-width: 1669px) {
   #grid_posts > div {
     width: 32.5%;
   }
 }
-@media screen and (min-width: 1670px) {
+@media screen and (max-width: 1670px) {
   #grid_posts > div {
     width: 44.5%;
   }
