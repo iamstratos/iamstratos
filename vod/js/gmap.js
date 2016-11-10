@@ -26,7 +26,7 @@
       var map = new google.maps.Map(mapElement, mapOptions);
       // Popups
       
-      var mapimage = '../img/map_dot.png';
+      var mapimage = './../img/map_dot.png';
       
       var marker_list = 
       [
