@@ -5358,6 +5358,10 @@ footer .elementary {
   }
 }
 @media screen and (max-width: 1000px) {
+  html {
+    font-size: 40%;
+  }
+
   #grid_posts .post {
     width: 49%;
     width: calc(50% - 6px);
