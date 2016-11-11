@@ -27,22 +27,32 @@ function lvlautoWidth()
 	var $browser_width = $(window).width();
 	var $lvl_1 = $(".lvl_1").outerWidth();
 	var $lvl_2 = $("#lvl_2").outerWidth();
-	var $item = $("#lvl_3").outerWidth();
+	var $lvl_3 = $("#lvl_3").outerWidth();
+	var $lvl_info = $("#lvl_info").outerWidth();
 	var $div_width1 = $lvl_1 + $lvl_2;
-	var $div_width2 = $div_width1 + $item;
+	var $div_width2 = $div_width1 + $lvl_3;
+	var $div_width_info = $div_width1 + $lvl_info;
 	var $width_result = $browser_width - $div_width2;
 	var $width_result2 = $browser_width - $div_width1;
+	var $width_result_info = $browser_width - $div_width_info;
 
-	$(".item").css("width", $width_result );
+	if( $("#lvl_3").length > 0 )
+	{
+		$(".item").css("width", $width_result );
+	} else {
+		$(".item").css("width", $width_result_info );
+	}
 
 	if( $(window).width() <= 1111 )
 	{
 		$(".lvl_3").css("width", $width_result2 );
 		$("#lvl_3 ul").css("width", $width_result2 );
+		$("#lvl_info").css("width", $width_result2 );
 	} else 
 	{
 		$(".lvl_3").css("width",'');
 		$("#lvl_3 ul").css("width",'');
+		$("#lvl_info").css("width",'');
 	}
 };
 
@@ -102,7 +112,7 @@ function prices_click_popup()
 			$(this).addClass("current");
 		}
 	});
-};
+}
 
 
 //  ------------------------  table hover bg color
@@ -117,8 +127,30 @@ function prices_li_bgcolor()
 		
 		$liCurrent.toggleClass("hover_colors");
 	});
-};
+}
 
+function prices_li_click_checkbox()
+{
+	$(".tab_two.table_info ul li").click(function(){
+
+		var $liClass = $(this).attr("class");
+		var $number = parseFloat($liClass);
+		var $liCurrent = $("." + $number + "_li");
+		var $label = $liCurrent.find('.input').find('.table_circle');
+		
+		//$label.prop('checked', true);
+		$(this).click(function() {
+			console.log('1');
+		    if($label.is(':checked'))
+		    {
+		    	$label.prop('checked', false);
+		    } else {
+		    	$label.prop('checked', true);
+		    }
+		});
+
+	});
+}
 
 function prices_li_adjust_height()
 {
@@ -139,7 +171,7 @@ function prices_li_adjust_height()
 		$tbadjust_lists.addClass('adjusted');
 		$('.adjusted').css('height', v );
 	}
-};
+}
 
 function prices_li_adjust_height_load()
 {
@@ -157,7 +189,7 @@ function prices_li_adjust_height_load()
 		$tbadjust_lists.addClass('adjusted');
 		$('.adjusted').css('height', v );
 	});
-};
+}
 
 
 //  ------------------------  price button click - magic.css
@@ -223,7 +255,7 @@ function prices_button_n_magic()
 		}, 500);
 
 	});
-};
+}
 
 
 function price_tab_link_click()
@@ -545,6 +577,11 @@ function init_scrollbars()
 	$('.lvl_3').scrollbar({
 	disableBodyScroll: true
 	});
+
+	// $('.lvl_info .text div p').scrollbar({
+	// disableBodyScroll: true
+	// });
+
 	$('.grid_port').scrollbar({
 	disableBodyScroll: true
 	});
@@ -585,7 +622,7 @@ function contactpage_form_tabs()
 		$(this).siblings().removeClass('active');
 		var tab_class = $(this).attr('class');
 		$(this).addClass('active');
-		console.log(tab_class);
+
 		$(this).closest('.sidebar').find('.form_area').children().addClass('hideit');
 		$(this).closest('.sidebar').find('.form_area').find("."+tab_class).removeClass('hideit');
 	});
@@ -596,7 +633,7 @@ function enable_map_scroll()
 {
 	$('#vod_address').click(function()
 	{
-	    $(this).css("pointer-events", "all");
+		$('#vod_address div').css("pointer-events","all");
 	});
 }
 
@@ -911,6 +948,8 @@ $(document).ready(function()
 	prices_li_bgcolor();
 
 	prices_li_adjust_height_load();
+
+	prices_li_click_checkbox();
 
 	modal();
 
