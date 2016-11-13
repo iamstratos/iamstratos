@@ -6572,3 +6572,11 @@ footer .elementary {
     -webkit-overflow-scrolling: touch;
   }
 }
+@media screen and (max-width: 640px) {
+  .homepage #smartmenu {
+    display: none;
+  }
+  .homepage .prices.home {
+    display: none;
+  }
+}
