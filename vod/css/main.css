@@ -2560,6 +2560,7 @@ footer .elementary {
 .inner_portfolio #grid_area, .inner_post #grid_area {
   width: 99.6%;
   overflow: hidden;
+  height: 297px;
 }
 .inner_portfolio .grid .grid-item, .inner_post .grid .grid-item {
   width: 19%;
@@ -4625,7 +4626,7 @@ footer .elementary {
   top: -3px;
 }
 .wrapper.inner_portfolio .all_images.full_width {
-  margin: 0;
+  margin: 0 auto;
 }
 .wrapper.inner_portfolio .all_images .img_slide_prev, .wrapper.inner_portfolio .all_images .wr_slide_prev, .wrapper.inner_portfolio .all_images .img_post_slide_prev, .wrapper.inner_portfolio .all_images .img_slide_next, .wrapper.inner_portfolio .all_images .wr_slide_next, .wrapper.inner_portfolio .all_images .img_post_slide_next, .wrapper.inner_portfolio .all_images .aboutus_page .container .aboutslider_prev, .aboutus_page .container .wrapper.inner_portfolio .all_images .aboutslider_prev, .wrapper.inner_portfolio .all_images .aboutus_page .container .aboutslider_next, .aboutus_page .container .wrapper.inner_portfolio .all_images .aboutslider_next {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -4928,6 +4929,10 @@ footer .elementary {
   max-width: 150px;
 }
 .wrapper.inner_portfolio .sidebar {
+  -moz-transition: all 0.9s ease-in;
+  -o-transition: all 0.9s ease-in;
+  -webkit-transition: all 0.9s ease-in;
+  transition: all 0.9s ease-in;
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
@@ -4940,19 +4945,22 @@ footer .elementary {
   margin: 0 4px 0 0;
   top: 89px;
   right: 0;
-  z-index: 100;
 }
 .wrapper.inner_portfolio .sidebar.small {
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
   height: 723px;
-  top: 635px;
+  top: 689px;
   vertical-align: top;
 }
 .wrapper.inner_portfolio .sidebar.small .content .sidebar_p {
-  height: 330px;
+  height: 530px;
   width: 100%;
 }
 .wrapper.inner_portfolio .sidebar.small .content .sidebar_p p {
-  height: 330px;
+  height: auto;
   width: 96%;
 }
 .wrapper.inner_portfolio .sidebar .info {
