@@ -546,10 +546,18 @@ h1.logo a .icon-logo_vector.dark {
   margin-right: 20px;
 }
 .mainmenu li a {
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   padding: 5px 0;
   color: #606367;
 }
 .mainmenu li a:hover {
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   color: #fff;
 }
 
@@ -702,6 +710,10 @@ h1.logo a .icon-logo_vector.dark {
   height: 16px;
   position: relative;
   top: 5px;
+}
+.top_right .menu_icon.hideit {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
 .top_right .menu_icon.anim .line1, .top_right .menu_icon.anim .line2, .top_right .menu_icon.anim .line3 {
   -moz-animation-play-state: running;
@@ -4682,7 +4694,7 @@ footer .elementary {
   background-size: cover;
   background-position: center center;
 }
-.wrapper.inner_portfolio .wireframes, .wrapper.inner_portfolio .post_area {
+.wrapper.inner_portfolio .wireframes {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
@@ -4693,11 +4705,11 @@ footer .elementary {
   position: relative;
   overflow: hidden;
 }
-.wrapper.inner_portfolio .wireframes .topbar, .wrapper.inner_portfolio .post_area .topbar {
+.wrapper.inner_portfolio .wireframes .topbar {
   padding: 23px 20px 30px;
   position: relative;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab, .wrapper.inner_portfolio .post_area .topbar span.tab {
+.wrapper.inner_portfolio .wireframes .topbar span.tab {
   font-size: 13px;
   font-size: 1.3rem;
   font-weight: 300;
@@ -4705,7 +4717,7 @@ footer .elementary {
   color: #a1a3a6;
   cursor: pointer;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab label, .wrapper.inner_portfolio .post_area .topbar span.tab label {
+.wrapper.inner_portfolio .wireframes .topbar span.tab label {
   border-radius: 25px;
   width: 22px;
   height: 22px;
@@ -4716,7 +4728,7 @@ footer .elementary {
   vertical-align: middle;
   margin-left: 5px;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab label p, .wrapper.inner_portfolio .post_area .topbar span.tab label p {
+.wrapper.inner_portfolio .wireframes .topbar span.tab label p {
   font-size: 13px;
   font-size: 1.3rem;
   color: #fff;
@@ -4725,16 +4737,16 @@ footer .elementary {
   top: -4px;
   width: 100%;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab:first-child, .wrapper.inner_portfolio .post_area .topbar span.tab:first-child {
+.wrapper.inner_portfolio .wireframes .topbar span.tab:first-child {
   margin-right: 23px;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab:hover, .wrapper.inner_portfolio .wireframes .topbar span.tab.active, .wrapper.inner_portfolio .post_area .topbar span.tab:hover, .wrapper.inner_portfolio .post_area .topbar span.tab.active {
+.wrapper.inner_portfolio .wireframes .topbar span.tab:hover, .wrapper.inner_portfolio .wireframes .topbar span.tab.active {
   color: #3f474e;
 }
-.wrapper.inner_portfolio .wireframes .topbar span.tab:hover label, .wrapper.inner_portfolio .wireframes .topbar span.tab.active label, .wrapper.inner_portfolio .post_area .topbar span.tab:hover label, .wrapper.inner_portfolio .post_area .topbar span.tab.active label {
+.wrapper.inner_portfolio .wireframes .topbar span.tab:hover label, .wrapper.inner_portfolio .wireframes .topbar span.tab.active label {
   background-color: #6f757a;
 }
-.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.hideit, .wrapper.inner_portfolio .wireframes .topbar .social_wr.hideit, .wrapper.inner_portfolio .post_area .topbar i.icon-socialcircle.hideit, .wrapper.inner_portfolio .post_area .topbar .social_wr.hideit {
+.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.hideit, .wrapper.inner_portfolio .wireframes .topbar .social_wr.hideit {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transform: scale(0);
@@ -4743,7 +4755,7 @@ footer .elementary {
   transform: scale(0);
   pointer-events: none;
 }
-.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle, .wrapper.inner_portfolio .post_area .topbar i.icon-socialcircle {
+.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle {
   font-size: 26px;
   font-size: 2.6rem;
   display: inline-block;
@@ -4761,7 +4773,7 @@ footer .elementary {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.anim, .wrapper.inner_portfolio .post_area .topbar i.icon-socialcircle.anim {
+.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.anim {
   -moz-animation: socialcircle 2.1s linear infinite;
   -webkit-animation: socialcircle 2.1s linear infinite;
   animation: socialcircle 2.1s linear infinite;
@@ -4800,7 +4812,7 @@ footer .elementary {
     transform: rotate(720deg);
   }
 }
-.wrapper.inner_portfolio .wireframes .topbar .social_wr, .wrapper.inner_portfolio .post_area .topbar .social_wr {
+.wrapper.inner_portfolio .wireframes .topbar .social_wr {
   position: absolute;
   top: 0;
   right: 0;
@@ -4810,11 +4822,11 @@ footer .elementary {
   height: 30px;
   margin: 29px auto 0;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social_wr a.icon-instagram, .wrapper.inner_portfolio .post_area .topbar .social_wr a.icon-instagram {
+.wrapper.inner_portfolio .wireframes .topbar .social_wr a.icon-instagram {
   font-size: 22.5px;
   font-size: 2.25rem;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social_wr a, .wrapper.inner_portfolio .post_area .topbar .social_wr a {
+.wrapper.inner_portfolio .wireframes .topbar .social_wr a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   font-size: 25px;
@@ -4822,11 +4834,11 @@ footer .elementary {
   color: #3f474e;
   cursor: pointer;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social_wr a:hover, .wrapper.inner_portfolio .post_area .topbar .social_wr a:hover {
+.wrapper.inner_portfolio .wireframes .topbar .social_wr a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social, .wrapper.inner_portfolio .post_area .topbar .social {
+.wrapper.inner_portfolio .wireframes .topbar .social {
   float: right;
   margin-right: 5px;
   color: #000;
@@ -4834,52 +4846,52 @@ footer .elementary {
   position: relative;
   top: 6px;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social span, .wrapper.inner_portfolio .post_area .topbar .social span {
+.wrapper.inner_portfolio .wireframes .topbar .social span {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=55);
   opacity: 0.55;
   font-size: 14px;
   font-size: 1.4rem;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social span:hover, .wrapper.inner_portfolio .post_area .topbar .social span:hover {
+.wrapper.inner_portfolio .wireframes .topbar .social span:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.wrapper.inner_portfolio .wireframes .topbar .social span i, .wrapper.inner_portfolio .post_area .topbar .social span i {
+.wrapper.inner_portfolio .wireframes .topbar .social span i {
   margin-right: 8px;
   margin-left: 23px;
 }
-.wrapper.inner_portfolio .wireframes .content, .wrapper.inner_portfolio .post_area .content {
+.wrapper.inner_portfolio .wireframes .content {
   width: 100%;
   position: relative;
 }
-.wrapper.inner_portfolio .wireframes .cnt-wrframe.hideit, .wrapper.inner_portfolio .wireframes .cnt-image.hideit, .wrapper.inner_portfolio .post_area .cnt-wrframe.hideit, .wrapper.inner_portfolio .post_area .cnt-image.hideit {
+.wrapper.inner_portfolio .wireframes .cnt-wrframe.hideit, .wrapper.inner_portfolio .wireframes .cnt-image.hideit {
   opacity: 0;
   pointer-events: none;
   position: absolute !important;
   top: 90px;
 }
-.wrapper.inner_portfolio .wireframes .cnt-image, .wrapper.inner_portfolio .post_area .cnt-image {
+.wrapper.inner_portfolio .wireframes .cnt-image {
   width: 100%;
   height: 433px;
 }
-.wrapper.inner_portfolio .wireframes .cnt-image li, .wrapper.inner_portfolio .post_area .cnt-image li {
+.wrapper.inner_portfolio .wireframes .cnt-image li {
   width: 232px;
   display: inline-block;
   position: relative;
   cursor: pointer;
 }
-.wrapper.inner_portfolio .wireframes .cnt-image li .wrframe, .wrapper.inner_portfolio .post_area .cnt-image li .wrframe {
+.wrapper.inner_portfolio .wireframes .cnt-image li .wrframe {
   width: 100%;
   display: inline-block;
   height: 134px;
   background-size: cover;
   position: relative;
 }
-.wrapper.inner_portfolio .wireframes .cnt-wrframe, .wrapper.inner_portfolio .post_area .cnt-wrframe {
+.wrapper.inner_portfolio .wireframes .cnt-wrframe {
   width: 100%;
   height: 433px;
 }
-.wrapper.inner_portfolio .wireframes .cnt-wrframe li, .wrapper.inner_portfolio .post_area .cnt-wrframe li {
+.wrapper.inner_portfolio .wireframes .cnt-wrframe li {
   width: 24%;
   width: calc(25% - 6px);
   height: 134px;
@@ -4888,14 +4900,14 @@ footer .elementary {
   margin: 0 8px 8px 0;
   cursor: pointer;
 }
-.wrapper.inner_portfolio .wireframes .cnt-wrframe li .wrframe, .wrapper.inner_portfolio .post_area .cnt-wrframe li .wrframe {
+.wrapper.inner_portfolio .wireframes .cnt-wrframe li .wrframe {
   width: 100%;
   display: inline-block;
   height: 134px;
   background-color: #f5f6f7;
   position: relative;
 }
-.wrapper.inner_portfolio .wireframes .cnt-wrframe li .wrframe > img, .wrapper.inner_portfolio .post_area .cnt-wrframe li .wrframe > img {
+.wrapper.inner_portfolio .wireframes .cnt-wrframe li .wrframe > img {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -4919,13 +4931,13 @@ footer .elementary {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   width: 472px;
-  height: 100vh;
+  height: 1070px;
   background-color: #fff;
-  position: fixed;
-  padding: 0 35px 25px 20px;
+  position: absolute;
+  padding: 25px 35px 25px 20px;
   display: inline-block;
   margin: 0 4px 0 0;
-  top: 4px;
+  top: 89px;
   right: 0;
   z-index: 100;
 }

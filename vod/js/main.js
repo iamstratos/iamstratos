@@ -25,7 +25,7 @@ function home_menu_openclose()
 		$(".menu_social").css("right","32px");
 		$('.top_right').css('right','280px');
 
-		$(this).css("opacity","0");
+		$(this).addClass("hideit");
 	});
 	$(".mainmenu .icon-close").click(function(){
 		$(".mainmenu").addClass("hide_menu");
@@ -34,7 +34,9 @@ function home_menu_openclose()
 		$(".menu_social").css("right","-200px");
 		$('.top_right').css('right','0');
 
-		$(".menu_icon").css("opacity","1");
+		setTimeout(function(){
+			$(".menu_icon").removeClass("hideit");
+		}, 300);
 	});
 };
 	
