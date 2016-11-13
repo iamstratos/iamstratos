@@ -6572,7 +6572,7 @@ footer .elementary {
     -webkit-overflow-scrolling: touch;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1200px) {
   .homepage #smartmenu {
     display: none;
   }
