@@ -1,4 +1,8 @@
- // When the window has finished loading create our google map below
+var $vod_address = $('#vod_address');
+
+if( $vod_address.length > 0 )
+{
+// When the window has finished loading create our google map below
       google.maps.event.addDomListener(window, 'load', init);
       
       var infoBubble;
@@ -124,3 +128,4 @@
         var closeSrc = document.getElementById('closeSrc').value;
         infoBubble.setCloseSrc(closeSrc);
       };
+}
