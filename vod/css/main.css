@@ -6576,6 +6576,9 @@ footer .elementary {
   .homepage #smartmenu {
     display: none;
   }
+  .homepage #grid_area {
+    display: none;
+  }
   .homepage .prices.home {
     display: none;
   }
