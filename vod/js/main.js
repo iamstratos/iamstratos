@@ -899,7 +899,7 @@ function freewall_grids()
 	  itemSelector: '.post',
 	  // use element for option
 	  columnWidth: '.post',
-	  percentPosition: true,
+	  //percentPosition: true,
 	  gutter: 8
 	});
 
@@ -1077,15 +1077,28 @@ function header_badge_show()
 function posts_grid_center()
 {
 	var browser_width = $(window).width();
-	var grid_posts_width = $('#grid_posts .post').width();
-	var width_left_3 = (browser_width - (grid_posts_width * 3)) / 2;
-	var width_left_2 = (browser_width - (grid_posts_width * 2)) / 2;
+	var $grid_posts = $('#grid_posts');
+	var $smartmenu = $('#smartmenu');
+
+
+	//var grid_posts_width = $('#grid_posts .post').width();
+	var $grid_posts_post = $('#grid_posts .post');
+
+	$grid_posts.css('width',$smartmenu.width() );
+
+	var posts_width3 = ($grid_posts.width() / 3) - 5.5;
+	var posts_width2 = ($grid_posts.width() / 2) - 4.5;
+
 	
+	//var width_left_3 = (browser_width - (grid_posts_width * 3)) / 2;
+	//var width_left_2 = (browser_width - (grid_posts_width * 2)) / 2;
+
+
 	if( browser_width > 1111 )
 	{
-		$('#grid_posts').css('left',width_left_3 / 2 )
+		$grid_posts_post.css('width',posts_width3 );
 	} else {
-		$('#grid_posts').css('left',width_left_2 / 2 )
+		$grid_posts_post.css('width',posts_width2 );
 	}
 }
 
