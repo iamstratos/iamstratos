@@ -1140,20 +1140,68 @@ h1.logo a .icon-logo_vector.dark {
   margin-right: 27px;
   color: #fefeff;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-.item .meta .social span {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  font-size: 14px;
-  font-size: 1.4rem;
-  margin-left: 26px;
-}
-.item .meta .social span:hover {
+.item .meta .social span.comments {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+  font-size: 14px;
+  font-size: 1.4rem;
+  position: relative;
+  right: 48px;
+  cursor: pointer;
 }
-.item .meta .social span i {
-  margin-right: 10px;
+.item .meta .social span.comments.long {
+  right: 145px;
+}
+.item .meta .social span.comments i {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+  margin-right: 4px;
+  color: #fff;
+}
+.item .meta .social span.comments:hover i {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  color: #fff;
+}
+.item .meta .social span.likes {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+.item .meta .social span.likes p {
+  color: #b3b3b3;
+  display: inline-block;
+  margin: 0;
+}
+.item .meta .social span.likes:hover i {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  color: #fff;
+}
+.item .meta .social span.likes .icon-heart {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+  margin-right: 4px;
+  color: #fff;
+}
+.item .meta .social span.likes .icon-heart:active:before {
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .item-gradient {
@@ -2178,13 +2226,78 @@ footer .elementary {
   opacity: 1;
   top: 0;
   height: 80px;
-  margin-top: 4px;
+  width: 100%;
   z-index: 2030;
   position: fixed;
 }
-.search .spin {
+.search .spinner {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   margin: 21px 0 21px 35px;
   float: left;
+  width: 37px;
+  height: 37px;
+  pointer-events: none;
+  position: absolute;
+  left: -500px;
+}
+.search .spinner.play {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  left: 0;
+  pointer-events: all;
+}
+.search .spinner.play path.main {
+  -moz-animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.search .spinner path.main {
+  fill: none;
+  stroke: #477cbf;
+  stroke-width: 20;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -moz-animation-name: s_grow;
+  -webkit-animation-name: s_grow;
+  animation-name: s_grow;
+  -moz-animation-duration: 1.2s;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.search .spinner path.bg {
+  fill: none;
+  stroke: #477cbf;
+  stroke-width: 20;
+  opacity: 0.3;
+}
+@-moz-keyframes s_grow {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes s_grow {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes s_grow {
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 .search i.icon-close {
   position: absolute;
@@ -2199,6 +2312,10 @@ footer .elementary {
   color: #121517;
 }
 .search input[type="search"] {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   font-size: 28px;
   font-size: 2.8rem;
   width: 91%;
@@ -6893,7 +7010,7 @@ footer .elementary {
     right: 80px;
   }
 }
-@media screen and (max-width: 1111px) {
+@media screen and (max-width: 1240px) {
   #smartmenu .item {
     display: none;
   }

@@ -62,7 +62,7 @@ function lvlautoWidth()
 		$(".item").css("width", $width_result_info );
 	}
 
-	if( $(window).width() <= 1111 )
+	if( $(window).width() <= 1240 )
 	{
 		$(".lvl_3").css("width", $width_result2 );
 		$("#lvl_3 ul").css("width", $width_result2 );
@@ -1102,6 +1102,17 @@ function posts_grid_center()
 	}
 }
 
+function search_enter_key()
+{
+	$('.search input').keydown(function(e) {
+	    if (e.keyCode == 13) {
+	        e.preventDefault();
+	        $(this).siblings('.spinner').addClass('play');
+	        $(this).css('padding-left','90px');
+	    }
+	});
+}
+
 ////////////////// DOCUMENT.READY
 
 $(document).ready(function()
@@ -1113,6 +1124,8 @@ $(document).ready(function()
 	inner_post_sidebar_height();
 
 	freewall_grids();
+
+	search_enter_key();
 
 	header_badge_show();
 
@@ -1187,7 +1200,6 @@ $(document).ready(function()
 			search_show_class();
 		}
 	});
-
 
 
 
