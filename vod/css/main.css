@@ -665,6 +665,7 @@ h1.logo a .icon-logo_vector.dark {
   margin-top: 28px;
   position: relative;
   z-index: 5;
+  right: 0;
 }
 .top_right .phone_number {
   font-size: 16px;
