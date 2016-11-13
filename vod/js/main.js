@@ -899,7 +899,8 @@ function freewall_grids()
 	  itemSelector: '.post',
 	  // use element for option
 	  columnWidth: '.post',
-	  percentPosition: true
+	  percentPosition: true,
+	  gutter: 8
 	});
 
 	// freewall
@@ -1057,6 +1058,37 @@ function table_info_tabs_responsive()
 	});
 }
 
+function header_badge_show()
+{
+	var $award_badge = $('.award .badge');
+	var $award_badge_popup = $('.award .badge .popup');
+
+	$award_badge.mouseover(function()
+	{
+		$award_badge_popup.removeClass('hideit');
+	});
+	$award_badge.mouseleave(function()
+	{
+		$award_badge_popup.addClass('hideit');
+	});
+
+}
+
+function posts_grid_center()
+{
+	var browser_width = $(window).width();
+	var grid_posts_width = $('#grid_posts .post').width();
+	var width_left_3 = (browser_width - (grid_posts_width * 3)) / 2;
+	var width_left_2 = (browser_width - (grid_posts_width * 2)) / 2;
+	
+	if( browser_width > 1111 )
+	{
+		$('#grid_posts').css('left',width_left_3 / 2 )
+	} else {
+		$('#grid_posts').css('left',width_left_2 / 2 )
+	}
+}
+
 ////////////////// DOCUMENT.READY
 
 $(document).ready(function()
@@ -1068,6 +1100,10 @@ $(document).ready(function()
 	inner_post_sidebar_height();
 
 	freewall_grids();
+
+	header_badge_show();
+
+	posts_grid_center();
 
 	table_info_tabs_responsive();
 
@@ -1229,15 +1265,20 @@ $(document).ready(function()
 	});
 
 	$owl_grid_inner_post.owlCarousel({
-		nav: false,
-		// itemElement: 'div',
+		//navContainer: '.inner_post_arrows',
+		//itemElement: 'div',
 		dots: false,
 		margin:4,
-		loop:true,
+		loop: false,
 		autoWidth:true,
 		items:4,
         mouseDrag: false,
-        touchDrag: false
+        touchDrag: false,
+	    navText: [
+	      "<span class='arrow_left'><i class='icon icon-slider-next'></i></span>",
+	      "<span class='arrow_right'><i class='icon icon-slider-next'></i></span>"
+	    ],
+	    nav: true
 	});
 
 
@@ -1310,6 +1351,7 @@ $(document).ready(function()
 
 	$(window).on('resize', function()
 	{
+		posts_grid_center();
 
 		lvlautoWidth();
 
