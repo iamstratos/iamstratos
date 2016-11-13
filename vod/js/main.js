@@ -626,8 +626,10 @@ function init_scrollbars()
 	});
 
 	$('.scrollbar-dynamic').scrollbar();
+
 	$('.scrollbar-inner').scrollbar({
-		disableBodyScroll: true
+		disableBodyScroll: true,
+		ignoreMobile: true
 	});
 	$('.textarea-scrollbar').scrollbar();
 
