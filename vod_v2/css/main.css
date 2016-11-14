@@ -4873,7 +4873,7 @@ footer .elementary {
 .wrapper.inner_portfolio .cnt_slides {
   width: 100%;
   height: 542px;
-  height: 62vh;
+  /* height: 62vh; */
   display: inline-block;
 }
 .wrapper.inner_portfolio .cnt_slides.hideit {
@@ -4886,7 +4886,7 @@ footer .elementary {
 .wrapper.inner_portfolio .cnt_slides .slide {
   width: 100%;
   height: 542px;
-  height: 62vh;
+  /* height: 62vh; */
   background-size: cover;
   background-position: center center;
 }
