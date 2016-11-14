@@ -24,7 +24,7 @@
 }
 @media screen and (max-width: 1600px) {
   .table_info .tabs {
-    margin: 0 0 30px 0;
+    margin: 0;
     position: absolute;
     top: 80px;
     z-index: 10;
@@ -46,7 +46,7 @@
     border-bottom: 1px solid #ebeef3;
     border-top: 1px solid #ebeef3;
     color: #3f474e;
-    padding: 17px 20px 19px;
+    padding: 13px 20px 15px;
     position: relative;
     text-align: center;
     width: 100%;
@@ -74,11 +74,39 @@
     opacity: 1;
     margin: 0;
   }
+  .table_info .title h3 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 18px;
+  }
+
+  .item {
+    display: none;
+  }
 }
 @media screen and (max-width: 1111px) {
+  #wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
   #grid_posts .post {
     width: 49%;
     width: calc(50% - 8px);
+  }
+
+  .mainheader .top_right .menu_icon.responsive {
+    display: inline-block;
+  }
+  .mainheader .top_right .openmenu {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .mainheader .mainmenu {
+    width: 100%;
+    z-index: 20;
   }
 }
 @media only screen and (device-width: 768px) {

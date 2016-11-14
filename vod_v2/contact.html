@@ -34,6 +34,18 @@
         </form>
         <header class="mainheader nosticky">
           <h1 class="logo"><a href="index.html"><i class="icon icon-logo_vector dark"></i></a></h1>
+          <nav class="mainmenu full hide_menu"><span class="icon icon-close"></span>
+            <ul>
+              <li class="active"><a href="#">Главная</a></li>
+              <li><a href="#">Портфолио</a></li>
+              <li class="notactive"><span class="label">скоро</span><a>Дизайнеры</a></li>
+              <li class="notactive"><span class="label">скоро</span><a>Все о нас</a></li>
+              <li><a href="#">Цены</a></li>
+              <li><a href="contact.html">О нас</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <div class="menu_social"><a href="#" class="icon icon-fb"></a><a href="#" class="icon icon-vk"></a><a href="#" class="icon icon-pinterest"></a><a href="#" class="icon icon-instagram"></a></div>
+          </nav>
           <section class="top_right">
             <nav class="openmenu">
               <ul>
@@ -48,7 +60,10 @@
             </nav>
             <div class="phone_number with-tooltip-phone dark">8 812 999 36 00
               <div class="tooltip tooltip-phone"><i class="icon icon-phone open_phonemodal"></i><i class="icon icon-mail open_emailmodal"></i></div>
-            </div><span class="src_btn dark"><i class="icon icon-src"></i></span>
+            </div><span class="src_btn dark"><i class="icon icon-src"></i></span><span class="menu_icon responsive dark">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div></span>
           </section>
         </header>
         <div class="sidebar">
@@ -68,12 +83,14 @@
             <div class="tab_two active">Отправить сообщение</div>
           </div>
           <div class="form_area">
-            <div class="comment_form tab_two">
+            <div class="comment_form tab_two icon_anim">
               <form>
-                <div class="step1"><i class="icon icon-user"></i>
+                <div class="step1">
+                  <div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-user"></i>
                   <input type="text" name="name" placeholder="Ваше имя">
                 </div>
-                <div class="step2"><i class="icon icon-at"></i>
+                <div class="step2">
+                  <div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-at"></i>
                   <input type="email" name="email" placeholder="Ваш email">
                 </div>
                 <div class="step3"><span class="avatar_circle"></span>
@@ -90,12 +107,14 @@
                 </div>
               </form>
             </div>
-            <div class="phone_form tab_one hideit">
+            <div class="phone_form icon_anim tab_one hideit">
               <form>
-                <div class="step1"><i class="icon icon-user"></i>
+                <div class="step1">
+                  <div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-user"></i>
                   <input type="text" name="name" placeholder="Ваше имя">
                 </div>
-                <div class="step2"><i class="icon icon-phone"></i>
+                <div class="step2">
+                  <div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-phone"></i>
                   <input type="phone" name="phone" placeholder="Ваш phone">
                 </div>
                 <div class="button_area">
@@ -133,11 +152,13 @@
           <h4 class="formtitle">Оставьте нам ваше<br>сообщение!</h4>
           <h4 class="finaltitle">Спасибо <span>George Misailidis!</span></h4>
         </div>
-        <form class="step1"><img src="img/spin_gray.svg" class="spin_gray"><i class="icon icon-user"></i>
+        <form class="step1">
+          <div class="spinner gray"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-user"></i>
           <button type="button" class="icon icon-enter goto_step2"></button>
           <input type="text" name="name" placeholder="Ваше имя">
         </form>
-        <form class="step2"><img src="img/spin_gray.svg" class="spin_gray"><i class="icon icon-at"></i>
+        <form class="step2">
+          <div class="spinner gray"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-at"></i>
           <button type="button" class="icon icon-enter goto_step3"></button>
           <input type="email" name="name" placeholder="Ваш email">
         </form>
@@ -174,11 +195,13 @@
           <h4 class="formtitle">Оставьте ваши контактные данные<br>и мы свяжемся с вами!</h4>
           <h4 class="finaltitle">Спасибо <span>George Misailidis!</span></h4>
         </div>
-        <form class="step1"><img src="img/spin_gray.svg" class="spin_gray"><i class="icon icon-user"></i>
+        <form class="step1">
+          <div class="spinner gray"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-user"></i>
           <button type="button" class="icon icon-enter goto_step2"></button>
           <input type="text" name="name" placeholder="Ваше имя">
         </form>
-        <form class="step2"><img src="img/spin_gray.svg" class="spin_gray"><i class="icon icon-phone"></i>
+        <form class="step2">
+          <div class="spinner gray"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div><i class="icon icon-phone"></i>
           <button type="button" class="icon icon-enter send_request"></button>
           <input type="email" name="name" placeholder="Ваш email">
         </form>

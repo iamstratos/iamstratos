@@ -50,11 +50,20 @@ function lvlautoWidth()
 	var $lvl_2 = $("#lvl_2").outerWidth();
 	var $lvl_3 = $("#lvl_3").outerWidth();
 	var $lvl_info = $("#lvl_info").outerWidth();
+	var $item = $(".item").outerWidth();
+
 	var $div_width1 = $lvl_1 + $lvl_2;
 	var $div_width2 = $div_width1 + $lvl_3;
+	var $div_width3 = $div_width2 + $lvl_info;
+
+
 	var $div_width_info = $div_width1 + $lvl_info;
+
+
 	var $width_result = $browser_width - $div_width2;
 	var $width_result2 = $browser_width - $div_width1;
+
+	var $width_result3 = $browser_width - $div_width3;
 	var $width_result_info = $browser_width - $div_width_info;
 
 	if( $("#lvl_3").length > 0 )
@@ -69,7 +78,21 @@ function lvlautoWidth()
 		$(".lvl_3").css("width", $width_result2 );
 		$("#lvl_3 ul").css("width", $width_result2 );
 		$("#lvl_info").css("width", $width_result2 );
-	} else 
+	} 
+	else if( $(window).width() > 1600 )
+	{
+		$(".item").css("width", $width_result3 );
+		$("#lvl_info").css("width","");
+		$(".lvl_3").css("width",'');
+		$("#lvl_3 ul").css("width",'');
+	}
+	else if( $(window).width() < 1600 && $(window).width() > 1240)
+	{
+		$("#lvl_info").css("width", $width_result );
+		$(".lvl_3").css("width",'');
+		$("#lvl_3 ul").css("width",'');
+	}
+	else 
 	{
 		$(".lvl_3").css("width",'');
 		$("#lvl_3 ul").css("width",'');
@@ -169,7 +192,7 @@ function prices_li_bgcolor()
 
 function prices_li_click_checkbox()
 {
-	$(".tab_two.table_info ul li").click(function(){
+	$(".tab_two.table_info ul li").add(".tab_five.table_info ul li").click(function(){
 
 		var $liClass = $(this).attr("class");
 		var $number = parseFloat($liClass);
@@ -261,6 +284,8 @@ function prices_button_n_magic()
 		}, 650);
 		setTimeout(function(){
 			$thisTable3.removeClass("hide").addClass("magictime spaceInRight");
+
+			window.dispatchEvent(new Event('resize'));
 		}, 900);
 
 	});
@@ -648,6 +673,7 @@ function init_scrollbars()
 	$('.sidebar_p').scrollbar({
 		disableBodyScroll: true
 	});
+
 }
 
 
@@ -958,52 +984,13 @@ function auto_grow(element) {
     element.style.height = (element.scrollHeight)+"px";
 }
 
-function inner_portfolio_scroll()
+function input_icon_anim()
 {
-
-	// var $sidebar = $('.inner_portfolio .sidebar');
-
-	// // init
-	// var ctrl = new ScrollMagic.Controller({
-	//     globalSceneOptions: {
-	//         triggerHook: 'onLeave'
-	//     }
-	// });
-
-	// var iphoneIntroTl = new TimelineMax();
-	// 	iphoneIntroTl
-	// 		.from($sidebar, 1, {yPercent: 50,xPercent: 100, ease: Power4.easeInOut})
-	// 		.to($sidebar, 0.5, {opacity: 0, yPercent: -5}, '0');
-
-	// 	// iPhone back to stylesheet position
-	// 	new ScrollMagic.Scene({
-	// 		duration: '70%'
-	// 	})
-	// 	.setTween(iphoneIntroTl)
-	// 	.triggerElement($('body')[0])
-	// 	.addTo(ctrl);
-
-
-	// var controller = new ScrollMagic.Controller();
-
-	// var ourScene = new ScrollMagic.Scene(
-	// {
-	// 	triggerElement: '.sidebar',
-	// 	duration: 800,
-	// 	triggerHook:  0
-	// })
-	// .setClassToggle('.sidebar', 'test')
-	// .addIndicators()
-	// .addTo(controller);
-}
-
-function comment_form_input_icon()
-{
-	$('.comment_form input').click(function()
+	$('.icon_anim input').click(function()
 	{
 		$(this).siblings('.icon').addClass('active');
 	});
-	$('.comment_form input').focusout(function()
+	$('.icon_anim input').focusout(function()
 	{
 		$(this).siblings('.icon').removeClass('active');
 	});
@@ -1178,7 +1165,83 @@ function price_boxes_sizes()
 		$tb3.css('width','223px');
 	} else {
 		$('.table_info').css('width',table_info_width);
-		$tb3.css('width',tb_anim_width - 13);
+		$tb3.css('width',tb_anim_width - 10.7);
+	}
+}
+
+function append_price_form()
+{
+	var table_phone_form = '<div class="table_phone_form hideit icon_anim">\
+	  <form>\
+	    <div class="step1"><div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div>\
+	      <i class="icon icon-user"></i>\
+	      <input type="text" name="name" placeholder="Ваше имя"/>\
+	    </div>\
+	    <div class="step2"><div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div>\
+	      <i class="icon icon-phone"></i>\
+	      <input type="phone" name="phone" placeholder="Ваш phone"/>\
+	    </div>\
+	    <div class="icon icon-close-thin close-form"></div>\
+	    <button type="button">\
+	      <div class="icon icon-enter send_request"></div>\
+	    </button>\
+	  </form>\
+	</div>';
+
+	var table_phone_form_absolute = '<div class="table_phone_form absolute hideit icon_anim">\
+	  <form>\
+	    <div class="step1"><div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div>\
+	      <i class="icon icon-user"></i>\
+	      <input type="text" name="name" placeholder="Ваше имя"/>\
+	    </div>\
+	    <div class="step2"><div class="spinner"><svg viewBox="-10 -10 220 220"> <path class="main" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path> <path class="bg" d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z"></path></svg></div>\
+	    <i class="icon icon-phone"></i>\
+	      <input type="phone" name="phone" placeholder="Ваш phone"/>\
+	    </div>\
+	    <div class="icon icon-close-thin close-form"></div>\
+	    <button type="button">\
+	      <div class="icon icon-enter send_request"></div>\
+	    </button>\
+	  </form>\
+	</div>';
+
+	$('.table_button a').click(function()
+	{
+		var $table_button = $(this).closest('.table_button');
+		
+		if( $table_button.hasClass('absolute'))
+		{
+			$(table_phone_form_absolute).insertAfter($table_button);
+		} else {
+			$(table_phone_form).insertAfter($table_button);
+		}
+
+		setTimeout(function(){
+			$table_button.siblings('.table_phone_form').removeClass('hideit');
+		}, 20);
+			
+	});
+
+	$(document).on('click', '.close-form', function(e)
+	{
+		var $table_phone_form = $(this).closest('.table_phone_form');
+
+		$table_phone_form.addClass('hideit');
+
+		setTimeout(function(){
+			$table_phone_form.remove();
+		}, 100);
+	});
+}
+
+function mainmenu_fixed_full()
+{
+	var $mainmenu = $('.mainmenu');
+	var browser_height = $(window).height();
+	
+	if( $mainmenu.hasClass('full') )
+	{
+		$mainmenu.css('height', browser_height);
 	}
 }
 
@@ -1188,13 +1251,15 @@ $(document).ready(function()
 {
 	init_scrollbars();
 
-	inner_portfolio_scroll();
-
 	inner_post_sidebar_height();
 
 	freewall_grids();
 
+	append_price_form();
+
 	price_boxes_sizes();
+
+	mainmenu_fixed_full();
 
 	inner_port_animations();
 
@@ -1206,7 +1271,7 @@ $(document).ready(function()
 
 	table_info_tabs_responsive();
 
-	comment_form_input_icon();
+	input_icon_anim();
 
 	contautoWidth_innerport();
 
@@ -1401,6 +1466,8 @@ $(document).ready(function()
 		prices_li_adjust_height();
 
 		price_boxes_sizes();
+
+		mainmenu_fixed_full();
 
 	}); //on.resize
 
