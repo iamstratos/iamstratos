@@ -810,6 +810,8 @@ function inner_port_wr_tabs_owl_arrows()
 		$('.img_arrows').addClass('hideit');
 
 		$('div.cnt-image').addClass('hideit');
+		$('div.cnt-wrframe').removeClass('hideit');
+		$('ul.cnt-wrframe').removeClass('hideit');
 		$(this).addClass('active');
 		$($wireframes_topbar_tab1).removeClass('active');
 	});
@@ -897,21 +899,6 @@ function inner_port_wr_tabs_owl_arrows()
 	
 function freewall_grids()
 {
-//  ------------------------   grid
-	// $(function() {
-	// 	var wall = new Freewall(".grid_normal");
-	// 	wall.reset({
-	// 		selector: '.grid-item',
-	// 		animate: true,
-	// 		fixSize: null,
-	// 		gutterX: 8,
-	// 		gutterY: 8,
-	// 		onResize: function() {
-	// 			this.fitWidth();
-	// 		}
-	// 	});
-	// 		wall.fitWidth();
-	// });
 
 	$('#grid_posts').masonry({
 	  // set itemSelector so .grid-sizer is not used in layout
@@ -1009,18 +996,20 @@ function inner_post_sidebar_height()
 		var $scrollbarY = $(".scrollbar-dynamic > .scroll-element.scroll-y .scroll-bar");
 		var sc_top = $scrollbarY.css("top");
 		var sc_clear = parseFloat(sc_top);
-		if (sc_clear > 35 && scroll_point == 0) {
+		if (sc_clear > 35) {
 			var $inner_post_sidebar = $('.inner_post .sidebar');
-		
+			
+			$inner_post_sidebar.addClass('full');
 			$inner_post_sidebar.css('top','4px');
 			$inner_post_sidebar.css('height','');
 
-		} else if (sc_clear <= 32 )
+		} else if (sc_clear <= 32)
 		{
 			var browser_height = $(window).height();
 			var $inner_post_sidebar = $('.inner_post .sidebar');
 			var sidebar_height = browser_height - 95;
 
+			$inner_post_sidebar.removeClass('full');
 			$('.inner_post .sidebar').css('top','89px');
 			$inner_post_sidebar.css('height',sidebar_height);
 			
@@ -1245,6 +1234,23 @@ function mainmenu_fixed_full()
 	}
 }
 
+function inner_posts_comments_height()
+{
+	var browser_height = $(window).height();
+	var $sidebar = $('.inner_post .sidebar .posts.scroll-wrapper');
+
+	var full_height = browser_height - 267;
+
+	$('.inner_post').closest('.scrollbar-dynamic').scroll(function() {
+		if( $('.inner_post .sidebar').hasClass('full') )
+		{
+			$sidebar.css('height', full_height);
+		} else {
+			$sidebar.css('height', full_height - 95);
+		}
+	});
+}
+
 ////////////////// DOCUMENT.READY
 
 $(document).ready(function()
@@ -1252,6 +1258,8 @@ $(document).ready(function()
 	init_scrollbars();
 
 	inner_post_sidebar_height();
+
+	inner_posts_comments_height();
 
 	freewall_grids();
 
@@ -1468,6 +1476,8 @@ $(document).ready(function()
 		price_boxes_sizes();
 
 		mainmenu_fixed_full();
+
+		inner_posts_comments_height();
 
 	}); //on.resize
 

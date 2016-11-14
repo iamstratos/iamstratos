@@ -30,7 +30,7 @@ if( $vod_address.length > 0 )
       var map = new google.maps.Map(mapElement, mapOptions);
       // Popups
       
-      var mapimage = 'http://ssstratos.com/vod/img/map_dot.png';
+      var mapimage = 'http://ssstratos.com/vod_v2/img/map_dot.png';
       
       var marker_list = 
       [
@@ -59,12 +59,12 @@ if( $vod_address.length > 0 )
         maxWidth: 356,
         minHeight: 88,
         pixelOffset: new google.maps.Size(-325,-45),
-        closeSrc: 'http://ssstratos.com/vod/img/blank.png'
+        closeSrc: 'http://ssstratos.com/vod_v2/img/blank.png'
       });
       
       // Clicks
       function open_bubble1(){
-        infoBubble.setContent('<img class="avatar" src="http://ssstratos.com/vod/img/map_avatar.png"><p>Санкт-Петербург / наб. Обводного канала <br>д.<span class="blue">60</span> БЦ Ткачи офис <span class="blue">310</span>, индекс <span class="blue">192007</span></p>');
+        infoBubble.setContent('<img class="avatar" src="http://ssstratos.com/vod_v2/img/map_avatar.png"><p>Санкт-Петербург / наб. Обводного канала <br>д.<span class="blue">60</span> БЦ Ткачи офис <span class="blue">310</span>, индекс <span class="blue">192007</span></p>');
         //map.panTo(marker_list[0].getPosition());
         map.panTo(new google.maps.LatLng(59.911486, 30.330055));
         infoBubble.open(map, marker_list[0]);

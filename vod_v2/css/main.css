@@ -2040,16 +2040,16 @@ h1.logo a .icon-logo_vector.dark {
   color: #3f474e;
 }
 .table1 .table_phone_form form .step1 input.placeholder, .table2 .table_phone_form form .step1 input.placeholder, .table3 .table_phone_form form .step1 input.placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step1 input:-moz-placeholder, .table2 .table_phone_form form .step1 input:-moz-placeholder, .table3 .table_phone_form form .step1 input:-moz-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step1 input::-moz-placeholder, .table2 .table_phone_form form .step1 input::-moz-placeholder, .table3 .table_phone_form form .step1 input::-moz-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step1 input::-webkit-input-placeholder, .table2 .table_phone_form form .step1 input::-webkit-input-placeholder, .table3 .table_phone_form form .step1 input::-webkit-input-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step2, .table2 .table_phone_form form .step2, .table3 .table_phone_form form .step2 {
   border-left: 4px solid #d9e6ff;
@@ -2098,16 +2098,16 @@ h1.logo a .icon-logo_vector.dark {
   color: #3f474e;
 }
 .table1 .table_phone_form form .step2 input.placeholder, .table2 .table_phone_form form .step2 input.placeholder, .table3 .table_phone_form form .step2 input.placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step2 input:-moz-placeholder, .table2 .table_phone_form form .step2 input:-moz-placeholder, .table3 .table_phone_form form .step2 input:-moz-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step2 input::-moz-placeholder, .table2 .table_phone_form form .step2 input::-moz-placeholder, .table3 .table_phone_form form .step2 input::-moz-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .step2 input::-webkit-input-placeholder, .table2 .table_phone_form form .step2 input::-webkit-input-placeholder, .table3 .table_phone_form form .step2 input::-webkit-input-placeholder {
-  color: #c0ceda;
+  color: #64686d;
 }
 .table1 .table_phone_form form .icon-close-thin, .table2 .table_phone_form form .icon-close-thin, .table3 .table_phone_form form .icon-close-thin {
   position: absolute;
@@ -4327,22 +4327,22 @@ footer .elementary {
   -webkit-text-fill-color: transparent;
 }
 .modal-phone .step1 input.placeholder, .modal-phone .step2 input.placeholder, .modal-email .step1 input.placeholder, .modal-email .step2 input.placeholder {
-  color: #4f5154;
+  color: #a9a9a9;
   text-shadow: none;
   -webkit-text-fill-color: initial;
 }
 .modal-phone .step1 input:-moz-placeholder, .modal-phone .step2 input:-moz-placeholder, .modal-email .step1 input:-moz-placeholder, .modal-email .step2 input:-moz-placeholder {
-  color: #4f5154;
+  color: #a9a9a9;
   text-shadow: none;
   -webkit-text-fill-color: initial;
 }
 .modal-phone .step1 input::-moz-placeholder, .modal-phone .step2 input::-moz-placeholder, .modal-email .step1 input::-moz-placeholder, .modal-email .step2 input::-moz-placeholder {
-  color: #4f5154;
+  color: #a9a9a9;
   text-shadow: none;
   -webkit-text-fill-color: initial;
 }
 .modal-phone .step1 input::-webkit-input-placeholder, .modal-phone .step2 input::-webkit-input-placeholder, .modal-email .step1 input::-webkit-input-placeholder, .modal-email .step2 input::-webkit-input-placeholder {
-  color: #4f5154;
+  color: #a9a9a9;
   text-shadow: none;
   -webkit-text-fill-color: initial;
 }
@@ -4827,8 +4827,7 @@ footer .elementary {
   opacity: 0.7;
   position: absolute;
   top: 0;
-  height: 542px;
-  height: 62vh;
+  height: 595px;
   width: 60px;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 30;
@@ -4872,8 +4871,7 @@ footer .elementary {
 }
 .wrapper.inner_portfolio .cnt_slides {
   width: 100%;
-  height: 542px;
-  height: 62vh;
+  height: 595px;
   display: inline-block;
 }
 .wrapper.inner_portfolio .cnt_slides.hideit {
@@ -4885,8 +4883,7 @@ footer .elementary {
 }
 .wrapper.inner_portfolio .cnt_slides .slide {
   width: 100%;
-  height: 542px;
-  height: 62vh;
+  height: 595px;
   background-size: cover;
   background-position: center center;
 }
@@ -4943,6 +4940,10 @@ footer .elementary {
   background-color: #6f757a;
 }
 .wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.hideit, .wrapper.inner_portfolio .wireframes .topbar .social_wr.hideit {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transform: scale(0);
@@ -4954,6 +4955,10 @@ footer .elementary {
 .wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle {
   font-size: 26px;
   font-size: 2.6rem;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   display: inline-block;
   position: absolute;
   color: #c5c7ca;
@@ -4961,7 +4966,7 @@ footer .elementary {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 29px auto 0;
+  margin: 23px auto 0;
   width: 36px;
   height: 36px;
   cursor: pointer;
@@ -5009,6 +5014,11 @@ footer .elementary {
   }
 }
 .wrapper.inner_portfolio .wireframes .topbar .social_wr {
+  -moz-transition: all 0.1s ease-out 0.3s;
+  -o-transition: all 0.1s ease-out 0.3s;
+  -webkit-transition: all 0.1s ease-out;
+  -webkit-transition-delay: 0.3s;
+  transition: all 0.1s ease-out 0.3s;
   position: absolute;
   top: 0;
   right: 0;
@@ -5192,7 +5202,7 @@ footer .elementary {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   width: 472px;
-  height: 1070px;
+  height: 1255px;
   background-color: #fff;
   position: absolute;
   padding: 25px 35px 25px 20px;
@@ -5400,6 +5410,10 @@ footer .elementary {
   background-color: #6f757a;
 }
 .wrapper.inner_post .post_area .topbar i.icon-socialcircle.hideit, .wrapper.inner_post .post_area .topbar .social_wr.hideit {
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -moz-transform: scale(0);
@@ -5411,6 +5425,10 @@ footer .elementary {
 .wrapper.inner_post .post_area .topbar i.icon-socialcircle {
   font-size: 26px;
   font-size: 2.6rem;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   display: inline-block;
   position: absolute;
   color: #c5c7ca;
@@ -5466,6 +5484,11 @@ footer .elementary {
   }
 }
 .wrapper.inner_post .post_area .topbar .social_wr {
+  -moz-transition: all 0.1s ease-out 0.3s;
+  -o-transition: all 0.1s ease-out 0.3s;
+  -webkit-transition: all 0.1s ease-out;
+  -webkit-transition-delay: 0.3s;
+  transition: all 0.1s ease-out 0.3s;
   position: absolute;
   top: 0;
   right: 0;
@@ -5834,11 +5857,13 @@ footer .elementary {
 .wrapper.inner_post .img_post_slides .owl-controls {
   position: absolute;
   bottom: 0;
-  left: 46.5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 .wrapper.inner_post .img_post_slides .owl-controls .owl-dots {
   display: inline-block;
-  width: 500px;
+  width: auto;
   height: 30px;
   position: relative;
   z-index: 9999;
@@ -6031,7 +6056,7 @@ footer .elementary {
   height: 100vh;
   background-color: #fff;
   position: fixed;
-  padding: 25px 25px 25px 20px;
+  padding: 0 25px 25px 20px;
   display: inline-block;
   margin: 0 4px 0 0;
   top: 89px;
@@ -6268,16 +6293,16 @@ footer .elementary {
   color: #3f474e;
 }
 .wrapper.inner_post .sidebar .comment_form form .step1 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step1 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step1 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step1 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 {
   border-left: 4px solid #d9e6ff;
@@ -6326,16 +6351,16 @@ footer .elementary {
   color: #3f474e;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step3 {
   border-left: 4px solid #d9e6ff;
@@ -6367,16 +6392,16 @@ footer .elementary {
   font-family: "Exo 2", sans-serif;
 }
 .wrapper.inner_post .sidebar .comment_form form .step3 textarea.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step3 textarea:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step3 textarea::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .step3 textarea::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .wrapper.inner_post .sidebar .comment_form form .button_area {
   position: relative;
@@ -6603,7 +6628,7 @@ footer .elementary {
   font-size: 1.4rem;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  color: #989fa4;
+  color: #87898c;
   font-family: "Exo 2", sans-serif;
   font-weight: 400;
   display: inline-block;
@@ -6714,16 +6739,16 @@ footer .elementary {
   color: #3f474e;
 }
 .contact_page .sidebar .form_area .comment_form form .step1 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step1 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step1 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step1 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 {
   border-left: 4px solid #d9e6ff;
@@ -6772,16 +6797,16 @@ footer .elementary {
   color: #3f474e;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step3 {
   border-left: 4px solid #d9e6ff;
@@ -6815,16 +6840,16 @@ footer .elementary {
   max-height: 200px;
 }
 .contact_page .sidebar .form_area .comment_form form .step3 textarea.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step3 textarea:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step3 textarea::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .step3 textarea::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .comment_form form .button_area {
   position: relative;
@@ -7006,16 +7031,16 @@ footer .elementary {
   color: #3f474e;
 }
 .contact_page .sidebar .form_area .phone_form form .step1 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step1 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step1 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step1 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 {
   border-left: 4px solid #d9e6ff;
@@ -7064,16 +7089,16 @@ footer .elementary {
   color: #3f474e;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 input.placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 input:-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 input::-moz-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 input::-webkit-input-placeholder {
-  color: #a1a3a6;
+  color: #64686d;
 }
 .contact_page .sidebar .form_area .phone_form form .button_area {
   position: relative;
@@ -7203,7 +7228,7 @@ footer .elementary {
 .aboutus_page .sidebar .aboutus .sidebar_p p {
   font-size: 14px;
   font-size: 1.4rem;
-  color: #a1a3a6;
+  color: #87898c;
   font-family: "Exo 2", sans-serif;
   font-weight: 300;
   position: relative;
