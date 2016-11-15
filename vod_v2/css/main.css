@@ -2001,7 +2001,7 @@ h1.logo a .icon-logo_vector.dark {
 .table1 .table_phone_form form .step1 .spinner, .table2 .table_phone_form form .step1 .spinner, .table3 .table_phone_form form .step1 .spinner {
   position: absolute;
   top: -5px;
-  left: -22px;
+  left: -21px;
   width: 37px;
 }
 .table1 .table_phone_form form .step1 .icon, .table2 .table_phone_form form .step1 .icon, .table3 .table_phone_form form .step1 .icon {
@@ -4492,6 +4492,7 @@ footer .elementary {
   font-size: 14px;
   font-size: 1.4rem;
   color: #c1c5c9;
+  font-family: "Exo 2", sans-serif;
   font-weight: 400;
   border: none;
   background: transparent;
@@ -4828,10 +4829,6 @@ footer .elementary {
   position: absolute;
   top: 0;
   height: 595px;
-<<<<<<< HEAD
-=======
-  /* height: 62vh; */
->>>>>>> origin/gh-pages
   width: 60px;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 30;
@@ -4876,10 +4873,6 @@ footer .elementary {
 .wrapper.inner_portfolio .cnt_slides {
   width: 100%;
   height: 595px;
-<<<<<<< HEAD
-=======
-  /* height: 62vh; */
->>>>>>> origin/gh-pages
   display: inline-block;
 }
 .wrapper.inner_portfolio .cnt_slides.hideit {
@@ -4892,10 +4885,6 @@ footer .elementary {
 .wrapper.inner_portfolio .cnt_slides .slide {
   width: 100%;
   height: 595px;
-<<<<<<< HEAD
-=======
-  /* height: 62vh; */
->>>>>>> origin/gh-pages
   background-size: cover;
   background-position: center center;
 }
@@ -4985,6 +4974,9 @@ footer .elementary {
   -moz-animation-duration: 1s;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+}
+.wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle:hover {
+  color: #a5a8ad;
 }
 .wrapper.inner_portfolio .wireframes .topbar i.icon-socialcircle.anim {
   -moz-animation: socialcircle 2.1s linear infinite;
@@ -5455,6 +5447,9 @@ footer .elementary {
   -moz-animation-duration: 1s;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
+}
+.wrapper.inner_post .post_area .topbar i.icon-socialcircle:hover {
+  color: #a5a8ad;
 }
 .wrapper.inner_post .post_area .topbar i.icon-socialcircle.anim {
   -moz-animation: socialcircle 2.1s linear infinite;
@@ -6324,7 +6319,7 @@ footer .elementary {
 .wrapper.inner_post .sidebar .comment_form form .step2 .spinner {
   position: absolute;
   top: -5px;
-  left: -20px;
+  left: 19px;
   width: 37px;
 }
 .wrapper.inner_post .sidebar .comment_form form .step2 .icon {
@@ -6658,8 +6653,8 @@ footer .elementary {
   color: #005aff;
 }
 .contact_page .sidebar .tabs {
-  margin-top: 45px;
   text-align: left;
+  margin-left: 37px;
 }
 .contact_page .sidebar .tabs > div {
   font-size: 14px;
@@ -6669,12 +6664,15 @@ footer .elementary {
   font-weight: 400;
   color: #3f474e;
   cursor: pointer;
-  margin-bottom: 25px;
 }
 .contact_page .sidebar .tabs > div:first-child {
   margin-right: 28px;
 }
-.contact_page .sidebar .tabs > div:hover, .contact_page .sidebar .tabs > div.active {
+.contact_page .sidebar .tabs > div:hover {
+  color: #0262d9;
+}
+.contact_page .sidebar .tabs > div.active {
+  pointer-events: none;
   color: #0262d9;
 }
 .contact_page .sidebar .form_area {
@@ -6682,6 +6680,7 @@ footer .elementary {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 325px;
 }
 .contact_page .sidebar .form_area .comment_form {
   -moz-transition: all 0.3s ease-in-out;
@@ -6712,7 +6711,7 @@ footer .elementary {
 .contact_page .sidebar .form_area .comment_form form .step1 .spinner {
   position: absolute;
   top: -5px;
-  left: -20px;
+  left: -21px;
   width: 37px;
 }
 .contact_page .sidebar .form_area .comment_form form .step1 .icon {
@@ -6770,7 +6769,7 @@ footer .elementary {
 .contact_page .sidebar .form_area .comment_form form .step2 .spinner {
   position: absolute;
   top: -5px;
-  left: -20px;
+  left: -19px;
   width: 37px;
 }
 .contact_page .sidebar .form_area .comment_form form .step2 .icon {
@@ -7004,7 +7003,7 @@ footer .elementary {
 .contact_page .sidebar .form_area .phone_form form .step1 .spinner {
   position: absolute;
   top: -5px;
-  left: -20px;
+  left: -21px;
   width: 37px;
 }
 .contact_page .sidebar .form_area .phone_form form .step1 .icon {
@@ -7062,7 +7061,7 @@ footer .elementary {
 .contact_page .sidebar .form_area .phone_form form .step2 .spinner {
   position: absolute;
   top: -5px;
-  left: -20px;
+  left: -21px;
   width: 37px;
 }
 .contact_page .sidebar .form_area .phone_form form .step2 .icon {
