@@ -508,15 +508,55 @@ function modal()
 
 	//  ------------------------  modal action
 
+	$(".modal form.step1 input").keydown(function(e) {
+	    if (e.keyCode == 13) {
+	        e.preventDefault();
+	        $(this).siblings('.spinner').addClass('play');
+	        setTimeout(function(){
+	        	$(".goto_step2").trigger( "click" );
+	        }, 1300);
+	    }
+	});
+
+	$(".modal-email form.step2 input").keydown(function(e) {
+	    if (e.keyCode == 13) {
+	        e.preventDefault();
+	        $(this).siblings('.spinner').addClass('play');
+	        setTimeout(function(){
+	        	$(".goto_step3").trigger( "click" );
+	        }, 1300);
+	    }
+	});
+
+	$(".modal-phone form.step2 input").keydown(function(e) {
+	    if (e.keyCode == 13) {
+	        e.preventDefault();
+	        $(this).siblings('.spinner').addClass('play');
+	        setTimeout(function(){
+	        	$(".send_request").trigger( "click" );
+	        }, 1300);
+	    }
+	});
+
 	$(".goto_step2").click(function()
 	{
-		var $step1 = $(this).closest(".step1");
-		var $step2 = $(".step2");
+		var $step1 = $(this).closest('.step1');
+		var $step2 = $(this).closest('form').siblings('.step2');
+		var $step2_modal = $step2.closest('.modal');
+		var $step2_email = $('.modal-email .step2');
+		var $step2_phone = $('.modal-phone .step2');
 
 		$(".first_action").addClass("add_action");
 		$step1.addClass("step_out");
 		$step2.addClass("step_in");
 
+		if( $step2_modal.hasClass('modal-email') )
+		{
+			$step2_email.find('input').focus();
+		} else if( $step2_modal.hasClass('modal-phone') )
+		{
+			$step2_phone.find('input').focus();
+		}
 	});
 
 	$(".goto_step3").click(function()
@@ -973,11 +1013,12 @@ function auto_grow(element) {
 
 function input_icon_anim()
 {
-	$('.icon_anim input').click(function()
+	$(document).on('click', '.icon_anim input', function(e)
 	{
 		$(this).siblings('.icon').addClass('active');
 	});
-	$('.icon_anim input').focusout(function()
+
+	$(document).on('focusout', '.icon_anim input', function(e)
 	{
 		$(this).siblings('.icon').removeClass('active');
 	});
