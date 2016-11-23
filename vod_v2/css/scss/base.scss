@@ -1,0 +1,58 @@
+// Use Compass
+@import "compass";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: 'Exo 2', sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 62.5%;
+
+$base-bg-color: #eaeaea;
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+
+/*-------------------- General -------------------------*/
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: $base-font-size;
+}
+body{
+  font-family: $base-font-family;
+  background-color: $base-bg-color;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+img{
+  border: none;
+}
+.hide{
+  display: none !important;
+}
