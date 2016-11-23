@@ -113,6 +113,7 @@ function search_show_class()
 	{
 		$(".search").addClass("show");
 		$("header").addClass("resize");
+		$(".search input").focus();
 	}
 };
 
@@ -129,6 +130,7 @@ function search_show_class_sticky()
 		$(".search").addClass("show_sticky");
 		$("header").addClass("resize");
 		$("header").css("opacity","0");
+		$(".search input").focus();
 	}
 };
 
