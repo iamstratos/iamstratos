@@ -96,7 +96,7 @@
         .staggerTo($footerMetaNum, .3, {x: 0, autoAlpha: 1, ease:Power2.easeInOut}, 0.2, 'intro+=.6')
         .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'intro+=.6')
 
-        .staggerTo($contentText, .6, {y: 0, autoAlpha: 1, ease:Power2.easeInOut}, -0.2, 'intro-=.5')
+        .staggerTo($contentText, .6, {y: 0, autoAlpha: 1, ease:Power2.easeInOut}, -0.1, 'intro-=.5')
         .to($playBtn, .5, {scale: 1, ease:Power2.easeInOut}, 'intro+=1.8')
         .to($specialLine, .5, {width: (widthLeft - 90), ease:Power2.easeInOut}, 'intro+=1.8')
 
@@ -214,11 +214,11 @@
 
                 // animate
                 .add('newSlideUp')
-                .staggerTo( $('.content-' + (contentNum - 1) + ' .h2, .content-' + (contentNum - 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, -0.2, 'newSlideUp+=1.2')
+                .staggerTo( $('.content-' + (contentNum - 1) + ' .h2, .content-' + (contentNum - 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, -0.1, 'newSlideUp+=1.2')
                 .to( $('.content-' + (contentNum - 1) + ' .btn') , .5, {scale: 1, ease:Power2.easeInOut}, 'newSlideUp+=1.9')
                 .to( $('.content-' + (contentNum - 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[1]}, 'newSlideUp+=1.9')
                 .to( $('.content-' + (contentNum - 1) + ' .bg-h2 span') , .8, {y: '0%', ease:Power2.easeInOut, onComplete: enableScroll}, 'newSlideUp+=1.6')
-                .to ( $('.slide-' + (contentNum - 1) ) , .5, {y: '0%', ease:Power2.easeInOut}, 'newSlideUp+=.7')
+                .to ( $('.slide-' + (contentNum - 1) ) , .5, {y: '0%', ease:Power2.easeInOut}, 'newSlideUp+=.6')
                 .to ( $('.slide-' + (contentNum - 1) + ' .h2 span' ) , .8, {y: '0%', ease:Power2.easeInOut}, 'newSlideUp+=1.6')
                 .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'newSlideUp+=1')
                 ;
@@ -233,7 +233,7 @@
                 .to( $('.content-' + contentNum + ' .special-line'), .5, {width: '0%', ease:Power2.easeInOut}, 'slideUp-=.1')
                 .to( $('.content-' + contentNum + ' .bg-h2 span'), .7, {y: '-100%', ease:Power1.easeInOut}, 'slideUp')
                 .to( $('.slide-' + contentNum + ' .h2 span' ) , .7, {y: '-100%', ease:Power1.easeInOut}, 'slideUp')
-                .to( $('.slide-' + contentNum ) , .7, {y: '100%', ease:Power2.easeInOut}, 'slideUp+=.6')
+                .to( $('.slide-' + contentNum ) , .9, {y: '100%', ease:Power4.easeInOut}, 'slideUp+=.6')
                 .staggerTo( $footerPages , .5, {x: 70, autoAlpha: 0, ease:Power1.easeInOut}, -0.1, 'slideUp')
                 .set($footerPages, {x: -90, autoAlpha: 0, onStart: setPager, onStartParams:[1] }, 'slideUp+=.7')
                 ;
@@ -250,11 +250,11 @@
 
                 // animate
                 .add('newSlideDown')
-                .staggerTo( $('.content-' + (contentNum + 1) + ' .h2, .content-' + (contentNum + 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, 0.2, 'newSlideDown+=1.2')
+                .staggerTo( $('.content-' + (contentNum + 1) + ' .h2, .content-' + (contentNum + 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, 0.1, 'newSlideDown+=1.2')
                 .to( $('.content-' + (contentNum + 1) + ' .btn') , .5, {scale: 1, ease:Power2.easeInOut}, 'newSlideDown+=1.9')
                 .to( $('.content-' + (contentNum + 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[-1] }, 'newSlideDown+=1.2')
                 .to( $('.content-' + (contentNum + 1) + ' .bg-h2 span') , .8, {y: '0%', ease:Power2.easeInOut, onComplete: enableScroll}, 'newSlideDown+=1.6')
-                .to ( $('.slide-' + (contentNum + 1) ) , .7, {y: '0%', ease:Power3.easeInOut}, 'newSlideDown+=.5')
+                .to ( $('.slide-' + (contentNum + 1) ) , .9, {y: '0%', ease:Power4.easeInOut}, 'newSlideDown+=.6')
                 .to ( $('.slide-' + (contentNum + 1) + ' .h2 span' ) , .8, {y: '0%', ease:Power2.easeInOut}, 'newSlideDown+=1.6')
                 .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'newSlideDown+=1')
                 ;
