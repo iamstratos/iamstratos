@@ -1,0 +1,13 @@
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  display: none;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: none;
+}
