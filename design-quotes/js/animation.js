@@ -17,8 +17,8 @@
         $specialLine = $('.special-line'),
 
         $footerPages = $('.footer .pages').children(),
-        $footerMetaIcons = $('.footer .meta .icon, .header .search .icon'),
-        $footerMetaNum = $('.footer .meta .num, .header .search input'),
+        $footerMetaIcons = $('.footer .meta .icon'),
+        $footerMetaNum = $('.footer .meta .num, .header .search input, .header .search .icon'),
 
         $loadCircle = $('#loader .circle'),
 
@@ -103,7 +103,6 @@
         .to($slideContentTitles, .8, {y: '0%', ease:Power2.easeInOut, onComplete: enable}, 'intro+=1.7')
         ;
 
-
     // Get active content's number and length, display them in page
     var getContent = $('.content.active')
                 .attr('class')
@@ -111,33 +110,6 @@
                 .replace('content-', ''),
         contentNum = parseInt(getContent),
         contentLength = $('.content').length;
-
-    function setPager(num)
-    {
-        if (num < 0)
-        {
-            $('.footer .pages .span').eq(0).text( ( contentNum - 1));
-        } else if (num > 0) {
-            $('.footer .pages .span').eq(0).text( ( contentNum + 1));
-        } else {
-            $('.footer .pages .span').eq(0).text(contentNum);
-        }
-        $('.footer .pages .span').eq(2).text(contentLength);
-    }
-
-    setPager(0);
-
-    function setActiveContent(num)
-    {
-        if (num >= 0 && contentNum > 1)
-        {
-            $('.content').removeClass('active');
-            $('.content-' + (contentNum - 1)).addClass('active');
-        } else if (num < 0 && contentNum < contentLength) {
-            $('.content').removeClass('active');
-            $('.content-' + (contentNum + 1)).addClass('active');
-        }
-    }
 
     // Hide all content except current slide on load
     TweenLite.set( $('.content'), {autoAlpha: 0});
@@ -154,6 +126,10 @@
         document.addEventListener('DOMMouseScroll', function(e)
         {
             animate(e);
+        });
+        document.body.addEventListener('keydown', function(e)
+        {
+            animate(e.keyCode);
         });
     }
 
@@ -177,6 +153,13 @@
         }
 
         var scrollData = e.wheelDelta || -e.detail;
+
+        if (e == 38 || e == 33)
+        {
+            scrollData = 1;
+        } else if (e == 40 || e == 34 || e == 32) {
+            scrollData = -1;
+        }
 
         // Set active content's number and length
         getContent = $('.content.active')
@@ -216,12 +199,15 @@
                 .add('newSlideUp')
                 .staggerTo( $('.content-' + (contentNum - 1) + ' .h2, .content-' + (contentNum - 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, -0.1, 'newSlideUp+=1.2')
                 .to( $('.content-' + (contentNum - 1) + ' .btn') , .5, {scale: 1, ease:Power2.easeInOut}, 'newSlideUp+=1.9')
-                .to( $('.content-' + (contentNum - 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[1]}, 'newSlideUp+=1.9')
+                .to( $('.content-' + (contentNum - 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut}, 'newSlideUp+=1.9')
+                // .to( $('.content-' + (contentNum - 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[1]}, 'newSlideUp+=1.9')
                 .to( $('.content-' + (contentNum - 1) + ' .bg-h2 span') , .8, {y: '0%', ease:Power2.easeInOut, onComplete: enableScroll}, 'newSlideUp+=1.6')
                 .to ( $('.slide-' + (contentNum - 1) ) , .5, {y: '0%', ease:Power2.easeInOut}, 'newSlideUp+=.6')
                 .to ( $('.slide-' + (contentNum - 1) + ' .h2 span' ) , .8, {y: '0%', ease:Power2.easeInOut}, 'newSlideUp+=1.6')
                 .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'newSlideUp+=1')
                 ;
+
+                setActiveContent(1);
         
         } else if (scrollData < 0 && contentNum < contentLength) {
             disableScroll();
@@ -252,16 +238,136 @@
                 .add('newSlideDown')
                 .staggerTo( $('.content-' + (contentNum + 1) + ' .h2, .content-' + (contentNum + 1) + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, 0.1, 'newSlideDown+=1.2')
                 .to( $('.content-' + (contentNum + 1) + ' .btn') , .5, {scale: 1, ease:Power2.easeInOut}, 'newSlideDown+=1.9')
-                .to( $('.content-' + (contentNum + 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[-1] }, 'newSlideDown+=1.2')
+                // .to( $('.content-' + (contentNum + 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut, onComplete: setActiveContent, onCompleteParams:[-1] }, 'newSlideDown+=1.2')
+                .to( $('.content-' + (contentNum + 1) + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut}, 'newSlideDown+=1.2')
                 .to( $('.content-' + (contentNum + 1) + ' .bg-h2 span') , .8, {y: '0%', ease:Power2.easeInOut, onComplete: enableScroll}, 'newSlideDown+=1.6')
                 .to ( $('.slide-' + (contentNum + 1) ) , .9, {y: '0%', ease:Power4.easeInOut}, 'newSlideDown+=.6')
                 .to ( $('.slide-' + (contentNum + 1) + ' .h2 span' ) , .8, {y: '0%', ease:Power2.easeInOut}, 'newSlideDown+=1.6')
                 .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'newSlideDown+=1')
                 ;
+
+                setActiveContent(-1);
         }
     }
 
+    function setActiveContent(num)
+    {
+
+        if (num >= 0 && contentNum > 1)
+        {
+            $('.content').removeClass('active');
+            $('.content-' + (contentNum - 1)).addClass('active');
+        } else if (num < 0 && contentNum < contentLength) {
+            $('.content').removeClass('active');
+            $('.content-' + (contentNum + 1)).addClass('active');
+        }
+        
+        getContent = $('.content.active')
+                .attr('class')
+                .split(' ')[1]
+                .replace('content-', ''),
+        contentNum = parseInt(getContent),
+        contentLength = $('.content').length;
+
+        var $mainLeft = $('.main-left');
+
+        if (contentNum == contentLength)
+        {
+            $mainLeft.addClass('last');
+        } else {
+            if ($mainLeft.hasClass('last'))
+            {
+                $mainLeft.removeClass('last');
+            }
+        }
+    }
+
+    function setPager(num)
+    {
+        $('.footer .pages .span').eq(0).text(contentNum);
+        $('.footer .pages .span').eq(2).text(contentLength);
+    }
+
+    setPager(0);
+
     // extra events
+
+    $('body').on('click', '.nextPage', function(e)
+    {
+        animate(e);
+    });
+
+    $('body').on('click', '.menu-icon', function()
+    {
+        disableScroll();
+
+        var tlMenuOpen = new TimelineMax(),
+            menuList = $('.menu-layer .list').children(),
+            info = $('.menu-layer .info').children();
+
+        tlMenuOpen
+            .set( $('.menu-layer'), {width: '50%'} )
+            .to( $('.menu-layer'), .6, {width: '100%', ease:Power3.easeInOut} );
+
+        tloldDown // Current slide goes down
+                .add('slideDown')
+                .set( $('.closeMenu'), {y: -300, autoAlpha: 1} )
+                .set( menuList, {x: -500} )
+                .set( info, {y: -60, autoAlpha: 0} )
+                .staggerTo( $('.content-' + contentNum + ' .h2, .content-' + contentNum + ' .author div'), .5, {y: '1000%', autoAlpha: 0, ease:Power3.easeInOut}, -0.1, 'slideDown-=1.8')
+                .to( $('.content-' + contentNum + ' .btn'), .3, {scale: 0, ease:Power1.easeInOut }, 'slideDown-=.1')
+                .to( $( $sidebar), .3, {x: -200, ease:Power2.easeInOut }, 'slideDown-=.1')
+                .to( $('.content-' + contentNum + ' .special-line'), .4, {width: '0%', ease:Power2.easeInOut}, 'slideDown-=.1')
+                .to( $('.content-' + contentNum + ' .bg-h2 span'), .5, {y: '100%', ease:Power1.easeInOut}, 'slideDown+=.1')
+                .staggerTo( $footerPages , .3, {x: 70, autoAlpha: 0, ease:Power1.easeInOut}, -0.1, 'slideDown-=1.5')
+                .staggerTo( $('.footer .meta') , .3, {x: 70, autoAlpha: 0, ease:Power1.easeInOut}, -0.1, 'slideDown-=1.5')
+                .to( $('.main-left'), .5, {autoAlpha: 0}, 'slideDown+=.3' )
+                .to( $('.menu-layer .line'), .6, {width: '100%', ease:Power3.easeInOut}, 'slideDown+=.5' )
+                .to( $('.closeMenu'), 1.4, {y: 0, ease:Power4.easeInOut}, 'slideDown'  )
+                .staggerTo( menuList, .5, {x: 0, ease:Power3.easeInOut}, 0.1, 'slideDown+=.2')
+                .staggerTo( info, .6, {y: 0, autoAlpha: 1, ease:Back.easeOut.config(2.3)}, 0.3, 'slideDown+=.8')
+                ;
+    });
+
+    $('body').on('click', '.closeMenu', function()
+    {
+        var tlMenuClose = new TimelineMax(),
+            menuList = $('.menu-layer .list').children(),
+            info = $('.menu-layer .info').children();
+
+        tlMenuClose
+            .to( $('.menu-layer'), .6, {width: '0%', ease:Power3.easeInOut} );
+
+        tlnewUp // New slide will come up
+                // set
+                .set( $('.content-' + contentNum) , {autoAlpha: 1})
+                .set( $('.content-' + contentNum + ' .h2, .content-' + contentNum + ' .author div') , {y: '-1000%', autoAlpha: 0})
+                .set( $('.content-' + contentNum + ' .btn') , {scale: 0})
+                .set( $('.content-' + contentNum + ' .special-line') , {width: 0})
+                .set( $('.content-' + contentNum + ' .bg-h2 span') , {y: '100%'})
+                .set( $('.footer .meta'), {x: 0, autoAlpha: 1})
+                .set($footerMetaIcons, {scale: 0})
+                .set($footerMetaNum, {x: -30, autoAlpha: 0})
+
+                // animate
+                .add('newSlideUp')
+                .to( $('.menu-layer .line'), .6, {width: '0%', ease:Power3.easeInOut}, 'newSlideUp' )
+                .to( $('.closeMenu'), .3, {autoAlpha: 0, ease:Power3.easeInOut}, 'newSlideUp' )
+                .to( $('.main-left'), .5, {autoAlpha: 1}, 'newSlideUp+=.3' )
+                .staggerTo( $('.content-' + contentNum + ' .h2, .content-' + contentNum + ' .author div') , .6, {y: '0%', autoAlpha: 1, ease:Power2.easeInOut}, -0.1, 'newSlideUp')
+                .to( $('.content-' + contentNum + ' .special-line') , .5, {width: (widthLeft - 90), ease:Power2.easeInOut}, 'newSlideUp+=.4')
+                .to( $('.content-' + contentNum + ' .bg-h2 span') , .8, {y: '0%', ease:Power2.easeInOut, onComplete: enableScroll}, 'newSlideUp+=.3')
+                .to( $('.content-' + contentNum + ' .btn') , .5, {scale: 1, ease:Power2.easeInOut}, 'newSlideUp+=.2')
+                .to( $( $sidebar), .3, {x: 0, ease:Power2.easeInOut }, 'newSlideUp-=.5')
+                .staggerTo($footerPages, .35, {x: 0, autoAlpha: 1, ease:Power1.easeOut}, -0.2, 'newSlideUp-=.2')
+                // .staggerTo( $('.footer .meta') , .3, {x: 0, autoAlpha: 1, ease:Power1.easeInOut}, -0.1, 'newSlideUp-=1.5')
+                .staggerTo($footerMetaIcons, .4, {scale: 1, ease:Back.easeOut.config(2.3)}, 0.2, 'newSlideUp+=.2')
+                .staggerTo($footerMetaNum, .3, {x: 0, autoAlpha: 1, ease:Power2.easeInOut}, 0.2, 'newSlideUp+=.2')
+                .staggerTo( menuList, .5, {x: -500, ease:Power3.easeInOut}, -0.1, 'newSlideUp-=.1')
+                .staggerTo( info, .6, {autoAlpha: 0, ease:Power3.easeInOut}, 0.1, 'newSlideUp-=.2')
+                ;
+        enableScroll();
+    });
 
     $('.nextPage').hover(function()
     {
@@ -271,9 +377,22 @@
         TweenLite.to( $(this), .5, {x: 0} );
     });
 
-    $('body').on('click', '.nextPage', function(e)
+    $('.closeMenu').hover(function()
     {
-        animate(e);
+        TweenLite.to( $(this), .45, {rotation: 180, ease:Power3.easeInOut} );
+    }, function()
+    {
+        TweenLite.to( $(this), .3, {rotation: 0} );
+    });
+
+    $('.menu-icon').hover(function()
+    {
+        var tlMenuIcon = new TimelineMax();
+        tlMenuIcon
+            .staggerTo( $(this).find('.line'), .5, {width: '25%', autoAlpha: 0}, 0.1 )
+            .add( TweenLite.to( $(this).find('.line-3'), .2, {width: '100%', autoAlpha: 1}) )
+            .add( TweenLite.to( $(this).find('.line-2'), .2, {width: '100%', autoAlpha: 1}) )
+            .add( TweenLite.to( $(this).find('.line-1'), .2, {width: '100%', autoAlpha: 1}) );
     });
 
     
