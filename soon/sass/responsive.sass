@@ -1,3 +1,10 @@
+=transform($transform)
+	-moz-transform: $transform
+	-o-transform: $transform
+	-webkit-transform: $transform
+	transform: $transform
+
+
 // Responsive
 
 $break-small: 320px
@@ -5,5 +12,9 @@ $break-medium: 600px
 
 @media (max-width: $break-medium)
 
+    html
+	    font-size: 14px
+
     #canvas
         width: 100%
+        +transform(scale(1.2))
