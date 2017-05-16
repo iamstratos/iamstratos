@@ -1,0 +1,44 @@
+/* ------ vars ----- */
+
+$base-font: 'Montserrat', sans-serif
+
+html
+	font-size: 16px
+
+html, body
+	width: 100%
+	height: 100%
+	font-family: $base-font
+	overflow: hidden
+
+a
+	color: #000
+
+/* ------ Normalize ----- */
+
+*,
+*:after,
+*:before
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+
+/* ------ mixins ----- */
+
+=transition($transition)
+	-moz-transition: $transition
+	-o-transition: $transition
+	-webkit-transition: $transition
+	transition: $transition
+
+=transform($transform)
+	-moz-transform: $transform
+	-o-transform: $transform
+	-webkit-transform: $transform
+	transform: $transform
+
+=box-shadow($boxshadow)
+	-moz-box-shadow: $boxshadow
+	-o-box-shadow: $boxshadow
+	-webkit-box-shadow: $boxshadow
+	box-shadow: $boxshadow
