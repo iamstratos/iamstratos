@@ -259,7 +259,7 @@ $(window).on('load', function()
         .to( $('.model'), 1.6, {autoAlpha: 1, ease: Power1.easeIn}, '-=1.3')
         .to( $('.footer'), .6, {y: 0, autoAlpha: 1, ease: Power2.easeOut}, '-=1.3')
         .staggerTo( $parallaxFirst, 1.4, {x: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.05, '-=1.3')
-        .staggerTo( $parallaxSecond, 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.05, '-=.8');
+        .staggerTo( $parallaxSecond, 1.5, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.05, '-=1.1');
     
     // $('.loader').fadeOut();
     setTimeout(function()
