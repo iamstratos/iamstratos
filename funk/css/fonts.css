@@ -1,0 +1,43 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3399657, 2017-06-01T07:35:16-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: CeraPRO-Black by TypeMates
+ * URL: https://www.myfonts.com/fonts/typemates/cera/pro-black/
+ * Licensed pageviews: 20,000
+ * 
+ * Webfont: CeraPRO-Light by TypeMates
+ * URL: https://www.myfonts.com/fonts/typemates/cera/pro-light/
+ * Licensed pageviews: 20,000
+ * 
+ * Webfont: CeraPRO-Regular by TypeMates
+ * URL: https://www.myfonts.com/fonts/typemates/cera/pro-regular/
+ * Licensed pageviews: 30,000
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3399657
+ * Webfonts copyright: Copyright (c) 2015 by Jakob Runge, under exclusive license to TypeMates, Runge Thomsen GbR. All rights reserved.
+ * 
+ * © 2017 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/33dfe9");
+
+  
+@font-face {font-family: 'CeraPRO-Black';src: url('webfonts/33DFE9_0_0.eot');src: url('webfonts/33DFE9_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33DFE9_0_0.woff2') format('woff2'),url('webfonts/33DFE9_0_0.woff') format('woff'),url('webfonts/33DFE9_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CeraPRO-Light';src: url('webfonts/33DFE9_1_0.eot');src: url('webfonts/33DFE9_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33DFE9_1_0.woff2') format('woff2'),url('webfonts/33DFE9_1_0.woff') format('woff'),url('webfonts/33DFE9_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'CeraPRO-Regular';src: url('webfonts/33DFE9_2_0.eot');src: url('webfonts/33DFE9_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/33DFE9_2_0.woff2') format('woff2'),url('webfonts/33DFE9_2_0.woff') format('woff'),url('webfonts/33DFE9_2_0.ttf') format('truetype');}
+@font-face {font-family: 'CeraPRO-Regular-IE';src: url('webfonts/33DFE9_2_0.eot?#iefix') format('embedded-opentype');}
+ 
