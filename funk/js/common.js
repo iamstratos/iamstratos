@@ -99,6 +99,7 @@ function animateScroll(e)
 
     var tlForm = new TimelineMax(),
         $screenForm = $('.screen-form'),
+        $parallaxChild = $('.parallax-base'),
         $obj = $('.obj');
 
     // Check if scroll is true
@@ -123,7 +124,9 @@ function animateScroll(e)
                 .set( $screenForm, {y: '140%'})
                 .set( $obj, {y: '100%'})
                 .set( $('.form'), {y: '10%', autoAlpha: 0})
-                .to( $screenForm, .9, {y: '-100%', ease: Power4.easeOut, onComplete: startBubbles})
+                .to( $('.model img'), .8, {y: 70, ease: Power2.easeOut})
+                .to( $parallaxChild, .8, {y: 70, ease: Power2.easeOut}, '-=.8')
+                .to( $screenForm, .9, {y: '-100%', ease: Power4.easeOut, onComplete: startBubbles}, '-=.9')
                 .to( $obj, .9, {y: '0%', ease: Power4.easeOut}, '-=.7')
                 .to( $('.form'), .9, {y: '0%', autoAlpha: 1, ease: Power2.easeOut, onComplete: enableScroll}, '-=.8');
         setActive(2);
@@ -134,7 +137,9 @@ function animateScroll(e)
         tlForm
                 .set( $screenForm, {y: '-100%'})
                 .set( $obj, {y: '0%'})
-                .to( $obj, .8, {y: '100%', ease: Power2.easeInOut, onComplete: stopBubbles})
+                .to( $('.model img'), .8, {y: 0, ease: Power2.easeOut})
+                .to( $parallaxChild, .8, {y: 0, ease: Power2.easeOut}, '-=.8')
+                .to( $obj, .8, {y: '100%', ease: Power2.easeInOut, onComplete: stopBubbles}, '-=.9')
                 .to( $screenForm, .9, {y: '100%', ease: Power2.easeInOut}, '-=.5')
                 .to( $('.form'), .9, {y: '100%', ease: Power2.easeInOut, onComplete: enableScroll}, '-=1.3');
         
