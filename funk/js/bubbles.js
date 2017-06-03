@@ -70,7 +70,8 @@ $("#bubbles, .loader").on("click", ".large", function() {
 	var bubble = $(this);
 	$(this).css("transform", "scale(1.1)");
 	setTimeout(function() {
-		$(bubble).css("background", "url('../files/large-bubble-burst.png')")
+		$(bubble).addClass('burst');
+		// $(bubble).css("background", "url('../files/large-bubble-burst.png')")
 		setTimeout(function() {
 			// $(bubble).css("opacity", "0");
 			$(bubble).remove();
@@ -82,7 +83,8 @@ $("#bubbles, .loader").on("click", ".small", function() {
 	var bubble = $(this);
 	$(this).css("transform", "scale(1.1)");
 	setTimeout(function() {
-		$(bubble).css("background", "url('../files/small-bubble-burst.png')")
+		$(bubble).addClass('burst');
+		// $(bubble).css("background", "url('../files/small-bubble-burst.png')")
 		setTimeout(function() {
 			// $(bubble).css("opacity", "0");
 			$(bubble).remove();
