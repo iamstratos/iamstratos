@@ -196,7 +196,8 @@ $(function()
     cssParallax('.parallax-container.first', '.parallax-base', 4);
 
     setModelLeft();
-    setupInputs(); 
+    setupInputs();
+    setScreenFormBG();
 
     //----------- Clicks
     $('body').on('click', '.text .arrow', function()
