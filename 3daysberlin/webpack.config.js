@@ -110,7 +110,7 @@ if (isProduction) {
   // Production rules
   rules.push(
     {
-      test: /\.scss$/,
+      test: /\.sass$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: 'css-loader!postcss-loader!sass-loader',
@@ -127,7 +127,7 @@ if (isProduction) {
   // Development rules
   rules.push(
     {
-      test: /\.scss$/,
+      test: /\.sass$/,
       exclude: /node_modules/,
       use: [
         'style-loader',
