@@ -82,6 +82,14 @@ const rules = [
     include: imgPath,
     use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
   },
+  {
+    test: /\.html$/,
+    loader: 'html-loader?attrs[]=video:src'
+  },
+  {
+    test: /\.mp4$/,
+    loader: 'url?limit=10000&mimetype=video/mp4'
+  }
 ];
 
 if (isProduction) {

@@ -1,31 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './views/components/Header';
+import ModuleIntro from './views/components/ModuleIntro';
+import BackgroundCanvas from './views/components/BackgroundCanvas';
 
 // Load SASS
 import '../sass/app.sass';
 
 
 
-const Headline = () => {
-  return <h1>React Cheat Sheet</h1>
-}
 
-const Intro = () => {
-  return (
-    <div>
-      <Headline />
-      <p>Welcome to the React world!</p>
-      <Greetings name="World" />
-    </div>
-  )
-}
-
-// Component that receives props
-const Greetings = (props) => {
-  return <p>You will love it {props.name}.</p>
+class App extends React.Component {
+    render(){
+        return (
+            <div>
+              <Header />
+              <ModuleIntro />
+              <BackgroundCanvas />
+            </div>
+        )
+    }
 }
 
 ReactDOM.render(
-  <Intro />,
+  <App />,
   document.getElementById('root')
 );

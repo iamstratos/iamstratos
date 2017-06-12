@@ -1,5 +1,5 @@
-$font-family-serif: Garamond, "Times New Roman", serif
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-serif: "Arapey", "George", "Times New Roman", serif
+$font-family-sans-serif: "Poppins", Helvetica, Arial, sans-serif
 
 $grey-border: #eee
 $grey-text: #aaa
@@ -7,15 +7,105 @@ $black: #000
 $white: #fff
 
 html
-  font-size: 10px
+	font-size: 10px
 
-  @include lg
-    font-size: 12px
+	@include lg
+		font-size: 12px
 
-  @include xl
-    font-size: 14px
+	@include xl
+		font-size: 14px
 
 
 body
-  color: $black
-  font-family: $font-family-sans-serif
+	color: $black
+	font-family: $font-family-sans-serif
+
+.Header
+	z-index: 5
+	position: relative
+
+	h1
+		text-indent: -9999px
+		display: inline-block
+		background-image: url(../assets/img/logo.png)
+		background-size: contain
+		width: (260px / 2)
+		height: (106px / 2)
+
+.social
+	a
+		color: #fff
+		text-decoration: none
+
+.ModuleIntro
+	z-index: 3
+	position: relative
+
+.BackgroundCanvas
+	overflow: hidden
+
+	canvas
+		// position: relative
+		// z-index: 3
+		width: auto
+		height: auto
+		min-height: 100%
+		min-width: 100%
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		overflow: hidden
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+
+	.videoMask
+		width: 100%
+		height: 100%
+		background-color: #17061F
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		opacity: 0.45
+
+	.bgVideo
+		display: none
+		width: auto
+		height: auto
+		min-height: 100%
+		min-width: 100%
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		overflow: hidden
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+
+.ModuleIntro
+	color: white
+
+	.spacing
+		display: block
+
+	h2
+		font-family: $font-family-serif
+		font-style: normal
+		font-weight: normal
+		font-size: 87px
+		line-height: 96%
+		letter-spacing: -1.74px
+		color: #FFFFFF
+
+	p
+		font-family: $font-family-sans-serif
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		line-height: 170%
+		color: #FFFFFF
