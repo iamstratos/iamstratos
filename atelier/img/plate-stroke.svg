@@ -1,0 +1,13 @@
+<svg class="plate-stroke-svg" xmlns="http://www.w3.org/2000/svg" width="457" height="664" viewBox="0 0 457 664">
+  <defs>
+    <style>
+      .plate-stroke-path{
+        fill: none;
+        stroke: #986f39;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path data-name="Rectangle 20 copy 9" class="plate-stroke-path" d="M889,3391v663H433V3391H889Z" transform="translate(-432.5 -3390.5)"/>
+</svg>

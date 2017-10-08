@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <style>
+      .close-overlay-cls-1 {
+        fill: #986f38;
+      }
+
+      .close-overlay-cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="close-overlay-cls-1" cx="22.5" cy="22.5" r="22.5"/>
+  <path data-name="+" class="close-overlay-cls-2" d="M13.954,29.535l1.814,1.814,6.664-6.664L28.949,31.2l1.666-1.666L24.1,23.019l6.627-6.627-1.814-1.814L22.285,21.2l-6.479-6.479-1.666,1.666,6.479,6.479Z"/>
+</svg>

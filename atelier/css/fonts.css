@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'LucasBold';
+  src: url('./fonts/Bold/NespressoLucas-Bold.eot?#iefix') format('embedded-opentype'),  
+     url('./fonts/Bold/NespressoLucas-Bold.woff') format('woff'), 
+     url('./fonts/Bold/NespressoLucas-Bold.woff2') format('woff2'), 
+     url('./fonts/Bold/NespressoLucas-Bold.ttf')  format('truetype'), 
+     url('./fonts/Bold/NespressoLucas-Bold.svg#LucasBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasBoldItalic';
+src: url('./fonts/BoldItalic/NespressoLucas-BoldItalic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/BoldItalic/NespressoLucas-BoldItalic.woff') format('woff'), 
+   url('./fonts/BoldItalic/NespressoLucas-BoldItalic.woff2') format('woff2'), 
+   url('./fonts/BoldItalic/NespressoLucas-BoldItalic.ttf')  format('truetype'), 
+   url('./fonts/BoldItalic/NespressoLucas-BoldItalic.svg#LucasBoldItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasItalic';
+src: url('./fonts/Italic/NespressoLucas-Italic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/Italic/NespressoLucas-Italic.woff') format('woff'), 
+   url('./fonts/Italic/NespressoLucas-Italic.woff2') format('woff2'), 
+   url('./fonts/Italic/NespressoLucas-Italic.ttf')  format('truetype'), 
+   url('./fonts/Italic/NespressoLucas-Italic.svg#LucasItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasLight';
+src: url('./fonts/Light/NespressoLucas-Light.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/Light/NespressoLucas-Light.woff') format('woff'), 
+   url('./fonts/Light/NespressoLucas-Light.woff2') format('woff2'), 
+   url('./fonts/Light/NespressoLucas-Light.ttf')  format('truetype'), 
+   url('./fonts/Light/NespressoLucas-Light.svg#LucasLight') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasLightItalic';
+src: url('./fonts/LightItalic/NespressoLucas-LightItalic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/LightItalic/NespressoLucas-LightItalic.woff') format('woff'), 
+   url('./fonts/LightItalic/NespressoLucas-LightItalic.woff2') format('woff2'), 
+   url('./fonts/LightItalic/NespressoLucas-LightItalic.ttf')  format('truetype'), 
+   url('./fonts/LightItalic/NespressoLucas-LightItalic.svg#LucasLightItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasMed';
+src: url('./fonts/Med/NespressoLucas-Med.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/Med/NespressoLucas-Med.woff') format('woff'), 
+   url('./fonts/Med/NespressoLucas-Med.woff2') format('woff2'), 
+   url('./fonts/Med/NespressoLucas-Med.ttf')  format('truetype'), 
+   url('./fonts/Med/NespressoLucas-Med.svg#LucasMed') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasMedItalic';
+src: url('./fonts/MedItalic/NespressoLucas-MedItalic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/MedItalic/NespressoLucas-MedItalic.woff') format('woff'), 
+   url('./fonts/MedItalic/NespressoLucas-MedItalic.woff2') format('woff2'), 
+   url('./fonts/MedItalic/NespressoLucas-MedItalic.ttf')  format('truetype'), 
+   url('./fonts/MedItalic/NespressoLucas-MedItalic.svg#LucasMedItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasReg';
+src: url('./fonts/Regular/NespressoLucas-Regular.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/Regular/NespressoLucas-Regular.woff') format('woff'), 
+   url('./fonts/Regular/NespressoLucas-Regular.woff2') format('woff2'), 
+   url('./fonts/Regular/NespressoLucas-Regular.ttf')  format('truetype'), 
+   url('./fonts/Regular/NespressoLucas-Regular.svg#LucasReg') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasSemiBold';
+src: url('./fonts/SemiBd/NespressoLucas-SemiBd.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/SemiBd/NespressoLucas-SemiBd.woff') format('woff'), 
+   url('./fonts/SemiBd/NespressoLucas-SemiBd.woff2') format('woff2'), 
+   url('./fonts/SemiBd/NespressoLucas-SemiBd.ttf')  format('truetype'), 
+   url('./fonts/SemiBd/NespressoLucas-SemiBd.svg#LucasSemiBold') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasSemiBoldItalic';
+src: url('./fonts/SemiBdItalic/NespressoLucas-SemiBdItalic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/SemiBdItalic/NespressoLucas-SemiBdItalic.woff') format('woff'), 
+   url('./fonts/SemiBdItalic/NespressoLucas-SemiBdItalic.woff2') format('woff2'), 
+   url('./fonts/SemiBdItalic/NespressoLucas-SemiBdItalic.ttf')  format('truetype'), 
+   url('./fonts/SemiBdItalic/NespressoLucas-SemiBdItalic.svg#LucasSemiBoldItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasExtraBold';
+src: url('./fonts/XtraBd/NespressoLucas-XtraBd.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/XtraBd/NespressoLucas-XtraBd.woff') format('woff'), 
+   url('./fonts/XtraBd/NespressoLucas-XtraBd.woff2') format('woff2'), 
+   url('./fonts/XtraBd/NespressoLucas-XtraBd.ttf')  format('truetype'), 
+   url('./fonts/XtraBd/NespressoLucas-XtraBd.svg#LucasExtraBold') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'LucasExtraBoldItalic';
+src: url('./fonts/XtraBdItalic/NespressoLucas-XtraBdItalic.eot?#iefix') format('embedded-opentype'),  
+   url('./fonts/XtraBdItalic/NespressoLucas-XtraBdItalic.woff') format('woff'), 
+   url('./fonts/XtraBdItalic/NespressoLucas-XtraBdItalic.woff2') format('woff2'), 
+   url('./fonts/XtraBdItalic/NespressoLucas-XtraBdItalic.ttf')  format('truetype'), 
+   url('./fonts/XtraBdItalic/NespressoLucas-XtraBdItalic.svg#LucasExtraBoldItalic') format('svg');
+font-weight: normal;
+font-style: normal;
+}

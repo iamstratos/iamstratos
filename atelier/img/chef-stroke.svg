@@ -1,0 +1,13 @@
+<svg class="chef-stroke-svg" xmlns="http://www.w3.org/2000/svg" width="235" height="285" viewBox="0 0 235 285">
+  <defs>
+    <style>
+      .chef-stroke-rect {
+        fill: none;
+        stroke: #986f38;
+        stroke-linecap: round;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <rect class="chef-stroke-rect" x="0.5" y="0.5" width="234" height="284"/>
+</svg>

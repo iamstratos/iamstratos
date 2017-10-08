@@ -1,0 +1,26 @@
+<svg id="play" xmlns="http://www.w3.org/2000/svg" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #986f38;
+      }
+
+      .cls-1 {
+        opacity: 0.48;
+      }
+
+      .cls-2 {
+        opacity: 0.95;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.79;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="58" cy="58" r="58"/>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-2" cx="58.531" cy="58.531" r="40.281"/>
+  <path id="Polygon_1" data-name="Polygon 1" class="cls-3" d="M74.11,59.611l-24.7,14.5v-29Z"/>
+</svg>
