@@ -1,0 +1,77 @@
+@import url("//hello.myfonts.net/count/34ab72");
+
+@font-face {
+	/*font-family: 'Gotham-Thin';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamThin.otf') format('opentype'), url('Gotham/GothamThin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-XLight';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamXLight.otf') format('opentype'), url('Gotham/GothamXLight.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Light';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamLight.otf') format('opentype'), url('Gotham/GothamLight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Book';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamBook.otf') format('opentype'), url('Gotham/GothamBook.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Medium';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamMedium.otf') format('opentype'), url('Gotham/GothamMedium.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Bold';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamBold.otf') format('opentype'), url('Gotham/GothamBold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Black';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamBlack.otf') format('opentype'), url('Gotham/GothamUltra.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	/*font-family: 'Gotham-Ultra';*/
+	font-family: 'Gotham';
+	src: url('Gotham/GothamUltra.otf') format('opentype'), url('Gotham/GothamUltra.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Newton-Bold';
+	src: url('Newton/34AB72_0_0.eot');
+	src: url('Newton/34AB72_0_0.eot?#iefix') format('embedded-opentype'), url('Newton/34AB72_0_0.woff2') format('woff2'), url('Newton/34AB72_0_0.woff') format('woff'), url('Newton/34AB72_0_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Newton-Regular';
+	src: url('Newton/34AB72_1_0.eot');
+	src: url('Newton/34AB72_1_0.eot?#iefix') format('embedded-opentype'), url('Newton/34AB72_1_0.woff2') format('woff2'), url('Newton/34AB72_1_0.woff') format('woff'), url('Newton/34AB72_1_0.ttf') format('truetype');
+}
