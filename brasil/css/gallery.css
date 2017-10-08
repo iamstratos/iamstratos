@@ -1,0 +1,424 @@
+
+.modalwrp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index:10;
+	height: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+	transition: all 660ms ease-in;
+}
+.modalwrp.opened {
+	-webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+	visibility: visible;
+	transition: all 660ms ease-out;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	left:0;
+    width: 100%;
+    height: 140%;
+    cursor:pointer;
+    background: #fff;
+}
+.modalwrp.opened .overlay {
+	z-index:1;
+}
+.modal {
+	position: absolute;
+	top:10px;
+	left: 10px;
+	z-index: 5;
+	text-align: center;
+	overflow:auto;
+	padding: 30px 25px;
+	background: #fff;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+}
+.closeModal {
+    font-size: 10px;
+    color: #302b2c;
+    position: absolute;
+    top: 16px;
+    cursor: pointer;
+    right: 15px;
+    z-index: 102;
+	padding: 10px;
+}
+.closeModal:before{
+	content: '';
+	background-image: url(../images/gallery-back.svg);
+	width: 18px;
+	height: 13px;
+	display: inline-block;
+	top: 3px;
+	position: relative;
+	margin-right: 10px;
+}
+
+.modalwrp.galleryWrp {
+	width: calc(100% - 35px);
+}
+.galleryWrp .modal {
+	display: -webkit-box;  
+	display: -ms-flexbox;  
+	display: -webkit-flex; 
+	display: flex; 
+	padding: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.galleryWrp .col {
+	float: left;
+	position:relative;
+	border-right: solid 1px #f3ebe4;
+	z-index: 2
+}
+.galleryWrp .col.action {
+	width: 77px;
+}
+.galleryWrp .col.thumbWrp {
+    width: 225px;
+    overflow: hidden;
+    transition: width .3s ease;
+    /*background: #fff;*/
+	background-color: rgba(255,255,255,0.35);
+    z-index: 1;
+}
+.galleryWrp.hideThumb .col.thumbWrp {
+	width: 0;
+	border:none;
+}
+.galleryWrp.hideThumb .col.mainImg {
+	    width: calc(100% - 77px);
+}
+.thumbImg {
+	margin-top: 80px;
+}
+.thumbImg figure {
+	margin: 16px 0;
+	cursor: pointer;
+}
+.thumbImg figure img {
+	transition: all .3s ease;
+	max-width: 75%;
+}
+.thumbImg figure:hover img {
+	box-shadow: 0 8px 15px 0 rgba(0,0,0,0.12);
+}
+.galleryWrp .col.mainImg {
+	width: calc(100% - 302px);
+	padding: 35px 15px;
+	transition: width .3s ease;
+	font-size: 0;
+}
+.galleryWrp .col.mainImg:before {
+	content: '';
+	display: inline-block;
+	width: 0;
+	height: 100%;
+	vertical-align: middle;
+}
+.galleryWrp .action .btn {
+	position:absolute;
+	top: 50%;
+	left:50%;
+	width: 50px;
+	height: 50px;
+	margin: -25px 0 0 -25px;
+}
+.toggleThumbs {
+	font-size: 50px;
+	position:absolute;
+	top: 0;
+	left: 0;
+	cursor:pointer;
+	color:#be955e;
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+/*.galleryWrp .col.action:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -13px;
+    background: #fff;
+    border: solid 1px #f3ebe4;
+    transform: rotate(45deg);
+    -wekbkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    width: 17px;
+    height: 19px;
+    margin-top: -10px;
+    z-index: 1;
+}*/
+.galleryWrp.hideThumb .col.action:after {
+	opacity: 0;
+}
+.galleryWrp.hideThumb .toggleThumbs {
+	background: #be955e;
+	color:#fff;
+}
+.galleryWrp .toggleThumbs:after,
+.galleryWrp.hideThumb .toggleThumbs:before{
+	opacity: 0;
+}
+.galleryWrp .toggleThumbs:after{
+	background: url(../images/galleryClose.svg) no-repeat scroll center center;
+	background-size: cover;
+	content: '';
+	left:0;
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.galleryWrp.hideThumb .toggleThumbs:after{
+	opacity: 1;
+}
+
+.galleryWrp .toggleThumbs:before{
+	opacity: 1;
+	transition: opacity 450ms ease-out;
+}
+
+.galleryWrp .maintitle {
+	position: absolute;
+	left: 42px;
+	top:20px;
+	font-size: 14px;
+	z-index: 6;
+	color:#be955e;
+}
+.galleryWrp .maintitle:after {
+    content: "";
+    z-index: -1;
+   -webkit-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    background: #fff;
+    position: absolute;
+    top: -48px;
+    left: 0;
+    width: 263px;
+    height: 150px;
+    opacity: 0.9;
+}
+.galleryWrp .maintitle i {
+	color:#2c2a3b;
+	font-size: 70px;
+	margin: 0 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+.galleryWrp .maintitle h4 {
+	font-size: 14px;
+	color:#be955e;
+	display: inline-block;
+	vertical-align: top;
+	margin-top:13px;
+	font-weight: normal;
+}
+.mainImgSlider {
+	padding: 0 30px;	
+	text-align: center;
+	width: 100%;
+}
+.mainImgSlider .owl-item {
+	padding: 0 10px;
+	width: 100%;
+}
+.mainImgSlider.owl-carousel .owl-item img {
+	width: auto;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.thumbWrp .mCSB_inside>.mCSB_container {
+    margin-right: 7px;
+}
+
+.brazil-landing .mCSB_scrollTools .mCSB_draggerRail{
+	background: transparent;
+}
+
+.brazil-landing .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background: #cececd;
+}
+
+.brazil-landing .mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
+}
+
+.brazil-landing .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.brazil-landing .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background-color: #cececd;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)"
+}
+
+.mainImgSlider .owl-nav > div {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	color:#be955e;
+	font-size: 40px;
+}
+.mainImgSlider .owl-nav > div.owl-next {
+	left:auto;
+	right: 0;
+}
+.questNumb {
+	font-size: 21px;
+	color:#be955e;
+	margin: 7px 10px 0px 0;
+	clear:both;
+	display: inline-block;
+	text-transform: uppercase;
+}
+.questNumb .active,
+.questNumb .all {
+	display: inline-block;
+}
+.questNumb .all {
+	position: relative;
+	left: -3px;
+}
+.questNumb .sep {
+	width: 70px;
+	height: 1px;
+	background-color: #be955e;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.questNumb i {
+	padding-right: 5px;
+	border-right: solid 2px #be955e;
+}
+
+.questNumb sub i {
+	padding-right: 0;
+	border-right: none;
+}
+.questNumb sub {
+	position: relative;
+	font-size: 11px;
+	bottom:0;
+}
+.galleryWrp .mainImg .title {
+	font-size: 14px;
+	color:#2c2a3b;
+	text-align: left;
+	margin-bottom: 20px;
+	padding: 0 45px;
+	clear:both;
+}
+.galleryWrp .mainImg .wrapper {
+    max-width: 1100px;
+    margin: 37px auto;
+    display: inline-block;
+    vertical-align: middle;
+	width: 99%;
+}
+
+.mainImgSlider .owl-nav .owl-prev,
+.mainImgSlider .owl-nav .owl-next{
+	color:#be955e;
+	transition: opacity 450ms ease-out;
+}
+
+.exQuestsWrap .owl-nav .owl-prev,
+.exQuestsWrap .owl-nav .owl-next{
+	color:#be955e;
+	float: left;	
+	font-size: 40px;
+	margin:0 14px;
+	width: 25px;
+	height: 40px;
+	position: relative;
+	transition: opacity 450ms ease-out;
+}
+
+.mainImgSlider .owl-nav .owl-prev:active,
+.mainImgSlider .owl-nav .owl-next:active,
+.exQuestsWrap .owl-nav .owl-prev:active,
+.exQuestsWrap .owl-nav .owl-next:active{
+	color:#9f7439;
+}
+
+.mainImgSlider .owl-nav .owl-next:before,
+.exQuestsWrap .owl-nav .owl-next:before{
+  	content: "\e920";
+	font-family: 'icomoon';
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:all .3s ease;
+}
+
+.mainImgSlider .owl-nav .owl-next:hover:before,
+.mainImgSlider .owl-nav .owl-prev:hover:before,
+.exQuestsWrap .owl-nav .owl-next:hover:before,
+.exQuestsWrap .owl-nav .owl-prev:hover:before {
+    transform: translateY(-7px);
+    font-size: 55px;
+}
+
+.mainImgSlider .owl-nav .owl-next:after,
+.exQuestsWrap .owl-nav .owl-next:after{
+  	content: "\e921";
+	font-family: 'icomoon';
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mainImgSlider .owl-nav .owl-prev,
+.exQuestsWrap .owl-nav .owl-prev {
+	transform: rotate(-180deg);
+}
+
+.mainImgSlider .owl-nav .owl-prev:before,
+.exQuestsWrap .owl-nav .owl-prev:before{
+ 	content: "\e920";
+	font-family: 'icomoon';
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition:all .3s ease;
+}
+
+.mainImgSlider .owl-nav .owl-prev:after,
+.exQuestsWrap .owl-nav .owl-prev:after{
+  	content: "\e921";
+	font-family: 'icomoon';
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mainImgSlider .owl-nav .owl-next.disabled,
+.mainImgSlider .owl-nav .owl-prev.disabled,
+.exQuestsWrap .owl-nav .owl-next.disabled,
+.exQuestsWrap .owl-nav .owl-prev.disabled{
+	cursor: default;
+	opacity: 0;
+}

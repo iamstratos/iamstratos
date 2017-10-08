@@ -1,0 +1,81 @@
+/*.expertIntro{
+	padding-top: 107px;
+}*/
+
+.expertIntro{
+	position: relative;
+	height: 95vh;
+	/* height: calc(95vh - 140px); */
+	height: calc(95vh - 91px);
+	padding-top: 0;
+	/* margin-top: 107px; */
+	margin-top: 58px;
+}
+
+.exIntroInner{
+	display: -webkit-box; 
+  	display: -ms-flexbox; 
+  	display: -webkit-flex;
+  	display: flex;
+  	-webkit-justify-content: space-between;
+  	justify-content: space-between;
+  	-webkit-align-items: center;
+  	align-items: center;
+  	-webkit-align-content: center;
+  	align-content: center;
+  	height: 100%;
+	background-color: #fff;
+}
+
+.expertIntro .img{
+	background: url(../images/intro/illustration.png) no-repeat scroll left top;
+	background-size: 100% auto;
+	-webkit-flex-basis: 56.5%;
+	flex-basis: 56.5%;
+	height: 100%;
+}
+
+.expertIntro .text{
+	-webkit-flex-basis: 43.5%;
+	flex-basis: 43.5%;
+	padding-top: 12px;
+	text-align: left;
+}
+
+.expertIntro .text p{
+	color:#2c2a3b;
+  	font-family: 'TrebuchetMS';
+	font-size: 14px;
+	line-height: 1.45;
+    margin-bottom: 0.65em;
+	max-width: 436px;
+}
+
+.expertIntro .logo{
+	margin-bottom: 6.38vh;
+}
+
+.expertIntro .textWrap{
+	padding: 0 5.4vw 0 75px;
+}
+
+.expertIntro .logo img{
+    margin-left: -34px;
+}
+
+.expertIntro .scrollDown{
+	bottom: 25px;
+	color:#d7bd9c;
+	cursor: pointer;
+	font-size: 50px;
+	left:50%;
+	margin-left: -25px;
+	position: absolute;
+	transition: transform 350ms ease-out;
+}
+
+.expertIntro .scrollDown:hover{
+	-webkit-transform: translateY(5px);
+	    -ms-transform: translateY(5px);
+	        transform: translateY(5px);
+}
