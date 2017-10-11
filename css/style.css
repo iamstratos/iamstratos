@@ -29,6 +29,10 @@ a {
     background-color: #000
 }
 
+#main-wrapper.about {
+    background-color: #151414;
+}
+
 #main-wrapper header {
     padding: 2rem 3rem 0;
     display: -webkit-box;
@@ -85,18 +89,138 @@ a {
 #main-wrapper main {
     padding: 0 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 100%;
+    overflow: auto;
+}
+
+#main-wrapper main .content {
+    width: 80vw;
 }
 
 #main-wrapper main .content h2 {
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
+    font-weight: normal;
+    margin-bottom: 14px;
+    position: relative;
+    display: inline-block;
 }
 
-#main-wrapper main .content p {
-    font-size: 14px;
+#main-wrapper main .content h2.smile:after {
+    content: '';
+    background-image: url('../images/emoj-smile.png');
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    background-size: contain;
+    position: absolute;
+    right: -28px;
+    top: 3px;
+}
+
+#main-wrapper main .content .desc,
+#main-wrapper main .content .links {
+    font-size: 18px;
+    color: #d6d6d6;
+    line-height: 28px;
+    margin-bottom: 14px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+#main-wrapper main .content .links a {
+    color: #d6d6d6;
+    text-decoration: none;
+    position: relative;
+}
+
+#main-wrapper main .content .links a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #d6d6d6;
+}
+
+#main-wrapper main .content .links a:hover:after {
+    border-bottom-style: solid;
+}
+
+#main-wrapper main .content .br {
+    display: block;
+}
+
+#main-wrapper main .content .tech {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+#main-wrapper main .content h3 {
+    font-size: 24px;
     color: #fff;
+    font-weight: normal;
+    margin-bottom: 14px;
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#main-wrapper main .content h3.hammer:after {
+    content: '';
+    background-image: url('../images/emoj-hammer.png');
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    background-size: contain;
+    position: absolute;
+    right: -28px;
+    top: 3px;
+}
+
+/* Link Colors */
+#main-wrapper .content .links a.red {
+    color: #b4353a;
+}
+
+#main-wrapper .content .links a.red:after {
+    border-bottom: 1px dashed #b4353a;
+}
+
+#main-wrapper .content .links a.purple {
+    color: #ab3a8a;
+}
+
+#main-wrapper .content .links a.purple:after {
+    border-bottom: 1px dashed #ab3a8a;
+}
+
+#main-wrapper .content .links a.gold {
+    color: #977245;
+}
+
+#main-wrapper .content .links a.gold:after {
+    border-bottom: 1px dashed #977245;
+}
+
+#main-wrapper .content .links a.yellow {
+    color: #f8d78a;
+}
+
+#main-wrapper .content .links a.yellow:after {
+    border-bottom: 1px dashed #f8d78a;
+}
+
+#main-wrapper .content .links a.red {
+    color: #ff2424;
+}
+
+#main-wrapper .content .links a.red:after {
+    border-bottom: 1px dashed #ff2424;
 }

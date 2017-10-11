@@ -1,1 +1,33 @@
-@media (max-width: 600px){html{font-size:14px}#main-wrapper header{padding:2rem 2rem 0}#canvas{width:100%;-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}}@media (max-width: 320px){html{font-size:13px}#main-wrapper header .social{white-space:nowrap}}
+@media (max-width: 600px), (max-height: 450px) {
+    html {
+        font-size: 14px
+    }
+    #main-wrapper header {
+        padding: 2rem 2rem 0
+    }
+    #canvas {
+        width: 100%;
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    #main-wrapper main {
+        align-items: flex-start;
+    }
+
+    #main-wrapper main .content {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 13px
+    }
+    #main-wrapper header .social {
+        white-space: nowrap
+    }
+}
