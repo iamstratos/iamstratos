@@ -23,14 +23,31 @@ a {
     margin: 0
 }
 
+.bg-img {
+    background-image: url('../images/bg-flares.gif');
+    background-size: cover; 
+    opacity: 0.02;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
 #main-wrapper {
     width: 100%;
     height: 100%;
-    background-color: #000
+    background-color: #000;
 }
 
 #main-wrapper.about {
     background-color: #151414;
+    position: relative;
+    z-index: 5;
 }
 
 #main-wrapper header {
@@ -176,12 +193,12 @@ a {
     content: '';
     background-image: url('../images/emoj-hammer.png');
     background-repeat: no-repeat;
-    width: 21px;
-    height: 21px;
+    width: 31px;
+    height: 28px;
     background-size: contain;
     position: absolute;
-    right: -28px;
-    top: 3px;
+    right: -33px;
+    top: 2px;
 }
 
 /* Link Colors */
