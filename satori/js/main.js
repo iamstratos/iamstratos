@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
 
+  $("body").niceScroll();
+
   $(document).on('mousemove', function (e) {
 
     var $backfaceImg = $('.intro-video .backface-img');
@@ -16,5 +18,10 @@ $(document).ready(function () {
         top: e.pageY - bfHeight / 2
       });
     }
+  });
+
+  $(document).on('click', '.goToHome', function () {
+    $('body').removeClass('intro').addClass('home');
+    $("body").getNiceScroll().resize();
   });
 });
