@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-  $("body").niceScroll();
+  if ($('html').hasClass('trident') === false) $("body").niceScroll();
 
   $(document).on('mousemove', function (e) {
 
