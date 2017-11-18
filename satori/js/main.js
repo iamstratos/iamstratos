@@ -24,4 +24,14 @@ $(document).ready(function () {
     $('body').removeClass('intro').addClass('home');
     $("body").getNiceScroll().resize();
   });
+
+  $(document).on('click', '.burger-btn', function () {
+    if ($('body').hasClass('nav-open')) {
+      $('body').removeClass('nav-open');
+    } else {
+      $('body').addClass('nav-open');
+    }
+
+    $("body").getNiceScroll().resize();
+  });
 });
