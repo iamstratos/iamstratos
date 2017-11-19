@@ -2,7 +2,9 @@
 
 $(document).ready(function () {
 
-  if ($('html').hasClass('trident') === false) $("body").niceScroll();
+  if ($('html').hasClass('trident') === false && $('html').hasClass('mobile') === false) {
+    $("body").niceScroll();
+  }
 
   $(document).on('mousemove', function (e) {
 
@@ -33,5 +35,12 @@ $(document).ready(function () {
     }
 
     $("body").getNiceScroll().resize();
+  });
+
+  $(document).on('click', '.side-nav .side-content', function () {
+    if ($(this).hasClass('active') === false) {
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+    }
   });
 });
