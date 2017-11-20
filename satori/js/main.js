@@ -71,6 +71,14 @@ $(document).ready(function () {
     }
   });
 
+  $(document).on('click', '#backTop', function (e) {
+    e.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500);
+  });
+
   $(window).scroll(function () {
     var scrollTop = $(document).scrollTop();
     var anchors = $('body').find('.anchor');
@@ -87,6 +95,29 @@ $(document).ready(function () {
     });
 
     // Hide header on scroll down, show on scroll up
-    hideHeaderScroll();
+    // hideHeaderScroll()
+  });
+
+  $(document).on('mousemove', function (e) {
+    var $box = $('.inner-content').eq(0);
+    var boxTop = $box.offset().top;
+    var boxBottom = $box.offset().top + $box.innerHeight();
+    var boxLeft = $box.offset().left;
+    var boxRight = $box.offset().left + $box.innerWidth();
+
+    var extraSpace = 30;
+
+    var wx = window.innerWidth;
+    var wh = window.innerHeight;
+
+    if (e.pageX > boxLeft && e.pageX < boxRight && e.pageY > boxTop && e.pageY < boxBottom) {
+      console.log("done");
+      $box.css('top', e.pageY - boxTop);
+      $box.css('left', e.pageX - boxLeft);
+      // $box.css('transform', `translate(${(e.pageX - boxLeft)},${(e.pageY - boxTop)})` )
+    } else {
+      $box.css('top', 0);
+      $box.css('left', 0);
+    }
   });
 });

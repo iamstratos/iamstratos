@@ -15,14 +15,14 @@ function pageAnimations() {
     var tweenScale = TweenMax.from($(this).find('img'), 1, { scale: 1.1, ease: Power0.Linear });
 
     var photoMotionScene = new ScrollMagic.Scene({
-      duration: '90%',
+      duration: '150%',
       triggerElement: this,
       triggerHook: 'onEnter',
       reverse: true
     }).setTween(tweenMotion).addTo(controller);
 
     var photoScaleScene = new ScrollMagic.Scene({
-      duration: '40%',
+      duration: '50%',
       triggerElement: this,
       triggerHook: 'onEnter',
       reverse: true
