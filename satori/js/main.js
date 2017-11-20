@@ -1,5 +1,7 @@
 'use strict';
 
+window.headerScrollTop = 0;
+
 function setSideNav() {
   var $sideNav = $('.side-nav');
 
@@ -12,6 +14,14 @@ function setSideNav() {
 
     $sideNav.find('.side-inner').append(sideContent);
   });
+}
+
+function hideHeaderScroll() {
+  var $headerNav = $('.header-nav');
+  var scrollTop = $(window).scrollTop();
+
+  $headerNav.toggleClass('hidden', scrollTop > headerScrollTop);
+  headerScrollTop = scrollTop;
 }
 
 $(document).ready(function () {
@@ -75,5 +85,8 @@ $(document).ready(function () {
         $('.side-nav .side-content[href="#' + $(_elem).attr('id') + '"]').removeClass('active');
       }
     });
+
+    // Hide header on scroll down, show on scroll up
+    hideHeaderScroll();
   });
 });
