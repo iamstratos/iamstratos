@@ -1,6 +1,6 @@
 'use strict';
 
-function pageAnimations() {
+function scrollMagicAnimations() {
   var controller = new ScrollMagic.Controller({
     addIndicators: false
   });
@@ -30,6 +30,20 @@ function pageAnimations() {
   });
 }
 
+function smBoldAnim() {
+  var $smTimeline = $('.sm-bold-anim .timeline');
+
+  var tl = new TimelineMax({ repeat: -1 });
+
+  tl.to($smTimeline, 0.7, { y: '-25px', ease: Power3.easeInOut }, 0.6);
+}
+
 $(document).ready(function () {
-  pageAnimations();
+
+  if ($('.module-photo').length > 0) scrollMagicAnimations();
+
+  if ($('.sm-bold-anim').length > 0) smBoldAnim();
+
+  // if ($('.loader-icon').length > 0)
+  //   new Vivus('logo-stroke', {duration: 0})
 });

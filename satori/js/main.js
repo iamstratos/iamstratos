@@ -119,9 +119,9 @@ $(document).ready(function () {
   });
 
   $(document).on('mousemove', function (e) {
-    var $box = $('.inner-content');
+    var $box = $('.inner-content.circle-icons-text');
 
-    if ($box.length === 0) return;
+    if ($box.length === 0 || $('html').hasClass('mobile')) return;
 
     $box.each(function (_index) {
       var values = contentBoxValues[_index].split(',');
