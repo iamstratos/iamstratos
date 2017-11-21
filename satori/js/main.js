@@ -123,8 +123,8 @@ $(document).ready(function () {
 
     if ($box.length === 0) return;
 
-    $box.each(function (index) {
-      var values = contentBoxValues[index].split(',');
+    $box.each(function (_index) {
+      var values = contentBoxValues[_index].split(',');
 
       var boxWidth = parseInt(values[2], 10);
       var boxHeight = parseInt(values[3], 10);
@@ -139,35 +139,49 @@ $(document).ready(function () {
       var wx = window.innerWidth;
       var wh = window.innerHeight;
 
+      var _x = 0;
+      var _y = 0;
+
       if (e.pageX > boxLeft && e.pageX < boxRight && e.pageY > boxTop && e.pageY < boxBottom) {
 
         if (e.pageX > boxLeft && e.pageX < boxLeft + boxWidth / 2) {
 
           if (e.pageY > boxTop && e.pageY < boxTop + boxHeight / 2) {
-            return $(this).css('transform', 'translate(' + (e.pageX - boxRight) / divideWith + 'px,' + (e.pageY - boxBottom) / divideWith + 'px)');
-          }
-          return $(this).css('transform', 'translate(' + (e.pageX - boxRight) / divideWith + 'px,' + (e.pageY - boxTop) / divideWith + 'px)');
-        }
 
-        if (e.pageX > boxLeft + boxWidth / 2 && e.pageX < boxRight) {
+            _x = (e.pageX - boxRight) / divideWith;
+            _y = (e.pageY - boxBottom) / divideWith;
+          } else {
+
+            _x = (e.pageX - boxRight) / divideWith;
+            _y = (e.pageY - boxTop) / divideWith;
+          }
+        } else if (e.pageX > boxLeft + boxWidth / 2 && e.pageX < boxRight) {
 
           if (e.pageY > boxTop && e.pageY < boxTop + boxHeight / 2) {
-            return $(this).css('transform', 'translate(' + (e.pageX - boxLeft) / divideWith + 'px,' + (e.pageY - boxBottom) / divideWith + 'px)');
+
+            _x = (e.pageX - boxLeft) / divideWith;
+            _y = (e.pageY - boxBottom) / divideWith;
+          } else {
+
+            _x = (e.pageX - boxLeft) / divideWith;
+            _y = (e.pageY - boxTop) / divideWith;
           }
-
-          return $(this).css('transform', 'translate(' + (e.pageX - boxLeft) / divideWith + 'px,' + (e.pageY - boxTop) / divideWith + 'px)');
-        }
-
-        if (e.pageX > boxLeft + boxWidth / 2 && e.pageX < boxRight) {
+        } else if (e.pageX > boxLeft + boxWidth / 2 && e.pageX < boxRight) {
 
           if (e.pageY > boxTop && e.pageY < boxTop + boxHeight / 2) {
-            return $(this).css('transform', 'translate(' + (e.pageX - boxLeft) / divideWith + 'px,' + (e.pageY - boxBottom) / divideWith + 'px)');
-          }
 
-          return $(this).css('transform', 'translate(' + (e.pageX - boxLeft) / divideWith + 'px,' + (e.pageY - boxTop) / divideWith + 'px)');
+            _x = (e.pageX - boxLeft) / divideWith;
+            _y = (e.pageY - boxBottom) / divideWith;
+          } else {
+
+            _x = (e.pageX - boxLeft) / divideWith;
+            _y = (e.pageY - boxTop) / divideWith;
+          }
         }
+
+        TweenMax.to($(this), 0.4, { x: _x, y: _y, ease: Power1.easeOut });
       } else {
-        $(this).css('transform', 'translate(0,0)');
+        TweenMax.to($(this), 0.4, { x: 0, y: 0, ease: Power1.easeOut });
       }
     });
   });
