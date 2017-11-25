@@ -201,7 +201,7 @@ $(document).ready(function () {
     $('body').addClass('modal-open');
   });
 
-  $(document).on('click', '.close-modal', function (e) {
+  $(document).on('click', '.close-modal, .modal-bg', function (e) {
     $('body').removeClass('modal-open');
   });
 });
