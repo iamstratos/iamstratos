@@ -40,9 +40,28 @@
       <div class="line-paragraph">
         <div class="text-line"></div>
         <div class="text-content">
-          <p class="xs-text">Get in touch now and we can schedule a free, <span class="br"></span>one hour, consultation. No strings attached.</p>
+          <p class="r-text">Get in touch now and we can schedule a free, <span class="br"></span>one hour, consultation. No strings attached.</p>
         </div>
-      </div><a class="btn btn-long">DROP US A LINE<img src="./images/button-arrow.svg"></a>
+      </div>
+      <form class="contact-form" onSubmit="return false;">
+        <div class="input-wrapper">
+          <label for="#subject">SUBJECT*</label>
+          <input id="subject" type="text" name="subject" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="#email">E-MAIL*</label>
+          <input id="email" type="text" name="email" required><span class="field-validation-error">Field is not valid</span>
+        </div>
+        <div class="input-wrapper">
+          <label for="#name">NAME*</label>
+          <input id="name" type="text" name="name" required>
+        </div>
+        <div class="input-wrapper">
+          <label for="#message">MESSAGE*</label>
+          <textarea id="message" type="text" name="message" required></textarea><span class="field-validation-error">Field is not valid</span>
+        </div>
+        <button class="btn btn-long" type="submit">SUBMIT<img src="./images/button-arrow.svg"></button>
+      </form>
       <div class="custom-content">
         <div class="contact-text">
           <div class="city">London</div>
@@ -51,7 +70,7 @@
         <div class="contact-text">
           <div class="city">Athens</div>
           <div class="address">Sfittion 3<br>Athens, Greece<br>118 54</div>
-        </div>
+        </div><img class="contact-map" src="./images/contact-map.png">
       </div>
     </div>
   </div>
