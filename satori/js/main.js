@@ -201,8 +201,19 @@ $(document).ready(function () {
     $('body').addClass('modal-open');
   });
 
-  $(document).on('click', '.close-modal, .modal-bg', function (e) {
+  $(document).on('click', '.close-modal, .modal-bg', function () {
     $('body').removeClass('modal-open');
+  });
+
+  $(document).on('click', '.iframe-layer', function () {
+    var _this = this;
+
+    var thisSrc = $(this).siblings('iframe').attr('src');
+    $(this).siblings('iframe').attr('src', thisSrc + '&autoplay=1');
+
+    setTimeout(function () {
+      $(_this).remove();
+    }, 200);
   });
 });
 
