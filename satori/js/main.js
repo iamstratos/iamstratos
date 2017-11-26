@@ -57,7 +57,7 @@ function setWorkSlideHeight() {
 
 $(document).ready(function () {
 
-  if ($('html').hasClass('trident') === false && $('html').hasClass('mobile') === false) $("body").niceScroll();
+  if ($('html').hasClass('trident') === false && $('html').hasClass('mobile') === false && $('html').hasClass('tablet') === false) $("body").niceScroll();
 
   if ($('.side-nav').length > 0) setSideNav();
 

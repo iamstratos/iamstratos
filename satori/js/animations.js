@@ -35,7 +35,7 @@ function smBoldAnim() {
 
   var tl = new TimelineMax({ repeat: -1 });
 
-  tl.to($smTimeline, 0.7, { y: '-25px', ease: Power3.easeInOut }, 0.6);
+  tl.to($smTimeline, 0.9, { y: '-25px', ease: Power3.easeInOut }, 1.6);
 }
 
 $(document).ready(function () {

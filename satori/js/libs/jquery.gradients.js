@@ -1,9 +1,8 @@
 $( document ).ready(function() {
-    // var colors = new Array(
-    //   [230,105,147],
-    //   [58,164,178],
-    //   [40,26,88],
-    //   [232,24,122]);
+  
+    if ($('html').hasClass('mobile') || $('html').hasClass('tablet'))
+      return
+
     var colors = new Array(
       [215,13,45],
       [248,156,74],
@@ -11,11 +10,6 @@ $( document ).ready(function() {
       [79,13,63]);
 
     var step = 0;
-    //color table indices for: 
-    // current color left
-    // next color left
-    // current color right
-    // next color right
     var colorIndices = [0,1,2,3];
 
     //transition speed
