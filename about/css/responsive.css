@@ -1,0 +1,40 @@
+@media (max-width: 600px),
+(max-height: 450px) {
+  html {
+    font-size: 14px
+  }
+  #main-wrapper header {
+    padding: 2rem 2rem 1rem
+  }
+  #main-wrapper main {
+    align-items: flex-start;
+    padding: 0;
+  }
+  #main-wrapper main .content {
+    padding: 0;
+    width: 100%;
+  }
+  #main-wrapper main .content .sep,
+  #main-wrapper main .content .desc {
+    padding: 0 10px;
+  }
+  #main-wrapper .projects {
+    padding: 0 10px;
+  }
+  #main-wrapper .project {
+    margin-bottom: 15px;
+  }
+  #main-wrapper .project-info {
+    position: relative;
+    height: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 13px
+  }
+  #main-wrapper header .social {
+    white-space: nowrap
+  }
+}
