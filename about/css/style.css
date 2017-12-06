@@ -149,6 +149,7 @@ a {
 #main-wrapper .project-img {
   width: 920px;
   max-width: 100%;
+  display: block;
 }
 
 #main-wrapper .project-img>img {
