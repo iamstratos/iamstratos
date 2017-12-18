@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway:200,400,500,700" rel="stylesheet">
@@ -22,11 +23,30 @@
   <header class="header-nav"><a class="header-logo" href="" style="background-image: url(&quot;./images/logos/satori-logo.svg&quot;);"></a>
     <div class="primary-nav">
       <div class="burger-btn"><span class="nav-line"></span><span class="nav-line"></span><span class="nav-line"></span><span class="nav-line"></span></div>
-      <nav><a class="nav-item" href="#">HOME<img class="active-elem" src="./images/header-nav/home-elem.svg"></a><a class="nav-item" href="#">SERVICES</a><a class="nav-item" href="#">OUR WORK</a><a class="nav-item" href="#">PEOPLE & CAREERS</a><a class="nav-item" href="#">BLOG</a><a class="nav-item" href="#">CONTACT</a></nav>
+      <nav><a class="nav-item active" href="#">HOME
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a><a class="nav-item" href="#">SERVICES
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a><a class="nav-item" href="#">OUR WORK
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a><a class="nav-item" href="#">PEOPLE & CAREERS
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a><a class="nav-item" href="#">BLOG
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a><a class="nav-item" href="#">CONTACT
+          <div class="active-elem">
+            <div class="skew-item" style="background-color: #9a534d;"></div>
+          </div></a></nav>
     </div>
   </header>
   <div class="mobile-nav">
-    <nav><a class="nav-item" href="#">HOME<img class="active-elem" src="./images/header-nav/home-elem.svg"></a><a class="nav-item" href="#">SERVICES</a><a class="nav-item" href="#">OUR WORK</a><a class="nav-item" href="#">PEOPLE & CAREERS</a><a class="nav-item" href="#">BLOG</a><a class="nav-item" href="#">CONTACT</a></nav>
+    <nav><a class="nav-item" href="#">HOME</a><a class="nav-item" href="#">SERVICES</a><a class="nav-item" href="#">OUR WORK
+        <div class="active-elem" style="background-color: #9a534d;"></div></a><a class="nav-item" href="#">PEOPLE & CAREERS</a><a class="nav-item" href="#">BLOG</a><a class="nav-item" href="#">CONTACT</a></nav>
     <footer class="footer s-footer">
       <div class="sm-bold" id="backTop">BACK TO TOP</div>
       <div class="social-text">Get in touch</div>
@@ -36,188 +56,67 @@
     </footer>
   </div>
   <section class="section-work">
-    <div class="module custom-work custom-work-responsive">
-      <div class="custom-content work-slides">
-        <div class="drag-timeline" data-x="0">
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/airlines.jpg">
-              <div class="work-desc">AIRLINES</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">01</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Sky-rocketing online <span class="br"></span>market shares</a>
-              <div class="work-category">Advanced Analytics</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/agencies.jpg">
-              <div class="work-desc">AGENCIES</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">02</div>
-              <div class="sep-line"></div><a class="work-title" href="#">The power of <span class="br"></span>simulation</a>
-              <div class="work-category">Advanced Analytics</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/telcos.jpg">
-              <div class="work-desc">TELCOS</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">03</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Machine learning automation <span class="br"></span>preventing customer churn</a>
-              <div class="work-category">Big Data Solutions, 360o Customer View</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/defence.jpg">
-              <div class="work-desc">DEFENCE</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">04</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Smart loyalty initiatives <span class="br"></span>boosting sales and ROI</a>
-              <div class="work-category">Big Data Solutions, 360o Customer View</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/fmcgs.jpg">
-              <div class="work-desc">FMCGS</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">05</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Data-driven personalisation <span class="br"></span>at scale</a>
-              <div class="work-category">Big Data Solutions, Machine Learning</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/finance.jpg">
-              <div class="work-desc">FINANCE</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">06</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Custom Reporting Platform <span class="br"></span>for leading Bank</a>
-              <div class="work-category">Software Engineering</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/airlines-2.jpg">
-              <div class="work-desc">AIRLINES</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">07</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Picking the optimal <span class="br"></span>pricing strategy</a>
-              <div class="work-category">Advanced Analytics, 360o Customer View</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/agencies-2.jpg">
-              <div class="work-desc">AGENCIES</div>
-            </div>
-            <div class="slide-text">
-              <div class="work-num">08</div>
-              <div class="sep-line"></div><a class="work-title" href="#">Custom BI solution <span class="br"></span>for Defence</a>
-              <div class="work-category">Software Engineering, Advanced Analytics</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="module custom-work">
       <div class="custom-content work-slides">
-        <div class="tip-arrow"><img class="tip-anim" src="./images/work-slide-arrow.svg"></div>
-        <div class="drag-img-timeline drag-timeline" data-x="0">
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/airlines.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">AIRLINES</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/agencies.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">AGENCIES</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/telcos.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">TELCOS</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/defence.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">DEFENCE</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/fmcgs.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">FMCGS</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/finance.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">FINANCE</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/airlines-2.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">AIRLINES</div>
-            </div>
-          </div>
-          <div class="slide-item">
-            <div class="slide-img"><img src="./images/work/work-page/agencies-2.jpg" draggable="false" ondragstart="return false;">
-              <div class="work-desc">AGENCIES</div>
-            </div>
-          </div>
-        </div>
         <div class="drag-text-timeline drag-timeline" data-x="0">
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/airlines.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">AIRLINES</div></a>
             <div class="slide-text">
               <div class="work-num">01</div>
               <div class="sep-line"></div><a class="work-title" href="#">Sky-rocketing online <span class="br"></span>market shares</a>
               <div class="work-category">Advanced Analytics</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/agencies.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">AGENCIES</div></a>
             <div class="slide-text">
               <div class="work-num">02</div>
               <div class="sep-line"></div><a class="work-title" href="#">The power of <span class="br"></span>simulation</a>
               <div class="work-category">Advanced Analytics</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/telcos.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">TELCOS</div></a>
             <div class="slide-text">
               <div class="work-num">03</div>
               <div class="sep-line"></div><a class="work-title" href="#">Machine learning automation <span class="br"></span>preventing customer churn</a>
               <div class="work-category">Big Data Solutions, 360o Customer View</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/defence.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">DEFENCE</div></a>
             <div class="slide-text">
               <div class="work-num">04</div>
               <div class="sep-line"></div><a class="work-title" href="#">Smart loyalty initiatives <span class="br"></span>boosting sales and ROI</a>
               <div class="work-category">Big Data Solutions, 360o Customer View</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/fmcgs.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">FMCGS</div></a>
             <div class="slide-text">
               <div class="work-num">05</div>
               <div class="sep-line"></div><a class="work-title" href="#">Data-driven personalisation <span class="br"></span>at scale</a>
               <div class="work-category">Big Data Solutions, Machine Learning</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/finance.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">FINANCE</div></a>
             <div class="slide-text">
               <div class="work-num">06</div>
               <div class="sep-line"></div><a class="work-title" href="#">Custom Reporting Platform <span class="br"></span>for leading Bank</a>
               <div class="work-category">Software Engineering</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/airlines-2.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">AIRLINES</div></a>
             <div class="slide-text">
               <div class="work-num">07</div>
               <div class="sep-line"></div><a class="work-title" href="#">Picking the optimal <span class="br"></span>pricing strategy</a>
               <div class="work-category">Advanced Analytics, 360o Customer View</div>
             </div>
           </div>
-          <div class="slide-item">
+          <div class="slide-item"><a class="slide-img" href="#"><img src="./images/work/work-page/agencies-2.jpg" draggable="false" ondragstart="return false;">
+              <div class="work-desc">AGENCIES</div></a>
             <div class="slide-text">
               <div class="work-num">08</div>
               <div class="sep-line"></div><a class="work-title" href="#">Custom BI solution <span class="br"></span>for Defence</a>
@@ -299,6 +198,7 @@
   <script src="js/libs/ScrollMagic.min.js"></script>
   <script src="js/libs/plugins/animation.gsap.min.js"></script>
   <script src="js/libs/plugins/debug.addIndicators.min.js"></script>
+  <script src="js/libs/slick.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
 </body>
