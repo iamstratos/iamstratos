@@ -31,7 +31,7 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #1e194c;
+        stroke: #ffffff;
         stroke-width: 4px;
         fill-rule: evenodd;
         opacity: 0.77;
