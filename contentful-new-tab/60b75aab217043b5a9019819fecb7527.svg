@@ -1,0 +1,22 @@
+<svg width="19" height="17" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>dropdown</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-604 -129)">
+<g id="dropdown">
+<g id="Rectangle 4">
+<use xlink:href="#path0_fill" transform="translate(604 129)" fill="#4A90E2"/>
+</g>
+<g id="arrow">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="matrix(-1 6.2457e-17 -6.00317e-17 -1 618 141)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 3C 0 1.34315 1.34315 0 3 0L 16 0C 17.6569 0 19 1.34315 19 3L 19 14C 19 15.6569 17.6569 17 16 17L 3 17C 1.34315 17 0 15.6569 0 14L 0 3Z"/>
+<path id="path1_fill" d="M 8.0089 6L 9 4.91473L 4.502 -2.60996e-07L -1.22206e-07 4.91473L 0.991101 6L 4.502 2.15496L 8.0089 6Z"/>
+</defs>
+</svg>

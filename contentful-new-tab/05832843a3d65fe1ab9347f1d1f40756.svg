@@ -1,0 +1,20 @@
+<svg width="24" height="4" viewBox="0 0 24 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>side-about</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(483 -398)">
+<g id="side-about">
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(-483 398)" fill="#5B6F85"/>
+</g>
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(-473 398)" fill="#5B6F85"/>
+</g>
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(-463 398)" fill="#5B6F85"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 4 2C 4 3.10457 3.10457 4 2 4C 0.895431 4 0 3.10457 0 2C 0 0.895431 0.895431 0 2 0C 3.10457 0 4 0.895431 4 2Z"/>
+</defs>
+</svg>
