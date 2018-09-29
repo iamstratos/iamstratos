@@ -236,8 +236,16 @@ $.fn.hasAnyClass = function () {
 
 $(document).ready(function () {
 
+  setTimeout(function () {
+    $('.js--splash').fadeOut();
+    $('body').removeClass('body-splash');
+  }, 1000);
+
   if (!$('html').hasAnyClass('mobile', 'tablet')) {
     setRevealJs();
+
+    // set each-section margin-top
+    $('.height-100').css('margin-top', window.innerHeight - 195);
   }
 
   if ($('html').hasClass('mobile') || $('html').hasClass('tablet')) {
@@ -324,6 +332,24 @@ $(document).ready(function () {
         }
       }
     }
+
+    var castLogo = document.querySelector('.js--cast-logo');
+    var row = document.querySelectorAll('.row[data-matchrow=' + ACTIVE_PAGE + ']')[0];
+    // const rows = document.querySelectorAll('.row')
+
+    // for (let row of rows) {
+    // }
+    if (row.getBoundingClientRect().top > castLogo.getBoundingClientRect().bottom) {
+      castLogo.classList.remove('cast-logo__small');
+    } else if (row.getBoundingClientRect().top < castLogo.getBoundingClientRect().bottom) {
+      if (row.getBoundingClientRect().bottom - 60 < castLogo.getBoundingClientRect().top) {
+        castLogo.classList.remove('cast-logo__small');
+      } else {
+        castLogo.classList.add('cast-logo__small');
+      }
+    } else {
+      castLogo.classList.add('cast-logo__small');
+    }
   });
 
   // ------- CLICKS  
@@ -332,13 +358,21 @@ $(document).ready(function () {
     var headerNav = $('.header-nav');
     if (headerNav.hasClass('header-nav--show')) {
       headerNav.removeClass('header-nav--show');
+      if ($('html').hasAnyClass('mobile', 'tablet')) $.scrollLock(false);
     } else {
       headerNav.addClass('header-nav--show');
+      if ($('html').hasAnyClass('mobile', 'tablet')) $.scrollLock(true);
     }
   });
 
   $(document).on('click', '.js-vertical-nav--item, .js-primary-nav--item', function () {
     if (!NAV_ACTIVE) return;
+
+    if ($('html').hasAnyClass('mobile', 'tablet')) {
+      var headerNav = $('.header-nav');
+      $.scrollLock(false);
+      headerNav.removeClass('header-nav--show');
+    }
 
     var thisMatch = $(this).attr('data-match');
     NAV_ACTIVE = false;
@@ -352,4 +386,11 @@ $(document).ready(function () {
     $('[data-ref]').removeClass('data-ref__active');
     $('[data-ref=' + $(this).attr('data-ref') + ']').addClass('data-ref__active');
   });
+});
+
+$(window).on('resize', function () {
+  if (!$('html').hasAnyClass('mobile', 'tablet')) {
+    // set each-section margin-top
+    $('.height-100').css('margin-top', window.innerHeight - 195);
+  }
 });
