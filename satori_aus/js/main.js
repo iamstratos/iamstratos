@@ -294,7 +294,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $('.js--splash').fadeOut();
     $('body').removeClass('body-splash');
-  }, 3000);
+  }, 3500);
 
   if (!$('html').hasAnyClass('mobile', 'tablet')) {
     setRevealJs();
