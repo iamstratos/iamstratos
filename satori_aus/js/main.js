@@ -272,7 +272,9 @@ function showAfterTitleQuote() {
 }
 
 function setLogoSize() {
-  if (ACTIVE_PAGE === 'home' || ACTIVE_PAGE === 'contact') {
+  if (ACTIVE_PAGE === 'home' && window.pageYOffset < 10) {
+    $('.js--cast-logo').addClass('cast-logo__full');
+  } else if (ACTIVE_PAGE === 'contact') {
     $('.js--cast-logo').addClass('cast-logo__full');
   } else {
     $('.js--cast-logo').removeClass('cast-logo__full');
