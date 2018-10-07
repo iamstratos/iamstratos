@@ -294,7 +294,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $('.js--splash').fadeOut();
     $('body').removeClass('body-splash');
-  }, 3500);
+  }, 4500);
 
   if (!$('html').hasAnyClass('mobile', 'tablet')) {
     setRevealJs();
@@ -395,12 +395,13 @@ $(document).ready(function () {
       }
     }
 
-    var castLogo = document.querySelector('.js--cast-logo .cast-logo-text');
+    var castLogo = document.querySelector('.js--cast-logo');
+    var castLogoItem = document.querySelector('.js--cast-logo .cast-logo-text');
     var row = document.querySelectorAll('.row[data-matchrow=' + ACTIVE_PAGE + ']')[0];
-    if (row.getBoundingClientRect().top > castLogo.getBoundingClientRect().bottom) {
+    if (row.getBoundingClientRect().top > castLogoItem.getBoundingClientRect().bottom) {
       castLogo.classList.remove('cast-logo__small');
-    } else if (row.getBoundingClientRect().top < castLogo.getBoundingClientRect().bottom) {
-      if (row.getBoundingClientRect().bottom - 60 < castLogo.getBoundingClientRect().top) {
+    } else if (row.getBoundingClientRect().top < castLogoItem.getBoundingClientRect().bottom) {
+      if (row.getBoundingClientRect().bottom - 60 < castLogoItem.getBoundingClientRect().top) {
         castLogo.classList.remove('cast-logo__small');
       } else {
         castLogo.classList.add('cast-logo__small');
