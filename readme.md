@@ -1,8 +1,8 @@
 # ⛷️ Stratos Iordanidis
 
-**`Full-Stack Software Engineer (React / VueJS / Python)`**
+**`Senior Full-Stack Software Engineer (React / VueJS / Python)`**
 
-Full-Stack Engineer with 11+ years of experience delivering web applications that drive measurable business outcomes, from booking systems processing thousands of daily transactions to property platforms and AI-powered analytics tools. Trusted by startups and S&P 500 companies alike. Specialized in React, TypeScript, Next.js, Node.js, GraphQL, Python, Go, and Ruby on Rails, with a proven ability to lead frontend teams and mentor developers.
+Senior Full-Stack Engineer with 11+ years of experience delivering web applications that drive measurable business outcomes, from booking systems processing thousands of daily transactions to property platforms and AI-powered analytics tools. Trusted by startups and S&P 500 companies alike. Specialized in React, TypeScript, Next.js, Node.js, GraphQL, Python, Go, and Ruby on Rails, with a proven ability to lead frontend teams and mentor developers.
 
 ---
 
